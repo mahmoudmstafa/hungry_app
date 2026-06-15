@@ -46,6 +46,11 @@ class $AssetsImagesGen {
   final AssetGenImage smallPurgerPng = const AssetGenImage(
     'assets/images/small_purger.png',
   );
+  final AssetGenImage tomatosPng = const AssetGenImage(
+    'assets/images/tomatos_png.png',
+  ); final AssetGenImage fries = const AssetGenImage(
+    'assets/images/fries.png',
+  );
   final SvgGenImage smallPurgerSvg = const SvgGenImage(
     'assets/images/small_purger.svg',
   );
