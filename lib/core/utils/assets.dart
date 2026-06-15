@@ -25,17 +25,29 @@ class $AssetsImagesGen {
     'assets/images/download.png',
   );
   final SvgGenImage home = const SvgGenImage('assets/images/home.svg');
+  final SvgGenImage image1Svg = const SvgGenImage('assets/images/image 1.svg');
   final AssetGenImage image1Png = const AssetGenImage(
     'assets/images/image1.png',
   );
-  final SvgGenImage image1Svg = const SvgGenImage('assets/images/image 1.svg');
   final SvgGenImage logo = const SvgGenImage('assets/images/logo.svg');
-  final SvgGenImage profile = const SvgGenImage('assets/images/profile.svg');
+  final AssetGenImage profilePng = const AssetGenImage(
+    'assets/images/profile.png',
+  );
+  final SvgGenImage profileSvg = const SvgGenImage('assets/images/profile.svg');
   final SvgGenImage purgerDetails = const SvgGenImage(
     'assets/images/purger_details.svg',
   );
+  final SvgGenImage star = const SvgGenImage(
+    'assets/images/star.svg',
+  );
+  final SvgGenImage car = const SvgGenImage(
+    'assets/images/car.svg',
+  );
   final SvgGenImage search = const SvgGenImage('assets/images/search.svg');
-  final SvgGenImage smallPurger = const SvgGenImage(
+  final AssetGenImage smallPurgerPng = const AssetGenImage(
+    'assets/images/small_purger.png',
+  );
+  final SvgGenImage smallPurgerSvg = const SvgGenImage(
     'assets/images/small_purger.svg',
   );
   final SvgGenImage splashIcon = const SvgGenImage(

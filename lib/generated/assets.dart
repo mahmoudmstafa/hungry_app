@@ -20,31 +20,31 @@ class $AssetsAssetsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  final SvgGenImage car = const SvgGenImage('assets/images/car.svg');
   final SvgGenImage comment = const SvgGenImage('assets/images/comment.svg');
   final AssetGenImage download = const AssetGenImage(
-    'assets/images/download.png',
-  );
+      'assets/images/download.png');
   final SvgGenImage home = const SvgGenImage('assets/images/home.svg');
   final SvgGenImage image1Svg = const SvgGenImage('assets/images/image 1.svg');
   final AssetGenImage image1Png = const AssetGenImage(
-    'assets/images/image1.png',
-  );
+      'assets/images/image1.png');
   final SvgGenImage logo = const SvgGenImage('assets/images/logo.svg');
-  final SvgGenImage profile = const SvgGenImage('assets/images/profile.svg');
+  final AssetGenImage profilePng = const AssetGenImage(
+      'assets/images/profile.png');
+  final SvgGenImage profileSvg = const SvgGenImage('assets/images/profile.svg');
   final SvgGenImage purgerDetails = const SvgGenImage(
-    'assets/images/purger_details.svg',
-  );
+      'assets/images/purger_details.svg');
   final SvgGenImage search = const SvgGenImage('assets/images/search.svg');
-  final SvgGenImage smallPurger = const SvgGenImage(
-    'assets/images/small_purger.svg',
-  );
+  final AssetGenImage smallPurgerPng = const AssetGenImage(
+      'assets/images/small_purger.png');
+  final SvgGenImage smallPurgerSvg = const SvgGenImage(
+      'assets/images/small_purger.svg');
   final SvgGenImage splashIcon = const SvgGenImage(
-    'assets/images/splash_icon.svg',
-  );
+      'assets/images/splash_icon.svg');
+  final SvgGenImage star = const SvgGenImage('assets/images/star.svg');
   final SvgGenImage success = const SvgGenImage('assets/images/success.svg');
   final AssetGenImage testImage = const AssetGenImage(
-    'assets/images/test_image.png',
-  );
+      'assets/images/test_image.png');
   final SvgGenImage tomatos = const SvgGenImage('assets/images/tomatos.svg');
   final SvgGenImage user = const SvgGenImage('assets/images/user.svg');
 }
@@ -60,89 +60,59 @@ class $AssetsInterGen {
   const $AssetsInterGen();
 
   final String inter18ptBlack = 'assets/fonts/Inter/Inter_18pt-Black.ttf';
-  final String inter18ptBlackItalic =
-      'assets/fonts/Inter/Inter_18pt-BlackItalic.ttf';
+  final String inter18ptBlackItalic = 'assets/fonts/Inter/Inter_18pt-BlackItalic.ttf';
   final String inter18ptBold = 'assets/fonts/Inter/Inter_18pt-Bold.ttf';
-  final String inter18ptBoldItalic =
-      'assets/fonts/Inter/Inter_18pt-BoldItalic.ttf';
-  final String inter18ptExtraBold =
-      'assets/fonts/Inter/Inter_18pt-ExtraBold.ttf';
-  final String inter18ptExtraBoldItalic =
-      'assets/fonts/Inter/Inter_18pt-ExtraBoldItalic.ttf';
-  final String inter18ptExtraLight =
-      'assets/fonts/Inter/Inter_18pt-ExtraLight.ttf';
-  final String inter18ptExtraLightItalic =
-      'assets/fonts/Inter/Inter_18pt-ExtraLightItalic.ttf';
+  final String inter18ptBoldItalic = 'assets/fonts/Inter/Inter_18pt-BoldItalic.ttf';
+  final String inter18ptExtraBold = 'assets/fonts/Inter/Inter_18pt-ExtraBold.ttf';
+  final String inter18ptExtraBoldItalic = 'assets/fonts/Inter/Inter_18pt-ExtraBoldItalic.ttf';
+  final String inter18ptExtraLight = 'assets/fonts/Inter/Inter_18pt-ExtraLight.ttf';
+  final String inter18ptExtraLightItalic = 'assets/fonts/Inter/Inter_18pt-ExtraLightItalic.ttf';
   final String inter18ptItalic = 'assets/fonts/Inter/Inter_18pt-Italic.ttf';
   final String inter18ptLight = 'assets/fonts/Inter/Inter_18pt-Light.ttf';
-  final String inter18ptLightItalic =
-      'assets/fonts/Inter/Inter_18pt-LightItalic.ttf';
+  final String inter18ptLightItalic = 'assets/fonts/Inter/Inter_18pt-LightItalic.ttf';
   final String inter18ptMedium = 'assets/fonts/Inter/Inter_18pt-Medium.ttf';
-  final String inter18ptMediumItalic =
-      'assets/fonts/Inter/Inter_18pt-MediumItalic.ttf';
+  final String inter18ptMediumItalic = 'assets/fonts/Inter/Inter_18pt-MediumItalic.ttf';
   final String inter18ptRegular = 'assets/fonts/Inter/Inter_18pt-Regular.ttf';
   final String inter18ptSemiBold = 'assets/fonts/Inter/Inter_18pt-SemiBold.ttf';
-  final String inter18ptSemiBoldItalic =
-      'assets/fonts/Inter/Inter_18pt-SemiBoldItalic.ttf';
+  final String inter18ptSemiBoldItalic = 'assets/fonts/Inter/Inter_18pt-SemiBoldItalic.ttf';
   final String inter18ptThin = 'assets/fonts/Inter/Inter_18pt-Thin.ttf';
-  final String inter18ptThinItalic =
-      'assets/fonts/Inter/Inter_18pt-ThinItalic.ttf';
+  final String inter18ptThinItalic = 'assets/fonts/Inter/Inter_18pt-ThinItalic.ttf';
   final String inter24ptBlack = 'assets/fonts/Inter/Inter_24pt-Black.ttf';
-  final String inter24ptBlackItalic =
-      'assets/fonts/Inter/Inter_24pt-BlackItalic.ttf';
+  final String inter24ptBlackItalic = 'assets/fonts/Inter/Inter_24pt-BlackItalic.ttf';
   final String inter24ptBold = 'assets/fonts/Inter/Inter_24pt-Bold.ttf';
-  final String inter24ptBoldItalic =
-      'assets/fonts/Inter/Inter_24pt-BoldItalic.ttf';
-  final String inter24ptExtraBold =
-      'assets/fonts/Inter/Inter_24pt-ExtraBold.ttf';
-  final String inter24ptExtraBoldItalic =
-      'assets/fonts/Inter/Inter_24pt-ExtraBoldItalic.ttf';
-  final String inter24ptExtraLight =
-      'assets/fonts/Inter/Inter_24pt-ExtraLight.ttf';
-  final String inter24ptExtraLightItalic =
-      'assets/fonts/Inter/Inter_24pt-ExtraLightItalic.ttf';
+  final String inter24ptBoldItalic = 'assets/fonts/Inter/Inter_24pt-BoldItalic.ttf';
+  final String inter24ptExtraBold = 'assets/fonts/Inter/Inter_24pt-ExtraBold.ttf';
+  final String inter24ptExtraBoldItalic = 'assets/fonts/Inter/Inter_24pt-ExtraBoldItalic.ttf';
+  final String inter24ptExtraLight = 'assets/fonts/Inter/Inter_24pt-ExtraLight.ttf';
+  final String inter24ptExtraLightItalic = 'assets/fonts/Inter/Inter_24pt-ExtraLightItalic.ttf';
   final String inter24ptItalic = 'assets/fonts/Inter/Inter_24pt-Italic.ttf';
   final String inter24ptLight = 'assets/fonts/Inter/Inter_24pt-Light.ttf';
-  final String inter24ptLightItalic =
-      'assets/fonts/Inter/Inter_24pt-LightItalic.ttf';
+  final String inter24ptLightItalic = 'assets/fonts/Inter/Inter_24pt-LightItalic.ttf';
   final String inter24ptMedium = 'assets/fonts/Inter/Inter_24pt-Medium.ttf';
-  final String inter24ptMediumItalic =
-      'assets/fonts/Inter/Inter_24pt-MediumItalic.ttf';
+  final String inter24ptMediumItalic = 'assets/fonts/Inter/Inter_24pt-MediumItalic.ttf';
   final String inter24ptRegular = 'assets/fonts/Inter/Inter_24pt-Regular.ttf';
   final String inter24ptSemiBold = 'assets/fonts/Inter/Inter_24pt-SemiBold.ttf';
-  final String inter24ptSemiBoldItalic =
-      'assets/fonts/Inter/Inter_24pt-SemiBoldItalic.ttf';
+  final String inter24ptSemiBoldItalic = 'assets/fonts/Inter/Inter_24pt-SemiBoldItalic.ttf';
   final String inter24ptThin = 'assets/fonts/Inter/Inter_24pt-Thin.ttf';
-  final String inter24ptThinItalic =
-      'assets/fonts/Inter/Inter_24pt-ThinItalic.ttf';
+  final String inter24ptThinItalic = 'assets/fonts/Inter/Inter_24pt-ThinItalic.ttf';
   final String inter28ptBlack = 'assets/fonts/Inter/Inter_28pt-Black.ttf';
-  final String inter28ptBlackItalic =
-      'assets/fonts/Inter/Inter_28pt-BlackItalic.ttf';
+  final String inter28ptBlackItalic = 'assets/fonts/Inter/Inter_28pt-BlackItalic.ttf';
   final String inter28ptBold = 'assets/fonts/Inter/Inter_28pt-Bold.ttf';
-  final String inter28ptBoldItalic =
-      'assets/fonts/Inter/Inter_28pt-BoldItalic.ttf';
-  final String inter28ptExtraBold =
-      'assets/fonts/Inter/Inter_28pt-ExtraBold.ttf';
-  final String inter28ptExtraBoldItalic =
-      'assets/fonts/Inter/Inter_28pt-ExtraBoldItalic.ttf';
-  final String inter28ptExtraLight =
-      'assets/fonts/Inter/Inter_28pt-ExtraLight.ttf';
-  final String inter28ptExtraLightItalic =
-      'assets/fonts/Inter/Inter_28pt-ExtraLightItalic.ttf';
+  final String inter28ptBoldItalic = 'assets/fonts/Inter/Inter_28pt-BoldItalic.ttf';
+  final String inter28ptExtraBold = 'assets/fonts/Inter/Inter_28pt-ExtraBold.ttf';
+  final String inter28ptExtraBoldItalic = 'assets/fonts/Inter/Inter_28pt-ExtraBoldItalic.ttf';
+  final String inter28ptExtraLight = 'assets/fonts/Inter/Inter_28pt-ExtraLight.ttf';
+  final String inter28ptExtraLightItalic = 'assets/fonts/Inter/Inter_28pt-ExtraLightItalic.ttf';
   final String inter28ptItalic = 'assets/fonts/Inter/Inter_28pt-Italic.ttf';
   final String inter28ptLight = 'assets/fonts/Inter/Inter_28pt-Light.ttf';
-  final String inter28ptLightItalic =
-      'assets/fonts/Inter/Inter_28pt-LightItalic.ttf';
+  final String inter28ptLightItalic = 'assets/fonts/Inter/Inter_28pt-LightItalic.ttf';
   final String inter28ptMedium = 'assets/fonts/Inter/Inter_28pt-Medium.ttf';
-  final String inter28ptMediumItalic =
-      'assets/fonts/Inter/Inter_28pt-MediumItalic.ttf';
+  final String inter28ptMediumItalic = 'assets/fonts/Inter/Inter_28pt-MediumItalic.ttf';
   final String inter28ptRegular = 'assets/fonts/Inter/Inter_28pt-Regular.ttf';
   final String inter28ptSemiBold = 'assets/fonts/Inter/Inter_28pt-SemiBold.ttf';
-  final String inter28ptSemiBoldItalic =
-      'assets/fonts/Inter/Inter_28pt-SemiBoldItalic.ttf';
+  final String inter28ptSemiBoldItalic = 'assets/fonts/Inter/Inter_28pt-SemiBoldItalic.ttf';
   final String inter28ptThin = 'assets/fonts/Inter/Inter_28pt-Thin.ttf';
-  final String inter28ptThinItalic =
-      'assets/fonts/Inter/Inter_28pt-ThinItalic.ttf';
+  final String inter28ptThinItalic = 'assets/fonts/Inter/Inter_28pt-ThinItalic.ttf';
 }
 
 class $AssetsRobotoGen {
@@ -153,95 +123,55 @@ class $AssetsRobotoGen {
   final String robotoBold = 'assets/fonts/Roboto/Roboto-Bold.ttf';
   final String robotoBoldItalic = 'assets/fonts/Roboto/Roboto-BoldItalic.ttf';
   final String robotoExtraBold = 'assets/fonts/Roboto/Roboto-ExtraBold.ttf';
-  final String robotoExtraBoldItalic =
-      'assets/fonts/Roboto/Roboto-ExtraBoldItalic.ttf';
+  final String robotoExtraBoldItalic = 'assets/fonts/Roboto/Roboto-ExtraBoldItalic.ttf';
   final String robotoExtraLight = 'assets/fonts/Roboto/Roboto-ExtraLight.ttf';
-  final String robotoExtraLightItalic =
-      'assets/fonts/Roboto/Roboto-ExtraLightItalic.ttf';
+  final String robotoExtraLightItalic = 'assets/fonts/Roboto/Roboto-ExtraLightItalic.ttf';
   final String robotoItalic = 'assets/fonts/Roboto/Roboto-Italic.ttf';
   final String robotoLight = 'assets/fonts/Roboto/Roboto-Light.ttf';
   final String robotoLightItalic = 'assets/fonts/Roboto/Roboto-LightItalic.ttf';
   final String robotoMedium = 'assets/fonts/Roboto/Roboto-Medium.ttf';
-  final String robotoMediumItalic =
-      'assets/fonts/Roboto/Roboto-MediumItalic.ttf';
+  final String robotoMediumItalic = 'assets/fonts/Roboto/Roboto-MediumItalic.ttf';
   final String robotoRegular = 'assets/fonts/Roboto/Roboto-Regular.ttf';
   final String robotoSemiBold = 'assets/fonts/Roboto/Roboto-SemiBold.ttf';
-  final String robotoSemiBoldItalic =
-      'assets/fonts/Roboto/Roboto-SemiBoldItalic.ttf';
+  final String robotoSemiBoldItalic = 'assets/fonts/Roboto/Roboto-SemiBoldItalic.ttf';
   final String robotoThin = 'assets/fonts/Roboto/Roboto-Thin.ttf';
   final String robotoThinItalic = 'assets/fonts/Roboto/Roboto-ThinItalic.ttf';
-  final String robotoCondensedBlack =
-      'assets/fonts/Roboto/Roboto_Condensed-Black.ttf';
-  final String robotoCondensedBlackItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-BlackItalic.ttf';
-  final String robotoCondensedBold =
-      'assets/fonts/Roboto/Roboto_Condensed-Bold.ttf';
-  final String robotoCondensedBoldItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-BoldItalic.ttf';
-  final String robotoCondensedExtraBold =
-      'assets/fonts/Roboto/Roboto_Condensed-ExtraBold.ttf';
-  final String robotoCondensedExtraBoldItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-ExtraBoldItalic.ttf';
-  final String robotoCondensedExtraLight =
-      'assets/fonts/Roboto/Roboto_Condensed-ExtraLight.ttf';
-  final String robotoCondensedExtraLightItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-ExtraLightItalic.ttf';
-  final String robotoCondensedItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-Italic.ttf';
-  final String robotoCondensedLight =
-      'assets/fonts/Roboto/Roboto_Condensed-Light.ttf';
-  final String robotoCondensedLightItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-LightItalic.ttf';
-  final String robotoCondensedMedium =
-      'assets/fonts/Roboto/Roboto_Condensed-Medium.ttf';
-  final String robotoCondensedMediumItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-MediumItalic.ttf';
-  final String robotoCondensedRegular =
-      'assets/fonts/Roboto/Roboto_Condensed-Regular.ttf';
-  final String robotoCondensedSemiBold =
-      'assets/fonts/Roboto/Roboto_Condensed-SemiBold.ttf';
-  final String robotoCondensedSemiBoldItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-SemiBoldItalic.ttf';
-  final String robotoCondensedThin =
-      'assets/fonts/Roboto/Roboto_Condensed-Thin.ttf';
-  final String robotoCondensedThinItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-ThinItalic.ttf';
-  final String robotoSemiCondensedBlack =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Black.ttf';
-  final String robotoSemiCondensedBlackItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-BlackItalic.ttf';
-  final String robotoSemiCondensedBold =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Bold.ttf';
-  final String robotoSemiCondensedBoldItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-BoldItalic.ttf';
-  final String robotoSemiCondensedExtraBold =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraBold.ttf';
-  final String robotoSemiCondensedExtraBoldItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraBoldItalic.ttf';
-  final String robotoSemiCondensedExtraLight =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraLight.ttf';
-  final String robotoSemiCondensedExtraLightItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraLightItalic.ttf';
-  final String robotoSemiCondensedItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Italic.ttf';
-  final String robotoSemiCondensedLight =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Light.ttf';
-  final String robotoSemiCondensedLightItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-LightItalic.ttf';
-  final String robotoSemiCondensedMedium =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Medium.ttf';
-  final String robotoSemiCondensedMediumItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-MediumItalic.ttf';
-  final String robotoSemiCondensedRegular =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Regular.ttf';
-  final String robotoSemiCondensedSemiBold =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-SemiBold.ttf';
-  final String robotoSemiCondensedSemiBoldItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-SemiBoldItalic.ttf';
-  final String robotoSemiCondensedThin =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Thin.ttf';
-  final String robotoSemiCondensedThinItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-ThinItalic.ttf';
+  final String robotoCondensedBlack = 'assets/fonts/Roboto/Roboto_Condensed-Black.ttf';
+  final String robotoCondensedBlackItalic = 'assets/fonts/Roboto/Roboto_Condensed-BlackItalic.ttf';
+  final String robotoCondensedBold = 'assets/fonts/Roboto/Roboto_Condensed-Bold.ttf';
+  final String robotoCondensedBoldItalic = 'assets/fonts/Roboto/Roboto_Condensed-BoldItalic.ttf';
+  final String robotoCondensedExtraBold = 'assets/fonts/Roboto/Roboto_Condensed-ExtraBold.ttf';
+  final String robotoCondensedExtraBoldItalic = 'assets/fonts/Roboto/Roboto_Condensed-ExtraBoldItalic.ttf';
+  final String robotoCondensedExtraLight = 'assets/fonts/Roboto/Roboto_Condensed-ExtraLight.ttf';
+  final String robotoCondensedExtraLightItalic = 'assets/fonts/Roboto/Roboto_Condensed-ExtraLightItalic.ttf';
+  final String robotoCondensedItalic = 'assets/fonts/Roboto/Roboto_Condensed-Italic.ttf';
+  final String robotoCondensedLight = 'assets/fonts/Roboto/Roboto_Condensed-Light.ttf';
+  final String robotoCondensedLightItalic = 'assets/fonts/Roboto/Roboto_Condensed-LightItalic.ttf';
+  final String robotoCondensedMedium = 'assets/fonts/Roboto/Roboto_Condensed-Medium.ttf';
+  final String robotoCondensedMediumItalic = 'assets/fonts/Roboto/Roboto_Condensed-MediumItalic.ttf';
+  final String robotoCondensedRegular = 'assets/fonts/Roboto/Roboto_Condensed-Regular.ttf';
+  final String robotoCondensedSemiBold = 'assets/fonts/Roboto/Roboto_Condensed-SemiBold.ttf';
+  final String robotoCondensedSemiBoldItalic = 'assets/fonts/Roboto/Roboto_Condensed-SemiBoldItalic.ttf';
+  final String robotoCondensedThin = 'assets/fonts/Roboto/Roboto_Condensed-Thin.ttf';
+  final String robotoCondensedThinItalic = 'assets/fonts/Roboto/Roboto_Condensed-ThinItalic.ttf';
+  final String robotoSemiCondensedBlack = 'assets/fonts/Roboto/Roboto_SemiCondensed-Black.ttf';
+  final String robotoSemiCondensedBlackItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-BlackItalic.ttf';
+  final String robotoSemiCondensedBold = 'assets/fonts/Roboto/Roboto_SemiCondensed-Bold.ttf';
+  final String robotoSemiCondensedBoldItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-BoldItalic.ttf';
+  final String robotoSemiCondensedExtraBold = 'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraBold.ttf';
+  final String robotoSemiCondensedExtraBoldItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraBoldItalic.ttf';
+  final String robotoSemiCondensedExtraLight = 'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraLight.ttf';
+  final String robotoSemiCondensedExtraLightItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraLightItalic.ttf';
+  final String robotoSemiCondensedItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-Italic.ttf';
+  final String robotoSemiCondensedLight = 'assets/fonts/Roboto/Roboto_SemiCondensed-Light.ttf';
+  final String robotoSemiCondensedLightItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-LightItalic.ttf';
+  final String robotoSemiCondensedMedium = 'assets/fonts/Roboto/Roboto_SemiCondensed-Medium.ttf';
+  final String robotoSemiCondensedMediumItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-MediumItalic.ttf';
+  final String robotoSemiCondensedRegular = 'assets/fonts/Roboto/Roboto_SemiCondensed-Regular.ttf';
+  final String robotoSemiCondensedSemiBold = 'assets/fonts/Roboto/Roboto_SemiCondensed-SemiBold.ttf';
+  final String robotoSemiCondensedSemiBoldItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-SemiBoldItalic.ttf';
+  final String robotoSemiCondensedThin = 'assets/fonts/Roboto/Roboto_SemiCondensed-Thin.ttf';
+  final String robotoSemiCondensedThinItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-ThinItalic.ttf';
 }
 
 class $AssetsLibGen {
@@ -275,6 +205,7 @@ class AssetGenImage {
   const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
 
   final String _assetName;
+
 
   final Size? size;
   final Set<String> flavors;
@@ -418,3 +349,4 @@ class SvgGenImage {
 
   String get keyName => _assetName;
 }
+
