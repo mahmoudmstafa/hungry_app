@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hungry_app/features/home_feature/presention/views/home_view.dart';
 
 import 'features/splash_view.dart';
 
@@ -20,8 +21,9 @@ class HungryApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         SplashView.id: (context) => const SplashView(),
+        HomeView.id: (context) => const HomeView(),
       },
-      initialRoute: SplashView.id,
+      initialRoute: HomeView.id,
     );
   }
 }

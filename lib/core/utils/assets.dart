@@ -25,10 +25,10 @@ class $AssetsImagesGen {
     'assets/images/download.png',
   );
   final SvgGenImage home = const SvgGenImage('assets/images/home.svg');
-  final SvgGenImage image1Svg = const SvgGenImage('assets/images/image 1.svg');
   final AssetGenImage image1Png = const AssetGenImage(
     'assets/images/image1.png',
   );
+  final SvgGenImage image1Svg = const SvgGenImage('assets/images/image 1.svg');
   final SvgGenImage logo = const SvgGenImage('assets/images/logo.svg');
   final SvgGenImage profile = const SvgGenImage('assets/images/profile.svg');
   final SvgGenImage purgerDetails = const SvgGenImage(
@@ -267,7 +267,6 @@ class $AssetsCoreGen {
 class $AssetsUtilsGen {
   const $AssetsUtilsGen();
 
-  final String assets = 'lib/core/utils/assets.dart';
   final String constant = 'lib/core/utils/constant.dart';
 }
 
