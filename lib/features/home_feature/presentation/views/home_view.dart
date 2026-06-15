@@ -6,6 +6,7 @@ import 'package:hungry_app/core/widgets/custom_button.dart';
 import 'package:hungry_app/features/home_feature/presentation/views/widgets/bottom_bar.dart';
 import 'package:hungry_app/features/home_feature/presentation/views/widgets/food_card.dart';
 import 'package:hungry_app/features/home_feature/presentation/views/widgets/app_bar_home_view.dart';
+import 'package:hungry_app/features/home_feature/presentation/views/widgets/home_view_body.dart';
 import 'package:hungry_app/features/home_feature/presentation/views/widgets/text_field_home_view.dart';
 
 import '../../../../core/utils/constant.dart';
@@ -22,36 +23,9 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScaffold(
-      child: Column(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: kPadding),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Gap(40),
-                  AppBarHomeView(),
-                  CustomText(
-                    text: 'Hello Mahmoud Mostafa',
-                    fontSize: 18,
-                  ),
-                  Gap(15),
-                  TextFieldHomeView(),
-                  Gap(30),
-                  MenuButtonsListView(),
-                  Gap(20),
-                  Expanded(
-                    child: FoodCardGridView(),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          BottomBar(),
-        ],
-      ),
-    );
+    return HomeViewBody();
   }
 }
+
+
+
