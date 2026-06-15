@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hungry_app/core/utils/constant.dart';
 
-import '../../../../../core/utils/assets.dart';
+import '../../../../../generated/assets.dart';
 
 
 

@@ -12,24 +12,22 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScaffold(
-      child: Column(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: kPadding),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  HomeViewAppBarSection(),
-                  SearchAndMenuAndFoodCardSection(),
-                ],
-              ),
+    return Column(
+      children: [
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: kPadding),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                HomeViewAppBarSection(),
+                SearchAndMenuAndFoodCardSection(),
+              ],
             ),
           ),
-          BottomBar(),
-        ],
-      ),
+        ),
+        BottomBar(),
+      ],
     );
   }
 }

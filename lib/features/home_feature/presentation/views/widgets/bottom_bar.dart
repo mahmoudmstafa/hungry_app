@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/constant.dart';
+import '../../../../../generated/assets.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({

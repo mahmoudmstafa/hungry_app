@@ -3,8 +3,8 @@ import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hungry_app/core/utils/constant.dart';
 
-import '../../../../../core/utils/assets.dart';
 import '../../../../../core/widgets/custom_text.dart';
+import '../../../../../generated/assets.dart';
 
 class FoodCard extends StatelessWidget {
   const FoodCard({super.key});

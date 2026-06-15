@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/constant.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
+import '../../../../../generated/assets.dart';
 
 class TextFieldHomeView extends StatelessWidget {
   const TextFieldHomeView({

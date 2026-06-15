@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.3.0
   flutter_gap: ^1.2.0
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -75,6 +76,12 @@ flutter:
     - lib/
     - lib/core/
     - lib/core/utils/
+    - lib/features/home_feature/
+    - lib/features/home_feature/presentation/
+    - lib/features/home_feature/presentation/views/
+    - lib/features/home_feature/presentation/views/widgets/
+    - lib/features/product_details_feature/
+    - lib/features/product_details_feature/views/
 
   fonts:
      - family: Inter
