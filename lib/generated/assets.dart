@@ -50,6 +50,10 @@ class $AssetsImagesGen {
     'assets/images/tomatos_png.png',
   ); final AssetGenImage fries = const AssetGenImage(
     'assets/images/fries.png',
+  );final AssetGenImage dollar = const AssetGenImage(
+    'assets/images/dollar.png',
+  );final AssetGenImage hamburger = const AssetGenImage(
+    'assets/images/hamburger.png',
   );
   final SvgGenImage smallPurgerSvg = const SvgGenImage(
     'assets/images/small_purger.svg',

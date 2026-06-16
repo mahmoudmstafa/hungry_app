@@ -15,7 +15,6 @@ class ToppingsAndSideOptionsSections extends StatelessWidget {
     return Column(
       children: [
         ToppingsSection(),
-        Gap(30),
         SideOptionSection(),
       ],
     );

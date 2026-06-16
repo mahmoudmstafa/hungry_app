@@ -20,7 +20,7 @@ class CustomBackButton extends StatelessWidget {
           padding: const EdgeInsets.only(left: 28.0),
           child: SvgPicture.asset(Assets.assets.images.back.path),
         ),
-        Gap(25),
+        Gap(20),
       ],
     );
   }

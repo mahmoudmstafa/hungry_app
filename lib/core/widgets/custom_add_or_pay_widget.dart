@@ -1,0 +1,68 @@
+import 'package:flutter/material.dart';
+import 'package:hungry_app/core/utils/constant.dart';
+import 'package:hungry_app/core/widgets/custom_button.dart';
+import 'package:hungry_app/core/widgets/custom_text.dart';
+
+import '../../generated/assets.dart';
+
+class CustomAddOrPayWidget extends StatelessWidget {
+  const CustomAddOrPayWidget(
+      {super.key, required this.textButton, required this.text, required this.textColor, required this.textWeight, required this.price,});
+
+  final String textButton;
+
+  final String text;
+
+  final int textColor;
+
+  final FontWeight textWeight;
+
+  final double price;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: kPadding,
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CustomText(
+                  text: text,
+                  color: textColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+                Row(
+                  children: [
+                    Image.asset(
+                      Assets.assets.images.dollar.path,
+                    ),
+                    CustomText(
+                      fontFamily: 'ReemKufiInk',
+                      text: ' $price',
+                      color: 0xFF000000,
+                      fontWeight: textWeight,
+                      fontSize: 32,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: CustomButton(
+              height: 55,
+              text: textButton,
+              backgroundColor: kPrimaryColor,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

@@ -9,12 +9,13 @@ class SideOptionListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 128,
+      height: 145,
       child: ListView.separated(
         padding: EdgeInsets.only(
           top: 8,
           left: 20,
           right: 20,
+          bottom: 15,
         ),
         scrollDirection: Axis.horizontal,
         physics: BouncingScrollPhysics(),

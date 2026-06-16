@@ -84,6 +84,7 @@ flutter:
     - lib/features/product_details_feature/views/
 
   fonts:
+
      - family: Inter
        fonts:
          - asset: assets/fonts/Inter/Inter_18pt-Thin.ttf
@@ -113,6 +114,10 @@ flutter:
          - asset: assets/fonts/Inter/Inter_18pt-Black.ttf
            weight: 900
 
+     - family: ReemKufiInk
+       fonts:
+           - asset: assets/fonts/Reem_Kufi_Ink/ReemKufiInk-Regular.ttf
+
      - family: Roboto
        fonts:
          - asset: assets/fonts/Roboto/Roboto-Thin.ttf
@@ -141,3 +146,4 @@ flutter:
 
          - asset: assets/fonts/Roboto/Roboto-Black.ttf
            weight: 900
+

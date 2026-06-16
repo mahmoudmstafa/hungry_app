@@ -28,7 +28,6 @@ class SideOptionSection extends StatelessWidget {
             fontWeight: FontWeight.w800,
           ),
         ),
-        Gap(10),
         SideOptionListView(),
       ],
     );
