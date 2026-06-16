@@ -21,6 +21,7 @@ class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   final SvgGenImage back = const SvgGenImage('assets/images/back.svg');
+  final SvgGenImage check = const SvgGenImage('assets/images/check.svg');
   final SvgGenImage car = const SvgGenImage('assets/images/car.svg');
   final SvgGenImage cold = const SvgGenImage('assets/images/cold.svg');
   final SvgGenImage comment = const SvgGenImage('assets/images/comment.svg');

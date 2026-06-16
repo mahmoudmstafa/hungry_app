@@ -59,11 +59,11 @@ flutter_gen:
 
 
 flutter_icons:
-    android: true
-    ios: true
-    image_path: "assets/images/download.png"
-    adaptive_icon_foreground: "assets/images/download.png"
-    adaptive_icon_background: "#000000"
+  android: true
+  ios: true
+  image_path: "assets/images/download.png"
+  adaptive_icon_foreground: "assets/images/download.png"
+  adaptive_icon_background: "#000000"
 
 flutter:
   uses-material-design: true
@@ -84,67 +84,96 @@ flutter:
     - lib/features/cart_feature/
     - lib/features/product_details_feature/presentation/views/widgets/
 
+
   fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter/Inter_18pt-Thin.ttf
+          weight: 100
 
-     - family: Inter
-       fonts:
-         - asset: assets/fonts/Inter/Inter_18pt-Thin.ttf
-           weight: 100
+        - asset: assets/fonts/Inter/Inter_18pt-ExtraLight.ttf
+          weight: 200
 
-         - asset: assets/fonts/Inter/Inter_18pt-ExtraLight.ttf
-           weight: 200
+        - asset: assets/fonts/Inter/Inter_18pt-Light.ttf
+          weight: 300
 
-         - asset: assets/fonts/Inter/Inter_18pt-Light.ttf
-           weight: 300
+        - asset: assets/fonts/Inter/Inter_18pt-Regular.ttf
+          weight: 400
 
-         - asset: assets/fonts/Inter/Inter_18pt-Regular.ttf
-           weight: 400
+        - asset: assets/fonts/Inter/Inter_18pt-Medium.ttf
+          weight: 500
 
-         - asset: assets/fonts/Inter/Inter_18pt-Medium.ttf
-           weight: 500
+        - asset: assets/fonts/Inter/Inter_18pt-SemiBold.ttf
+          weight: 600
 
-         - asset: assets/fonts/Inter/Inter_18pt-SemiBold.ttf
-           weight: 600
+        - asset: assets/fonts/Inter/Inter_18pt-Bold.ttf
+          weight: 700
 
-         - asset: assets/fonts/Inter/Inter_18pt-Bold.ttf
-           weight: 700
+        - asset: assets/fonts/Inter/Inter_18pt-ExtraBold.ttf
+          weight: 800
 
-         - asset: assets/fonts/Inter/Inter_18pt-ExtraBold.ttf
-           weight: 800
+        - asset: assets/fonts/Inter/Inter_18pt-Black.ttf
+          weight: 900
 
-         - asset: assets/fonts/Inter/Inter_18pt-Black.ttf
-           weight: 900
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Thin.ttf
+          weight: 100
 
-     - family: ReemKufiInk
-       fonts:
-           - asset: assets/fonts/Reem_Kufi_Ink/ReemKufiInk-Regular.ttf
+        - asset: assets/fonts/Poppins/Poppins-ExtraLight.ttf
+          weight: 200
 
-     - family: Roboto
-       fonts:
-         - asset: assets/fonts/Roboto/Roboto-Thin.ttf
-           weight: 100
+        - asset: assets/fonts/Poppins/Poppins-Light.ttf
+          weight: 300
 
-         - asset: assets/fonts/Roboto/Roboto-ExtraLight.ttf
-           weight: 200
+        - asset: assets/fonts/Poppins/Poppins-Regular.ttf
+          weight: 400
 
-         - asset: assets/fonts/Roboto/Roboto-Light.ttf
-           weight: 300
+        - asset: assets/fonts/Poppins/Poppins-Medium.ttf
+          weight: 500
 
-         - asset: assets/fonts/Roboto/Roboto-Regular.ttf
-           weight: 400
+        - asset: assets/fonts/Poppins/Poppins-SemiBold.ttf
+          weight: 600
 
-         - asset: assets/fonts/Roboto/Roboto-Medium.ttf
-           weight: 500
+        - asset: assets/fonts/Poppins/Poppins-Bold.ttf
+          weight: 700
 
-         - asset: assets/fonts/Roboto/Roboto-SemiBold.ttf
-           weight: 600
+        - asset: assets/fonts/Poppins/Poppins-ExtraBold.ttf
+          weight: 800
 
-         - asset: assets/fonts/Roboto/Roboto-Bold.ttf
-           weight: 700
+        - asset: assets/fonts/Poppins/Poppins-Black.ttf
+          weight: 900
 
-         - asset: assets/fonts/Roboto/Roboto-ExtraBold.ttf
-           weight: 800
+    - family: ReemKufiInk
+      fonts:
+        - asset: assets/fonts/Reem_Kufi_Ink/ReemKufiInk-Regular.ttf
 
-         - asset: assets/fonts/Roboto/Roboto-Black.ttf
-           weight: 900
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto/Roboto-Thin.ttf
+          weight: 100
+
+        - asset: assets/fonts/Roboto/Roboto-ExtraLight.ttf
+          weight: 200
+
+        - asset: assets/fonts/Roboto/Roboto-Light.ttf
+          weight: 300
+
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
+          weight: 400
+
+        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
+          weight: 500
+
+        - asset: assets/fonts/Roboto/Roboto-SemiBold.ttf
+          weight: 600
+
+        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
+          weight: 700
+
+        - asset: assets/fonts/Roboto/Roboto-ExtraBold.ttf
+          weight: 800
+
+        - asset: assets/fonts/Roboto/Roboto-Black.ttf
+          weight: 900
 
