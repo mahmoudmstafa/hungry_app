@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
+import 'package:hungry_app/features/cart_feature/presentation/views/widgets/shopping_cart_item.dart';
 
-import '../../../cart_feature/views/widgets/shopping_cart_item.dart';
 
 
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
-import 'package:hungry_app/features/product_details_feature/views/widgets/product_details_text.dart';
-import 'package:hungry_app/features/product_details_feature/views/widgets/spicy_section.dart';
+import 'package:hungry_app/features/product_details_feature/presentation/views/widgets/product_details_text.dart';
+import 'package:hungry_app/features/product_details_feature/presentation/views/widgets/spicy_section.dart';
 
-import '../../../../generated/assets.dart';
+import '../../../../../generated/assets.dart';
 
 
 class ProductDetailsSection extends StatelessWidget {

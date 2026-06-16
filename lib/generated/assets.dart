@@ -49,6 +49,7 @@ class $AssetsImagesGen {
     'assets/images/purger_details.svg',
   );
   final SvgGenImage search = const SvgGenImage('assets/images/search.svg');
+  final SvgGenImage settings = const SvgGenImage('assets/images/settings.svg');
   final AssetGenImage smallPurgerPng = const AssetGenImage(
     'assets/images/small_purger.png',
   );
@@ -310,8 +311,6 @@ class $AssetsWidgetsGen {
       'lib/features/home_feature/presentation/views/widgets/acitve_and_inactive_menu.dart';
   final String appBarHomeView =
       'lib/features/home_feature/presentation/views/widgets/app_bar_home_view.dart';
-  final String bottomBar =
-      'lib/features/home_feature/presentation/views/widgets/custom_bottom_bar.dart';
   final String foodCard =
       'lib/features/home_feature/presentation/views/widgets/food_card.dart';
   final String foodCardGridView =

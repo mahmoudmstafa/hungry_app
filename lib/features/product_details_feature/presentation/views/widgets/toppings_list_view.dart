@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hungry_app/core/utils/constant.dart';
-import 'package:hungry_app/features/product_details_feature/views/widgets/editing_widget.dart';
+
+import 'editing_widget.dart';
 
 class ToppingsListView extends StatelessWidget {
   const ToppingsListView({super.key});

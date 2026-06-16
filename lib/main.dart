@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hungry_app/features/product_details_feature/views/product_details_view.dart';
 
-import 'features/cart_feature/views/cart_view.dart';
+import 'features/cart_feature/presentation/views/cart_view.dart';
 import 'features/home_feature/presentation/views/home_view.dart';
+import 'features/product_details_feature/presentation/views/product_details_view.dart';
 import 'features/splash_view.dart';
 
 void main() {

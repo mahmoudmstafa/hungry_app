@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/constant.dart';
-import '../../../../core/widgets/custom_text.dart';
-import '../../../../generated/assets.dart';
+import '../../../../../core/utils/constant.dart';
+import '../../../../../core/widgets/custom_text.dart';
+import '../../../../../generated/assets.dart';
+
 
 class EditingWidget extends StatelessWidget {
   const EditingWidget({

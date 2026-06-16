@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
-import 'package:hungry_app/features/product_details_feature/views/widgets/product_details_section.dart';
-import 'package:hungry_app/features/product_details_feature/views/widgets/toppings_and_side_options_sections.dart';
+import 'package:hungry_app/features/product_details_feature/presentation/views/widgets/product_details_section.dart';
+import 'package:hungry_app/features/product_details_feature/presentation/views/widgets/toppings_and_side_options_sections.dart';
 
-import '../../../../core/utils/constant.dart';
-import '../../../../core/widgets/custom_add_or_pay_widget.dart';
-import '../../../../core/widgets/custom_back_button.dart';
+import '../../../../../core/utils/constant.dart';
+import '../../../../../core/widgets/custom_add_or_pay_widget.dart';
+import '../../../../../core/widgets/custom_back_button.dart';
 
 class ProductDetailsViewBody extends StatelessWidget {
   const ProductDetailsViewBody({super.key});

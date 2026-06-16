@@ -5,20 +5,29 @@ import 'package:flutter_svg/svg.dart';
 import '../../generated/assets.dart';
 import '../utils/constant.dart';
 
-
 class CustomBackButton extends StatelessWidget {
   const CustomBackButton({
     super.key,
+    this.settings = false,
   });
+
+  final bool settings;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Gap(kTopSpace),
-        Padding(
-          padding: const EdgeInsets.only(left: 28.0),
-          child: SvgPicture.asset(Assets.assets.images.back.path),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SvgPicture.asset(Assets.assets.images.back.path),
+            settings
+                ? SvgPicture.asset(
+                    Assets.assets.images.settings.path,
+                  )
+                : SizedBox(),
+          ],
         ),
         Gap(20),
       ],
