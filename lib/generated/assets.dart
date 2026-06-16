@@ -22,9 +22,15 @@ class $AssetsImagesGen {
 
   final SvgGenImage back = const SvgGenImage('assets/images/back.svg');
   final SvgGenImage car = const SvgGenImage('assets/images/car.svg');
+  final SvgGenImage cold = const SvgGenImage('assets/images/cold.svg');
   final SvgGenImage comment = const SvgGenImage('assets/images/comment.svg');
+  final AssetGenImage dollar = const AssetGenImage('assets/images/dollar.png');
   final AssetGenImage download = const AssetGenImage(
     'assets/images/download.png',
+  );
+  final AssetGenImage fries = const AssetGenImage('assets/images/fries.png');
+  final AssetGenImage hamburger = const AssetGenImage(
+    'assets/images/hamburger.png',
   );
   final SvgGenImage home = const SvgGenImage('assets/images/home.svg');
   final SvgGenImage image1Svg = const SvgGenImage('assets/images/image 1.svg');
@@ -46,29 +52,22 @@ class $AssetsImagesGen {
   final AssetGenImage smallPurgerPng = const AssetGenImage(
     'assets/images/small_purger.png',
   );
-  final AssetGenImage tomatosPng = const AssetGenImage(
-    'assets/images/tomatos_png.png',
-  ); final AssetGenImage fries = const AssetGenImage(
-    'assets/images/fries.png',
-  );final AssetGenImage dollar = const AssetGenImage(
-    'assets/images/dollar.png',
-  );final AssetGenImage hamburger = const AssetGenImage(
-    'assets/images/hamburger.png',
-  );
   final SvgGenImage smallPurgerSvg = const SvgGenImage(
     'assets/images/small_purger.svg',
   );
+  final SvgGenImage spicy = const SvgGenImage('assets/images/spicy.svg');
   final SvgGenImage splashIcon = const SvgGenImage(
     'assets/images/splash_icon.svg',
   );
   final SvgGenImage star = const SvgGenImage('assets/images/star.svg');
   final SvgGenImage success = const SvgGenImage('assets/images/success.svg');
-  final SvgGenImage cold = const SvgGenImage('assets/images/cold.svg');
-  final SvgGenImage spicy = const SvgGenImage('assets/images/spicy.svg');
   final AssetGenImage testImage = const AssetGenImage(
     'assets/images/test_image.png',
   );
   final SvgGenImage tomatos = const SvgGenImage('assets/images/tomatos.svg');
+  final AssetGenImage tomatosPng = const AssetGenImage(
+    'assets/images/tomatos_png.png',
+  );
   final SvgGenImage user = const SvgGenImage('assets/images/user.svg');
 }
 
@@ -312,7 +311,7 @@ class $AssetsWidgetsGen {
   final String appBarHomeView =
       'lib/features/home_feature/presentation/views/widgets/app_bar_home_view.dart';
   final String bottomBar =
-      'lib/features/home_feature/presentation/views/widgets/bottom_bar.dart';
+      'lib/features/home_feature/presentation/views/widgets/custom_bottom_bar.dart';
   final String foodCard =
       'lib/features/home_feature/presentation/views/widgets/food_card.dart';
   final String foodCardGridView =
@@ -338,7 +337,7 @@ class $AssetsProductDetailsFeatureGen {
 // class $AssetsViewsGen {
 //   const $AssetsViewsGen();
 //
-//   final String productDetails =
+//   final String productDetailsView =
 //       'lib/features/product_details_feature/views/product_details_view.dart';
 // }
 

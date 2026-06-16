@@ -6,18 +6,24 @@ import 'package:hungry_app/core/widgets/custom_text.dart';
 import '../../generated/assets.dart';
 
 class CustomAddOrPayWidget extends StatelessWidget {
-  const CustomAddOrPayWidget(
-      {super.key, required this.textButton, required this.text, required this.textColor, required this.textWeight, required this.price,});
+  const CustomAddOrPayWidget({
+    super.key,
+    required this.textButton,
+    required this.text,
+    this.textColor,
+    this.textWeight,
+    this.price,
+  });
 
   final String textButton;
 
   final String text;
 
-  final int textColor;
+  final int? textColor;
 
-  final FontWeight textWeight;
+  final FontWeight? textWeight;
 
-  final double price;
+  final double? price;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +39,7 @@ class CustomAddOrPayWidget extends StatelessWidget {
               children: [
                 CustomText(
                   text: text,
-                  color: textColor,
+                  color: textColor ?? kIntSecondaryColor,
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),

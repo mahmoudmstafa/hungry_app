@@ -24,7 +24,6 @@ class ProductDetailsViewBody extends StatelessWidget {
           textButton: 'Add To Cart',
           text: 'Total',
           textColor: kIntSecondaryColor,
-          textWeight: FontWeight.bold,
           price: 18.19,
         ),
         Gap(30),

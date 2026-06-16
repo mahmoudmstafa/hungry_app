@@ -8,7 +8,7 @@ class CustomButton extends StatelessWidget {
     required this.backgroundColor,
     this.textColor,
     this.width,
-    this.height, this.padding, this.margin,
+    this.height, this.padding, this.margin, this.borderRadius, this.textFontSize,
   });
 
   final VoidCallback? onTap;
@@ -21,7 +21,8 @@ class CustomButton extends StatelessWidget {
 
   final EdgeInsetsGeometry? padding ;
   final EdgeInsetsGeometry? margin ;
-
+final double? textFontSize;
+  final double? borderRadius;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -30,7 +31,7 @@ class CustomButton extends StatelessWidget {
         height: height ?? 50,
         decoration: BoxDecoration(
           color: backgroundColor,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(borderRadius ?? 16),
         ),
         padding: padding,
         margin: margin ,
@@ -41,7 +42,7 @@ class CustomButton extends StatelessWidget {
               text,
               style: TextStyle(
                 color: textColor ?? Colors.white,
-                fontSize: 16,
+                fontSize: textFontSize ?? 16,
                 fontWeight: FontWeight.bold,
               ),
             ),

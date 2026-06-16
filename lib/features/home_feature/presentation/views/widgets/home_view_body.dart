@@ -3,7 +3,7 @@ import 'package:hungry_app/features/home_feature/presentation/views/widgets/sear
 
 import '../../../../../core/utils/constant.dart';
 import '../../../../../core/widgets/custom_scaffold.dart';
-import 'bottom_bar.dart';
+import '../../../../../core/widgets/custom_bottom_bar.dart';
 import 'home_view_app_bar_section.dart';
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({
@@ -26,7 +26,7 @@ class HomeViewBody extends StatelessWidget {
             ),
           ),
         ),
-        BottomBar(),
+        CustomBottomBar(),
       ],
     );
   }

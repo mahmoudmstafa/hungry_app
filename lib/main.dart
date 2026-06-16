@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hungry_app/features/product_details_feature/views/product_details_view.dart';
 
+import 'features/cart_feature/views/cart_view.dart';
 import 'features/home_feature/presentation/views/home_view.dart';
 import 'features/splash_view.dart';
 
@@ -24,8 +25,9 @@ class HungryApp extends StatelessWidget {
         SplashView.id: (context) => const SplashView(),
         HomeView.id: (context) => const HomeView(),
         ProductDetailsView.id: (context) => const ProductDetailsView(),
+        CartView.id: (context) => const CartView(),
       },
-      initialRoute: ProductDetailsView.id,
+      initialRoute: CartView.id,
     );
   }
 }

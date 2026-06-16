@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../core/utils/constant.dart';
-import '../../../../../generated/assets.dart';
+import '../utils/constant.dart';
+import '../../generated/assets.dart';
 
-class BottomBar extends StatefulWidget {
-  const BottomBar({
+class CustomBottomBar extends StatefulWidget {
+  const CustomBottomBar({
     super.key,
   });
 
   @override
-  State<BottomBar> createState() => _BottomBarState();
+  State<CustomBottomBar> createState() => _CustomBottomBarState();
 }
 
-class _BottomBarState extends State<BottomBar> {
+class _CustomBottomBarState extends State<CustomBottomBar> {
   final List<String> icons = [
     Assets.assets.images.home.path,
     Assets.assets.images.comment.path,
