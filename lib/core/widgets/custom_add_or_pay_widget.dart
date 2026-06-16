@@ -28,48 +28,43 @@ class CustomAddOrPayWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: kPadding,
-      ),
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CustomText(
-                  text: text,
-                  color: textColor ?? kIntSecondaryColor,
-                  fontSize: fontSize ?? 18,
-                  fontWeight: textWeight ?? FontWeight.bold,
-                ),
-                Row(
-                  children: [
-                    Image.asset(
-                      Assets.assets.images.dollar.path,
-                    ),
-                    CustomText(
-                      fontFamily: 'ReemKufiInk',
-                      text: ' $price',
-                      color: 0xFF000000,
-                      fontWeight: textWeight,
-                      fontSize: 32,
-                    ),
-                  ],
-                ),
-              ],
-            ),
+    return Row(
+      children: [
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomText(
+                text: text,
+                color: textColor ?? kIntSecondaryColor,
+                fontSize: fontSize ?? 18,
+                fontWeight: textWeight ?? FontWeight.bold,
+              ),
+              Row(
+                children: [
+                  Image.asset(
+                    Assets.assets.images.dollar.path,
+                  ),
+                  CustomText(
+                    fontFamily: 'ReemKufiInk',
+                    text: ' $price',
+                    color: 0xFF000000,
+                    fontWeight: textWeight,
+                    fontSize: 32,
+                  ),
+                ],
+              ),
+            ],
           ),
-          Expanded(
-            child: CustomButton(
-              height: 55,
-              text: textButton,
-              backgroundColor: kPrimaryColor,
-            ),
+        ),
+        Expanded(
+          child: CustomButton(
+            height: 55,
+            text: textButton,
+            backgroundColor: kPrimaryColor,
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

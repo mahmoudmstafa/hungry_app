@@ -6,6 +6,7 @@ import 'package:hungry_app/features/product_details_feature/presentation/views/w
 import '../../../../../core/utils/constant.dart';
 import '../../../../../core/widgets/custom_add_or_pay_widget.dart';
 import '../../../../../core/widgets/custom_back_button.dart';
+import 'add_to_cart_section.dart';
 
 class ProductDetailsViewBody extends StatelessWidget {
   const ProductDetailsViewBody({super.key});
@@ -15,22 +16,19 @@ class ProductDetailsViewBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomBackButton(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: kPadding),
+          child: CustomBackButton(),
+        ),
         ProductDetailsSection(),
-        Gap(30),
         ToppingsAndSideOptionsSections(),
         Spacer(),
-        CustomAddOrPayWidget(
-          textButton: 'Add To Cart',
-          text: 'Total',
-          textColor: kIntSecondaryColor,
-          price: 18.19,
-        ),
-        Gap(30),
+        AddToCartSection(),
       ],
     );
   }
 }
+
 
 
 
