@@ -83,6 +83,8 @@ flutter:
     - lib/features/product_details_feature/
     - lib/features/cart_feature/
     - lib/features/product_details_feature/presentation/views/widgets/
+    - lib/features/profile_feature/presentation/views/widgets/
+    - lib/generated/
 
 
   fonts:

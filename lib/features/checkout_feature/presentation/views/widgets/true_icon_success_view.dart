@@ -4,7 +4,6 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../../core/utils/constant.dart';
 import '../../../../../generated/assets.dart';
 
-
 class TrueIconSuccessView extends StatelessWidget {
   const TrueIconSuccessView({
     super.key,
@@ -13,7 +12,7 @@ class TrueIconSuccessView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 26),
+      margin: EdgeInsets.only(top: 25, bottom: 24),
       width: 65,
       height: 65,
       decoration: BoxDecoration(

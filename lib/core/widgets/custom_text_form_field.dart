@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/constant.dart';
+
 class CustomTextFormField extends StatefulWidget {
   const CustomTextFormField({
     super.key,
@@ -21,7 +23,13 @@ class CustomTextFormField extends StatefulWidget {
     this.onSaved,
     this.validator,
     this.hintColor,
-    this.keyboardType, this.prefixIcon,
+    this.keyboardType,
+    this.prefixIcon,
+    this.filled,
+    this.borderRadius,
+    this.textStyle,
+    this.label,
+    this.obscureText = false,
   });
 
   final String? hintText;
@@ -43,11 +51,19 @@ class CustomTextFormField extends StatefulWidget {
 
   final double? widthFocusedBorder;
 
+  final TextStyle? textStyle;
+
+  final bool? filled;
   final double? widthErrorBorder;
   final TextInputType? keyboardType;
   final double? widthFocusedErrorBorder;
   final void Function(String? data)? onSaved;
   final String? Function(String? data)? validator;
+
+  final Widget? label;
+  final double? borderRadius;
+
+  final bool obscureText;
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
@@ -77,6 +93,9 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscuringCharacter: '●',
+      obscureText: widget.obscureText,
+      style: widget.textStyle,
       keyboardType: widget.keyboardType,
       onChanged: _handleChange,
       onFieldSubmitted: widget.onSubmitted,
@@ -96,30 +115,24 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       cursorColor: widget.cursorColor,
       textDirection: _textDirection,
       decoration: InputDecoration(
-        filled: true ,
+        filled: widget.filled ?? true,
         fillColor: Colors.white,
         contentPadding: EdgeInsets.symmetric(
-          horizontal: 16,
+          horizontal: 22,
           vertical: 16,
         ),
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-        // labelText: widget.labelText ?? 'Search',
-        prefixIcon: widget.prefixIcon ??
-            Icon(
-              Icons.search,
-              color: Colors.black,
-              size: 28,
-            ),
-        // suffixIcon: widget.suffixIcon ??
-        //     Icon(
-        //       Icons.search,
-        //       color: Colors.black,
-        //       size: 28,
-        //     ),
+        label: widget.label,
+        // floatingLabelBehavior: FloatingLabelBehavior.always,
+        labelText: widget.labelText,
+        prefixIcon: widget.prefixIcon,
+        suffixIcon: widget.suffixIcon,
         labelStyle: TextStyle(
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
-          fontSize: 24,
+          color: Color(0xFF7F7F7F),
+          fontSize: 18,
+        ),
+        floatingLabelStyle: const TextStyle(
+          color: Colors.white,
+          fontSize: 20,
         ),
         suffixIconConstraints: const BoxConstraints(
           minWidth: 12,
@@ -159,7 +172,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
     required double widthBorder,
   }) {
     return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(widget.borderRadius ?? 20),
       borderSide: BorderSide(
         color: colorBorder,
         width: widthBorder,

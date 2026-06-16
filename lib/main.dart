@@ -4,6 +4,7 @@ import 'features/cart_feature/presentation/views/cart_view.dart';
 import 'features/checkout_feature/presentation/views/checkout_view.dart';
 import 'features/home_feature/presentation/views/home_view.dart';
 import 'features/product_details_feature/presentation/views/product_details_view.dart';
+import 'features/profile_feature/presentation/views/profile_view.dart';
 import 'features/splash_view.dart';
 
 void main() {
@@ -28,8 +29,9 @@ class HungryApp extends StatelessWidget {
         ProductDetailsView.id: (context) => const ProductDetailsView(),
         CartView.id: (context) => const CartView(),
         CheckoutView.id: (context) => const CheckoutView(),
+        ProfileView.id: (context) => const ProfileView(),
       },
-      initialRoute: CheckoutView.id,
+      initialRoute: HomeView.id,
     );
   }
 }

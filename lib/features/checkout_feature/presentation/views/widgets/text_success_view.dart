@@ -26,7 +26,7 @@ class TextSuccessView extends StatelessWidget {
           text:
           'Your payment was successful.\nA receipt for this purchase\nhas been sent to your email.',
           color: 0xffBCBBBB,
-          fontSize: 12,
+          fontSize: 14,
         ),
       ],
     );

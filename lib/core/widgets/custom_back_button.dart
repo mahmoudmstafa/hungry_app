@@ -9,9 +9,12 @@ class CustomBackButton extends StatelessWidget {
   const CustomBackButton({
     super.key,
     this.settings = false,
+    this.colorOfBackIcon,
   });
 
   final bool settings;
+
+  final Color? colorOfBackIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,10 @@ class CustomBackButton extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SvgPicture.asset(Assets.assets.images.back.path),
+            SvgPicture.asset(
+              Assets.assets.images.back.path,
+              color: colorOfBackIcon,
+            ),
             settings
                 ? SvgPicture.asset(
                     Assets.assets.images.settings.path,

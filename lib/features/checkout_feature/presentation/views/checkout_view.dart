@@ -9,7 +9,7 @@ class CheckoutView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SuccessView();
+    // return SuccessView();
     return Scaffold(
       backgroundColor: Colors.white,
       body: CheckoutViewBody(),

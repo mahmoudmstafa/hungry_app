@@ -24,16 +24,23 @@ class TextFieldHomeView extends StatelessWidget {
         ],
       ),
       child: CustomTextFormField(
+        cursorColor: kSecondaryColor,
+        textStyle: TextStyle(
+          color: kSecondaryColor,
+          fontSize: 20,
+          fontWeight: FontWeight.w600,
+        ),
         focusedBorderColor: kPrimaryColor,
         prefixIcon: Padding(
           padding: const EdgeInsets.only(
-            top: 13.0,
+            top: 14.0,
             bottom: 13,
             left: 25,
             right: 28,
           ),
           child: SvgPicture.asset(
             Assets.assets.images.search.path,
+            width: 24,
           ),
         ),
         hintText: "Search",
