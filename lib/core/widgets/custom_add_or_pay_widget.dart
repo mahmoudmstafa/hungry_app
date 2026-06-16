@@ -13,6 +13,7 @@ class CustomAddOrPayWidget extends StatelessWidget {
     this.textColor,
     this.textWeight,
     this.price,
+    this.fontSize,
   });
 
   final String textButton;
@@ -23,7 +24,7 @@ class CustomAddOrPayWidget extends StatelessWidget {
 
   final FontWeight? textWeight;
 
-  final double? price;
+  final double? price, fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +41,8 @@ class CustomAddOrPayWidget extends StatelessWidget {
                 CustomText(
                   text: text,
                   color: textColor ?? kIntSecondaryColor,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+                  fontSize: fontSize ?? 18,
+                  fontWeight: textWeight ?? FontWeight.bold,
                 ),
                 Row(
                   children: [

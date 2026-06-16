@@ -25,10 +25,16 @@ class $AssetsImagesGen {
   final SvgGenImage cold = const SvgGenImage('assets/images/cold.svg');
   final SvgGenImage comment = const SvgGenImage('assets/images/comment.svg');
   final AssetGenImage dollar = const AssetGenImage('assets/images/dollar.png');
+  final SvgGenImage dollarBackgroundRemoved1 = const SvgGenImage(
+    'assets/images/dollar Background Removed 1.svg',
+  );
   final AssetGenImage download = const AssetGenImage(
     'assets/images/download.png',
   );
   final AssetGenImage fries = const AssetGenImage('assets/images/fries.png');
+  final AssetGenImage greyDollar = const AssetGenImage(
+    'assets/images/grey_dollar.png',
+  );
   final AssetGenImage hamburger = const AssetGenImage(
     'assets/images/hamburger.png',
   );
@@ -44,6 +50,7 @@ class $AssetsImagesGen {
   final AssetGenImage profilePng = const AssetGenImage(
     'assets/images/profile.png',
   );
+
   final SvgGenImage profileSvg = const SvgGenImage('assets/images/profile.svg');
   final SvgGenImage purgerDetails = const SvgGenImage(
     'assets/images/purger_details.svg',
@@ -70,6 +77,7 @@ class $AssetsImagesGen {
     'assets/images/tomatos_png.png',
   );
   final SvgGenImage user = const SvgGenImage('assets/images/user.svg');
+  final AssetGenImage visa = const AssetGenImage('assets/images/visa.png');
 }
 
 class $AssetsFontsGen {
@@ -279,8 +287,6 @@ class $AssetsFeaturesGen {
   const $AssetsFeaturesGen();
 
   final $AssetsHomeFeatureGen homeFeature = const $AssetsHomeFeatureGen();
-  final $AssetsProductDetailsFeatureGen productDetailsFeature =
-      const $AssetsProductDetailsFeatureGen();
   final String splashView = 'lib/features/splash_view.dart';
 }
 
@@ -326,19 +332,6 @@ class $AssetsWidgetsGen {
   final String textFieldHomeView =
       'lib/features/home_feature/presentation/views/widgets/text_field_home_view.dart';
 }
-
-class $AssetsProductDetailsFeatureGen {
-  const $AssetsProductDetailsFeatureGen();
-
-  final $AssetsViewsGen views = const $AssetsViewsGen();
-}
-//
-// class $AssetsViewsGen {
-//   const $AssetsViewsGen();
-//
-//   final String productDetailsView =
-//       'lib/features/product_details_feature/views/product_details_view.dart';
-// }
 
 class $AssetsCoreGen {
   const $AssetsCoreGen();

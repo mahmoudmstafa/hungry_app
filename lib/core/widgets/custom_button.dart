@@ -42,7 +42,7 @@ final double? textFontSize;
               text,
               style: TextStyle(
                 color: textColor ?? Colors.white,
-                fontSize: textFontSize ?? 16,
+                fontSize: textFontSize ?? 14,
                 fontWeight: FontWeight.bold,
               ),
             ),
