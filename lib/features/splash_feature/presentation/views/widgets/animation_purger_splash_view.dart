@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../../../generated/assets.dart';
+
 class AnimationPurgerSplashView extends StatelessWidget {
   const AnimationPurgerSplashView({
     super.key,
@@ -12,15 +13,27 @@ class AnimationPurgerSplashView extends StatelessWidget {
     return Image.asset(
       Assets.assets.images.image1Png.path,
     )
-        .animate(delay: 1300.ms)
+        .animate(delay: 800.ms)
         .fadeIn(
-      duration: 1300.ms,
+      duration: 800.ms,
     )
         .slideY(
       begin: 0.5,
       end: 0,
-      duration: 1300.ms,
+      duration: 800.ms,
       curve: Curves.easeOut,
+    )
+        .then(
+      delay: 600.ms,
+    )
+        .slideY(
+      begin: 0,
+      end: 0.5,
+      duration: 800.ms,
+      curve: Curves.easeInBack,
+    )
+        .fadeOut(
+      duration: 800.ms,
     );
   }
 }

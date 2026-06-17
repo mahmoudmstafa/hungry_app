@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:hungry_app/core/utils/app_routes.dart';
 import 'package:hungry_app/features/aut_feature/presentation/views/login_view.dart';
 
 import '../../../../../core/widgets/custom_text.dart';
@@ -30,8 +33,8 @@ class TextAlreadyHavaAnAccount extends StatelessWidget {
             ),
         GestureDetector(
               onTap: () {
-                Navigator.pop(
-                  context,
+                Get.offNamed(
+                  AppRoutes.login,
                 );
               },
               child: CustomText(

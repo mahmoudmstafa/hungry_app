@@ -17,7 +17,7 @@ class HungryApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       getPages: AppRoutes.routes,
-      initialRoute: SplashView.id,
+      initialRoute: AppRoutes.splash,
     );
   }
 }

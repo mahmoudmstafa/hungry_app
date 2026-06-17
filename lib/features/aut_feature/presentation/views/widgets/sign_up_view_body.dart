@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:hungry_app/core/utils/constant.dart';
 import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_already_hava_an_account.dart';
 import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_fields_login_view_section.dart';
@@ -8,7 +9,9 @@ import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_
 import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_get_started_login_view.dart';
 import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_join_us_sign_up_view.dart';
 import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_welcome_back_login_view.dart';
+import 'package:hungry_app/features/home_feature/presentation/views/home_view.dart';
 
+import '../../../../../core/utils/app_routes.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../generated/assets.dart';
 import 'custom_auth_logo.dart';
@@ -45,6 +48,11 @@ class SignUpViewBody extends StatelessWidget {
                 ),
                 TextFieldSignUpViewSection(),
                 CustomButton(
+                  onTap: () {
+                    Get.offNamed(
+                      AppRoutes.home,
+                    );
+                  },
                   text: 'Sign Up',
                   textColor: kPrimaryColor,
                   textFontSize: 20,

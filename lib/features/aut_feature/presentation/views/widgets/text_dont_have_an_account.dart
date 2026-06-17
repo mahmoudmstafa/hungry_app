@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
+import '../../../../../core/utils/app_routes.dart';
 import '../../../../../core/widgets/custom_text.dart';
 import '../sign_up_view.dart';
 
@@ -29,9 +32,8 @@ class TextDontHaveAnAccount extends StatelessWidget {
             ),
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(
-              context,
-              SignUpView.id,
+            Get.offNamed(
+              AppRoutes.signUp,
             );
           },
           child:

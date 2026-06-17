@@ -1,7 +1,3 @@
-
-
-
-
 import 'package:get/get.dart';
 
 import '../../features/aut_feature/presentation/views/login_view.dart';
@@ -13,46 +9,85 @@ import '../../features/product_details_feature/presentation/views/product_detail
 import '../../features/profile_feature/presentation/views/profile_view.dart';
 import '../../features/splash_feature/presentation/views/splash_view.dart';
 
-class AppRoutes {
+abstract class AppRoutes {
+  static const String splash = "/splash";
+  static const String home = "/home";
+  static const String productDetails = "/product-details";
+  static const String cart = "/cart";
+  static const String checkout = "/checkout";
+  static const String profile = "/profile";
+  static const String signUp = "/sign-up";
+  static const String login = "/login";
   static final routes = [
     GetPage(
-      name: SplashView.id,
+      name: splash,
       page: () => const SplashView(),
+      transition: Transition.fade,
+      transitionDuration: const Duration(
+        milliseconds: 1000,
+      ),
     ),
 
     GetPage(
-      name: HomeView.id,
-      page: () => const HomeView(),
-    ),
-
-    GetPage(
-      name: ProductDetailsView.id,
-      page: () => const ProductDetailsView(),
-    ),
-
-    GetPage(
-      name: CartView.id,
-      page: () => const CartView(),
-    ),
-
-    GetPage(
-      name: CheckoutView.id,
-      page: () => const CheckoutView(),
-    ),
-
-    GetPage(
-      name: ProfileView.id,
-      page: () => const ProfileView(),
-    ),
-
-    GetPage(
-      name: SignUpView.id,
+      name: signUp,
       page: () => const SignUpView(),
+      transition: Transition.fade,
+      transitionDuration: const Duration(
+        milliseconds: 1000,
+      ),
     ),
 
     GetPage(
-      name: LoginView.id,
+      name: login,
       page: () => const LoginView(),
+      transition: Transition.fade,
+      transitionDuration: const Duration(
+        milliseconds: 1000,
+      ),
+    ),
+    GetPage(
+      name: home,
+      page: () => const HomeView(),
+      transition: Transition.zoom,
+      transitionDuration: const Duration(
+        milliseconds: 700,
+      ),
+    ),
+
+    GetPage(
+      name: productDetails,
+      page: () => const ProductDetailsView(),
+      transition: Transition.downToUp,
+      transitionDuration: const Duration(
+        milliseconds: 700,
+      ),
+    ),
+
+    GetPage(
+      name: cart,
+      page: () => const CartView(),
+      transition: Transition.downToUp,
+      transitionDuration: const Duration(
+        milliseconds: 700,
+      ),
+    ),
+
+    GetPage(
+      name: checkout,
+      page: () => const CheckoutView(),
+      transition: Transition.downToUp,
+      transitionDuration: const Duration(
+        milliseconds: 700,
+      ),
+    ),
+
+    GetPage(
+      name: profile,
+      page: () => const ProfileView(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(
+        milliseconds: 700,
+      ),
     ),
   ];
 }
