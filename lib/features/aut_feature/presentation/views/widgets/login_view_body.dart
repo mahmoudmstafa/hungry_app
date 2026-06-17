@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hungry_app/core/widgets/custom_button.dart';
 import 'package:hungry_app/core/widgets/custom_text.dart';
 import 'package:hungry_app/core/widgets/custom_text_form_field.dart';
+import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_dont_have_an_account.dart';
 import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_fields_login_view_section.dart';
 import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_get_started_login_view.dart';
 import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_welcome_back_login_view.dart';
@@ -35,7 +36,9 @@ class LoginViewBody extends StatelessWidget {
                 CustomAuthLogo(),
                 Gap(10),
                 TextWelcomeBackLoginView(),
-                Spacer(flex: 2,),
+                Spacer(
+                  flex: 2,
+                ),
                 TextGetStartedLoginView(),
                 TextFieldsLoginViewSection(),
                 CustomButton(
@@ -45,6 +48,8 @@ class LoginViewBody extends StatelessWidget {
                   height: 55,
                   backgroundColor: Colors.white,
                 ),
+                Gap(10),
+                TextDontHaveAnAccount(),
                 Gap(10),
                 Spacer(
                   flex: 7,
@@ -57,3 +62,4 @@ class LoginViewBody extends StatelessWidget {
     );
   }
 }
+

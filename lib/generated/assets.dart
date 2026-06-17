@@ -288,6 +288,7 @@ class $AssetsLibGen {
   final $AssetsCoreGen core = const $AssetsCoreGen();
   final $AssetsFeaturesGen features = const $AssetsFeaturesGen();
   final $AssetsGeneratedGen generated = const $AssetsGeneratedGen();
+  final String app = 'lib/app.dart';
   final String main = 'lib/main.dart';
 }
 
@@ -299,7 +300,6 @@ class $AssetsFeaturesGen {
       const $AssetsProductDetailsFeatureGen();
   final $AssetsProfileFeatureGen profileFeature =
       const $AssetsProfileFeatureGen();
-  final String splashView = 'lib/features/splash_view.dart';
 }
 
 class $AssetsHomeFeatureGen {
@@ -444,6 +444,7 @@ class $AssetsCoreGen {
 class $AssetsUtilsGen {
   const $AssetsUtilsGen();
 
+  final String appRoutes = 'lib/core/utils/app_routes.dart';
   final String constant = 'lib/core/utils/constant.dart';
 }
 

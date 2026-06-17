@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hungry_app/core/utils/constant.dart';
+import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_already_hava_an_account.dart';
 import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_fields_login_view_section.dart';
 import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_fields_sign_up_view_section.dart';
 import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_get_started_login_view.dart';
@@ -50,6 +51,8 @@ class SignUpViewBody extends StatelessWidget {
                   height: 55,
                   backgroundColor: Colors.white,
                 ),
+                Gap(10),
+                TextAlreadyHavaAnAccount(),
                 Gap(20),
                 Spacer(
                   flex: 7,
@@ -62,9 +65,3 @@ class SignUpViewBody extends StatelessWidget {
     );
   }
 }
-//
-// Expanded(
-// child: SizedBox(
-// height: 15,
-// ),
-// ),

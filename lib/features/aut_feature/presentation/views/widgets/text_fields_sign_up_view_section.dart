@@ -68,7 +68,7 @@ class _TextFieldSignUpViewSectionState
           ),
         ),
         Gap(
-          40,
+          25,
         ),
       ],
     );
