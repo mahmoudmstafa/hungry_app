@@ -28,12 +28,14 @@ class SignUpViewBody extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                Gap(10),
                 Spacer(
                   flex: 3,
                 ),
                 CustomAuthLogo(),
                 Gap(10),
                 TextJoinUsSignUpView(),
+                Gap(10),
                 Spacer(
                   flex: 2,
                 ),
@@ -60,3 +62,9 @@ class SignUpViewBody extends StatelessWidget {
     );
   }
 }
+//
+// Expanded(
+// child: SizedBox(
+// height: 15,
+// ),
+// ),

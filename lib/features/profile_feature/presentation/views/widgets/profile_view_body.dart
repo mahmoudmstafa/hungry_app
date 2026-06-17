@@ -24,8 +24,10 @@ class ProfileViewBody extends StatelessWidget {
         horizontal: kPadding,
       ),
       child: CustomScrollView(
+        physics: BouncingScrollPhysics(),
         slivers: [
-          SliverToBoxAdapter(
+          SliverFillRemaining(
+            hasScrollBody: false,
             child: Column(
               children: [
                 CustomBackButton(
@@ -36,8 +38,13 @@ class ProfileViewBody extends StatelessWidget {
                 TextFormFieldsProfileViewSection(),
                 CustomDividerProfileView(),
                 PaymentWithCardProfileView(),
-                Gap(25),
+                Expanded(
+                  child: SizedBox(
+                    height: 15,
+                  ),
+                ),
                 ButtonsProfileViewSection(),
+                Gap(25),
               ],
             ),
           ),
@@ -46,4 +53,3 @@ class ProfileViewBody extends StatelessWidget {
     );
   }
 }
-
