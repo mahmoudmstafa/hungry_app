@@ -18,7 +18,7 @@ class SplashView extends StatelessWidget {
           children: [
             Spacer(),
             SvgPicture.asset(
-              Assets.assets.images.logo.path,
+              kLogo,
             ),
             Spacer(),
             Image.asset(

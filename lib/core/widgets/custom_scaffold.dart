@@ -14,6 +14,7 @@ class CustomScaffold extends StatelessWidget {
         FocusScope.of(context).unfocus();
       },
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: backgroundColor ?? Colors.white,
         body: child,
       ),

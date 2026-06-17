@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'features/aut_feature/presentation/views/login_view.dart';
+import 'features/aut_feature/presentation/views/sign_up_view.dart';
 import 'features/cart_feature/presentation/views/cart_view.dart';
 import 'features/checkout_feature/presentation/views/checkout_view.dart';
 import 'features/home_feature/presentation/views/home_view.dart';
@@ -30,8 +32,10 @@ class HungryApp extends StatelessWidget {
         CartView.id: (context) => const CartView(),
         CheckoutView.id: (context) => const CheckoutView(),
         ProfileView.id: (context) => const ProfileView(),
+        SignUpView.id: (context) => const SignUpView(),
+        LoginView.id: (context) => const LoginView(),
       },
-      initialRoute: HomeView.id,
+      initialRoute: LoginView.id,
     );
   }
 }

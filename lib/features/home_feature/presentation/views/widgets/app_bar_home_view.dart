@@ -15,7 +15,7 @@ class AppBarHomeView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SvgPicture.asset(
-          Assets.assets.images.logo.path,
+          kLogo,
           color: kPrimaryColor,
           width: 180,
         ),

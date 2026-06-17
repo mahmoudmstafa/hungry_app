@@ -29,7 +29,7 @@ class CustomTextFormField extends StatefulWidget {
     this.borderRadius,
     this.textStyle,
     this.label,
-    this.obscureText = false,
+    this.obscureText = false, this.hintFontSize, this.hintFontWeight,
   });
 
   final String? hintText;
@@ -62,6 +62,9 @@ class CustomTextFormField extends StatefulWidget {
 
   final Widget? label;
   final double? borderRadius;
+
+  final double? hintFontSize;
+  final FontWeight? hintFontWeight;
 
   final bool obscureText;
 
@@ -141,8 +144,8 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         hintText: widget.hintText,
         hintStyle: TextStyle(
           color: widget.hintColor ?? Colors.grey,
-          fontSize: 20,
-          fontWeight: FontWeight.w600,
+          fontSize: widget.hintFontSize ??20,
+          fontWeight: widget.hintFontWeight ?? FontWeight.w600,
         ),
         errorStyle: const TextStyle(
           color: Color(0xFFEF9A9A),

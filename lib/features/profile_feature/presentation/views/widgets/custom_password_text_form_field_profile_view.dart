@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/widgets/custom_text_field_password_icon.dart';
 import 'custom_text_form_field_profile_view.dart';
 
 class CustomPasswordTextFormFieldProfileView extends StatefulWidget {
-  const CustomPasswordTextFormFieldProfileView({super.key});
+  const CustomPasswordTextFormFieldProfileView({super.key, this.iconColor});
+
+  final Color? iconColor;
 
   @override
   State<CustomPasswordTextFormFieldProfileView> createState() =>
@@ -19,17 +22,13 @@ class _CustomPasswordTextFormFieldProfileViewState
     return CustomTextFormFieldProfileView(
       obscureText: obscureText,
       labelText: 'Password',
-      suffixIcon: IconButton(
-        padding: EdgeInsets.only(right: 20),
+      suffixIcon: CustomTextFieldPasswordIcon(
+        obscureText: obscureText,
         onPressed: () {
           setState(() {
             obscureText = !obscureText;
           });
         },
-        icon: Icon(
-          obscureText ? Icons.lock_outline_rounded : Icons.lock_open_outlined,
-          color: Colors.white,
-        ),
       ),
     );
   }
