@@ -23,21 +23,25 @@ class ProfileViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(
         horizontal: kPadding,
       ),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            CustomBackButton(
-              settings: true,
-              colorOfBackIcon: Colors.white,
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Column(
+              children: [
+                CustomBackButton(
+                  settings: true,
+                  colorOfBackIcon: Colors.white,
+                ),
+                ProfilePhotoWidget(),
+                TextFormFieldsProfileViewSection(),
+                CustomDividerProfileView(),
+                PaymentWithCardProfileView(),
+                Gap(25),
+                ButtonsProfileViewSection(),
+              ],
             ),
-            ProfilePhotoWidget(),
-            TextFormFieldsProfileViewSection(),
-            CustomDividerProfileView(),
-            PaymentWithCardProfileView(),
-            Gap(25),
-            ButtonsProfileViewSection(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

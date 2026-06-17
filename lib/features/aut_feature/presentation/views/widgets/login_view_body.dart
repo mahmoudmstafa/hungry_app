@@ -30,21 +30,22 @@ class LoginViewBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Spacer(
-                  flex: 2,
+                  flex: 3,
                 ),
                 CustomAuthLogo(),
                 Gap(10),
                 TextWelcomeBackLoginView(),
-                Spacer(),
+                Spacer(flex: 2,),
                 TextGetStartedLoginView(),
                 TextFieldsLoginViewSection(),
                 CustomButton(
                   text: 'Login',
                   textColor: kPrimaryColor,
-                  textFontSize: 22,
+                  textFontSize: 21,
                   height: 55,
                   backgroundColor: Colors.white,
                 ),
+                Gap(10),
                 Spacer(
                   flex: 7,
                 ),

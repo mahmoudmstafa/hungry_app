@@ -35,7 +35,7 @@ class HungryApp extends StatelessWidget {
         SignUpView.id: (context) => const SignUpView(),
         LoginView.id: (context) => const LoginView(),
       },
-      initialRoute: LoginView.id,
+      initialRoute: ProfileView.id,
     );
   }
 }

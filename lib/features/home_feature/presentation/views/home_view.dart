@@ -10,6 +10,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
+      resizeToAvoidBottomInset: false,
       child: HomeViewBody(),
     );
   }
