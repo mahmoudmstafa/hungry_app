@@ -20,7 +20,7 @@ class HomeViewAppBarSection extends StatelessWidget {
         AppBarHomeView(),
         CustomText(
           text: 'Hello Mahmoud Mostafa',
-          fontSize: 18,
+          fontSize: 17,
         ),
       ],
     );
