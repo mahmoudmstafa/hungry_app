@@ -20,7 +20,7 @@ class PayNowSection extends StatelessWidget {
           price: 18.19,
           fontSize: 14,
         ),
-        Gap(30),
+        Gap(8),
       ],
     );
   }

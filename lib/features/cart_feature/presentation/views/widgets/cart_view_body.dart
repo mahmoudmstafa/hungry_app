@@ -9,6 +9,7 @@ import 'package:hungry_app/features/cart_feature/presentation/views/widgets/shop
 import '../../../../../core/utils/constant.dart';
 import '../../../../../core/widgets/custom_text.dart';
 import '../../../../../generated/assets.dart';
+
 class CartViewBody extends StatelessWidget {
   const CartViewBody({super.key});
 
@@ -35,8 +36,7 @@ class CartViewBody extends StatelessWidget {
             ),
           ),
         ),
-        Gap(10),
-        CustomBottomBar(),
+        Gap(8),
       ],
     );
   }

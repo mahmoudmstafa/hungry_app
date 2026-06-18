@@ -14,10 +14,11 @@ class CustomBottomBar extends StatefulWidget {
 }
 
 class _CustomBottomBarState extends State<CustomBottomBar> {
-  final List<String> icons = [
-    Assets.assets.images.home.path,
-    Assets.assets.images.comment.path,
-    Assets.assets.images.user.path,
+  final List<IconData> icons = [
+    Icons.home,
+    Icons.comment,
+    Icons.local_restaurant_sharp,
+    Icons.person,
   ];
 
   int selectedIndex = 0;
@@ -25,6 +26,9 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(
+        bottom: 8,
+      ),
       decoration: BoxDecoration(
         color: kPrimaryColor,
         borderRadius: BorderRadius.only(
@@ -36,18 +40,20 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: List.generate(icons.length, (index) {
-          return GestureDetector(
-            onTap: () {
+          return IconButton(
+            constraints: const BoxConstraints(
+              minWidth: 60,
+              minHeight: 60,
+            ),
+            onPressed: () {
               setState(() {
                 selectedIndex = index;
               });
             },
-            child: SvgPicture.asset(
+            icon: Icon(
               icons[index],
-              colorFilter: ColorFilter.mode(
-                selectedIndex == index ? Colors.grey : Colors.white,
-                BlendMode.srcIn,
-              ),
+              size: 28,
+              color: selectedIndex == index ? Colors.white : Colors.grey,
             ),
           );
         }),

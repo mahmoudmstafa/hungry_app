@@ -48,7 +48,7 @@ class LoginViewBody extends StatelessWidget {
                 CustomButton(
                   onTap: () {
                     Get.offNamed(
-                      AppRoutes.home,
+                      AppRoutes.main,
                     );
                   },
                   text: 'Login',

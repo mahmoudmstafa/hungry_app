@@ -26,7 +26,6 @@ class HomeViewBody extends StatelessWidget {
             ),
           ),
         ),
-        CustomBottomBar(),
       ],
     );
   }

@@ -8,9 +8,11 @@ import '../../features/home_feature/presentation/views/home_view.dart';
 import '../../features/product_details_feature/presentation/views/product_details_view.dart';
 import '../../features/profile_feature/presentation/views/profile_view.dart';
 import '../../features/splash_feature/presentation/views/splash_view.dart';
+import '../../root_view.dart';
 
 abstract class AppRoutes {
   static const String splash = "/splash";
+  static const String main = "/main";
   static const String home = "/home";
   static const String productDetails = "/product-details";
   static const String cart = "/cart";
@@ -27,7 +29,10 @@ abstract class AppRoutes {
         milliseconds: 1000,
       ),
     ),
-
+    GetPage(
+      name: main,
+      page: () => RootView(),
+    ),
     GetPage(
       name: signUp,
       page: () => const SignUpView(),
@@ -50,7 +55,7 @@ abstract class AppRoutes {
       page: () => const HomeView(),
       transition: Transition.zoom,
       transitionDuration: const Duration(
-        milliseconds: 700,
+        milliseconds: 500,
       ),
     ),
 

@@ -45,7 +45,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   Future<void> navigateToLoginView() async {
     await Future.delayed(
       const Duration(
-        milliseconds: 4550,
+        milliseconds: 4700,
       ),
       () {
         Get.offNamed(
