@@ -5,14 +5,17 @@ import '../../../../../core/utils/constant.dart';
 
 class CustomAuthLogo extends StatelessWidget {
   const CustomAuthLogo({
-    super.key,
+    super.key, this.isSignView = true,
   });
+
+  final bool isSignView;
 
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
       kLogo,
       width: 250,
+      color: isSignView ? kPrimaryColor : Colors.white,
     );
   }
 }

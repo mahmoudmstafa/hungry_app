@@ -14,19 +14,23 @@ class ShoppingCartItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomShadowWidget(
-      child: Row(
-        children: [
-          Expanded(
-            child: ShoppingCartItemDetails(),
-          ),
-          Gap(10),
-          Expanded(
-            child: ShoppingCartItemQuantityCounter(),
-          ),
-        ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20,
+      ),
+      child: CustomShadowWidget(
+        child: Row(
+          children: [
+            Expanded(
+              child: ShoppingCartItemDetails(),
+            ),
+            Gap(10),
+            Expanded(
+              child: ShoppingCartItemQuantityCounter(),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
-

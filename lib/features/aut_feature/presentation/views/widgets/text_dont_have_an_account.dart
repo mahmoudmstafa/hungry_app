@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:hungry_app/core/utils/constant.dart';
 
 import '../../../../../core/utils/app_routes.dart';
 import '../../../../../core/widgets/custom_text.dart';
@@ -19,8 +20,9 @@ class TextDontHaveAnAccount extends StatelessWidget {
       children: [
         CustomText(
               text: "Don't have an account ?  ",
-              color: 0xFFFFFFFF,
+              color: 0xFFFF9100,
               fontSize: 15,
+          fontWeight: FontWeight.w500,
             )
             .animate(delay: 600.ms)
             .fadeIn(duration: 500.ms)
@@ -39,9 +41,9 @@ class TextDontHaveAnAccount extends StatelessWidget {
           child:
               CustomText(
                     text: ">>> Sign Up <<<",
-                    color: 0xFFFFAB40,
+                    color: kIntPrimaryColor,
                     fontSize: 16,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w700,
                   )
                   .animate(delay: 800.ms)
                   .fadeIn(duration: 500.ms)

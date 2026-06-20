@@ -14,15 +14,27 @@ class ProductDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kPadding),
-          child: CustomBackButton(),
+        Expanded(
+          child: CustomScrollView(
+            physics: BouncingScrollPhysics(),
+            slivers: [
+              SliverToBoxAdapter(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: kPadding),
+                      child: CustomBackButton(),
+                    ),
+                    ProductDetailsSection(),
+                    ToppingsAndSideOptionsSections(),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
-        ProductDetailsSection(),
-        ToppingsAndSideOptionsSections(),
-        Spacer(),
         AddToCartSection(),
       ],
     );

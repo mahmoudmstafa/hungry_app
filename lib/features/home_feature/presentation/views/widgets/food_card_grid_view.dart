@@ -10,7 +10,8 @@ class FoodCardGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      physics: BouncingScrollPhysics(),
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       padding: EdgeInsets.only(top: 5,bottom: 20),
       itemCount: 20,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

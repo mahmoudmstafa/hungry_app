@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 import '../../generated/assets.dart';
 import '../utils/constant.dart';
@@ -24,9 +25,12 @@ class CustomBackButton extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SvgPicture.asset(
-              Assets.assets.images.back.path,
-              color: colorOfBackIcon,
+            GestureDetector(
+              onTap: () => Get.back(),
+              child: SvgPicture.asset(
+                Assets.assets.images.back.path,
+                color: colorOfBackIcon,
+              ),
             ),
             settings
                 ? SvgPicture.asset(

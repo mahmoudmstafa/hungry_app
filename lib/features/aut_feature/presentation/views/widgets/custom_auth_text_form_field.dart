@@ -27,11 +27,11 @@ class CustomAuthTextFormField extends StatelessWidget {
       ),
       borderRadius: 14,
       hintText: hintText,
-      hintColor: kSecondaryColor,
+      hintColor: kPrimaryColor,
       hintFontSize: 18,
       hintFontWeight: FontWeight.w400,
-      focusedBorderColor: kSecondaryColor,
-      enabledBorderColor: Colors.white,
+      focusedBorderColor: kPrimaryColor,
+      enabledBorderColor: kPrimaryColor,
     );
   }
 }

@@ -21,13 +21,22 @@ class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   final SvgGenImage back = const SvgGenImage('assets/images/back.svg');
+  final AssetGenImage burgerPreview = const AssetGenImage(
+    'assets/images/burger_preview.png',
+  );
   final SvgGenImage car = const SvgGenImage('assets/images/car.svg');
   final SvgGenImage check = const SvgGenImage('assets/images/check.svg');
+  final AssetGenImage chesseBurger = const AssetGenImage(
+    'assets/images/chesse_burger.png',
+  );
   final SvgGenImage cold = const SvgGenImage('assets/images/cold.svg');
   final SvgGenImage comment = const SvgGenImage('assets/images/comment.svg');
   final AssetGenImage dollar = const AssetGenImage('assets/images/dollar.png');
   final SvgGenImage dollarBackgroundRemoved1 = const SvgGenImage(
     'assets/images/dollar Background Removed 1.svg',
+  );
+  final AssetGenImage dollarUpscayl4xUpscaylStandard4x = const AssetGenImage(
+    'assets/images/dollar_upscayl_4x_upscayl-standard-4x.png',
   );
   final AssetGenImage download = const AssetGenImage(
     'assets/images/download.png',
@@ -37,6 +46,10 @@ class $AssetsImagesGen {
   final AssetGenImage greyDollar = const AssetGenImage(
     'assets/images/grey_dollar.png',
   );
+  final AssetGenImage greyDollarUpscayl4xUpscaylStandard4x =
+      const AssetGenImage(
+        'assets/images/grey_dollar_upscayl_4x_upscayl-standard-4x.png',
+      );
   final AssetGenImage hamburger = const AssetGenImage(
     'assets/images/hamburger.png',
   );
@@ -61,6 +74,7 @@ class $AssetsImagesGen {
   );
   final SvgGenImage search = const SvgGenImage('assets/images/search.svg');
   final SvgGenImage settings = const SvgGenImage('assets/images/settings.svg');
+  final SvgGenImage shadow = const SvgGenImage('assets/images/shadow.svg');
   final AssetGenImage signOut = const AssetGenImage(
     'assets/images/sign-out.png',
   );
@@ -290,7 +304,7 @@ class $AssetsLibGen {
   final $AssetsGeneratedGen generated = const $AssetsGeneratedGen();
   final String app = 'lib/app.dart';
   final String main = 'lib/main.dart';
-  final String mainView = 'lib/root_view.dart';
+  final String rootView = 'lib/root_view.dart';
 }
 
 class $AssetsFeaturesGen {
@@ -330,6 +344,8 @@ class $AssetsWidgetsGen {
       'lib/features/home_feature/presentation/views/widgets/acitve_and_inactive_menu.dart';
   final String appBarHomeView =
       'lib/features/home_feature/presentation/views/widgets/app_bar_home_view.dart';
+  final String favouriteButton =
+      'lib/features/home_feature/presentation/views/widgets/favourite_button.dart';
   final String foodCard =
       'lib/features/home_feature/presentation/views/widgets/food_card.dart';
   final String foodCardGridView =
@@ -352,11 +368,93 @@ class $AssetsProductDetailsFeatureGen {
   final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
 }
 
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String addToCartSection =
+//       'lib/features/product_details_feature/presentation/views/widgets/add_to_cart_section.dart';
+//   final String coldAndSpicyIcons =
+//       'lib/features/product_details_feature/presentation/views/widgets/cold_and_spicy_icons.dart';
+//   final String editingWidget =
+//       'lib/features/product_details_feature/presentation/views/widgets/editing_widget.dart';
+//   final String productDetailsSection =
+//       'lib/features/product_details_feature/presentation/views/widgets/product_details_section.dart';
+//   final String productDetailsText =
+//       'lib/features/product_details_feature/presentation/views/widgets/product_details_text.dart';
+//   final String productDetailsViewBody =
+//       'lib/features/product_details_feature/presentation/views/widgets/product_details_view_body.dart';
+//   final String sideOptionsListView =
+//       'lib/features/product_details_feature/presentation/views/widgets/side_options_list_view.dart';
+//   final String sideOptionsSection =
+//       'lib/features/product_details_feature/presentation/views/widgets/side_options_section.dart';
+//   final String sliderWidget =
+//       'lib/features/product_details_feature/presentation/views/widgets/slider_widget.dart';
+//   final String spicySection =
+//       'lib/features/product_details_feature/presentation/views/widgets/spicy_section.dart';
+//   final String toppingsAndSideOptionsSections =
+//       'lib/features/product_details_feature/presentation/views/widgets/toppings_and_side_options_sections.dart';
+//   final String toppingsListView =
+//       'lib/features/product_details_feature/presentation/views/widgets/toppings_list_view.dart';
+//   final String toppingsSection =
+//       'lib/features/product_details_feature/presentation/views/widgets/toppings_section.dart';
+// }
+
 class $AssetsProfileFeatureGen {
   const $AssetsProfileFeatureGen();
 
   final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
 }
+
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String buttonsProfileViewSection =
+//       'lib/features/profile_feature/presentation/views/widgets/buttons_profile_view_section.dart';
+//   final String customButtonProfileView =
+//       'lib/features/profile_feature/presentation/views/widgets/custom_button_profile_view.dart';
+//   final String customDividerProfileView =
+//       'lib/features/profile_feature/presentation/views/widgets/custom_divider_profile_view.dart';
+//   final String customPasswordTextFormFieldProfileView =
+//       'lib/features/profile_feature/presentation/views/widgets/custom_password_text_form_field_profile_view.dart';
+//   final String customTextFormFieldProfileView =
+//       'lib/features/profile_feature/presentation/views/widgets/custom_text_form_field_profile_view.dart';
+//   final String paymentWithCardProfileView =
+//       'lib/features/profile_feature/presentation/views/widgets/payment_with_card_profile_view.dart';
+//   final String profilePhotoWidget =
+//       'lib/features/profile_feature/presentation/views/widgets/profile_photo_widget.dart';
+//   final String profileViewBody =
+//       'lib/features/profile_feature/presentation/views/widgets/profile_view_body.dart';
+//   final String profileViewForm =
+//       'lib/features/profile_feature/presentation/views/widgets/profile_view_form.dart';
+//   final String profileViewHeader =
+//       'lib/features/profile_feature/presentation/views/widgets/profile_view_header.dart';
+//   final String textFormFieldsProfileViewSection =
+//       'lib/features/profile_feature/presentation/views/widgets/text_form_fields_profile_view_section.dart';
+// }
 
 class $AssetsCoreGen {
   const $AssetsCoreGen();

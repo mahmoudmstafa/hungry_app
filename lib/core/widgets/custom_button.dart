@@ -44,12 +44,13 @@ class CustomButton extends StatelessWidget {
         margin: margin,
         child: Center(
           child: Padding(
+
             padding: const EdgeInsets.symmetric(horizontal: 18.0),
             child: Text(
               text,
               style: TextStyle(
                 color: textColor ?? Colors.white,
-                fontSize: textFontSize ?? 14,
+                fontSize: textFontSize ?? 18,
                 fontWeight: FontWeight.bold,
               ),
             ),

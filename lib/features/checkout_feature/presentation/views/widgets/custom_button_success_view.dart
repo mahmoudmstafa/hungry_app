@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../core/utils/constant.dart';
 import '../../../../../core/widgets/custom_button.dart';
 
-class CustomButtonSuccessView extends StatelessWidget {
-  const CustomButtonSuccessView({
+class CustomButtonSuccessWidget extends StatelessWidget {
+  const CustomButtonSuccessWidget({
     super.key,
   });
 
@@ -15,6 +16,7 @@ class CustomButtonSuccessView extends StatelessWidget {
         horizontal: 35,
       ),
       child: CustomButton(
+        onTap: () => Get.back(),
         text: 'Go Back',
         backgroundColor: kPrimaryColor,
         height: 55,

@@ -21,7 +21,7 @@ class _CustomPasswordTextFormFieldProfileViewState
   Widget build(BuildContext context) {
     return CustomTextFormFieldProfileView(
       obscureText: obscureText,
-      labelText: 'Password',
+      hintText: 'Password',
       suffixIcon: CustomTextFieldPasswordIcon(
         obscureText: obscureText,
         onPressed: () {

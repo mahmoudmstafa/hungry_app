@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 
+import '../../../../../core/utils/constant.dart';
 import '../../../../../core/widgets/custom_text.dart';
 
 
@@ -17,7 +18,7 @@ class TextJoinUsSignUpView extends StatelessWidget {
       alignment: Alignment.center,
       child: CustomText(
         text: 'Join Us Today and Discover Great Fast Food',
-        color: 0xFFFFFFFF,
+        color: kIntPrimaryColor,
         fontSize: 13,
       ),
     );

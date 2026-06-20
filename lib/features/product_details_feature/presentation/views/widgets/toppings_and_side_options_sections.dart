@@ -16,7 +16,10 @@ class ToppingsAndSideOptionsSections extends StatelessWidget {
       children: [
         Gap(30),
         ToppingsSection(),
+        Gap(10),
         SideOptionSection(),
+        Gap(10),
+
       ],
     );
   }

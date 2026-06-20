@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hungry_app/core/utils/constant.dart';
-import 'package:hungry_app/features/cart_feature/presentation/views/cart_view.dart';
 
+import '../../core/utils/constant.dart';
+import 'features/cart_feature/presentation/views/cart_view.dart';
 import 'features/checkout_feature/presentation/views/checkout_view.dart';
 import 'features/home_feature/presentation/views/home_view.dart';
+import 'features/order_history_feature/presentation/views/order_history_view.dart';
 import 'features/profile_feature/presentation/views/profile_view.dart';
 
 class RootView extends StatefulWidget {
@@ -15,37 +16,54 @@ class RootView extends StatefulWidget {
 
 class _RootViewState extends State<RootView> {
   late PageController pageController;
-  late List<Widget> pages;
+
   int currentIndex = 0;
+
+  final List<Widget Function()> pages = [
+        () => const HomeView(),
+        () => const CartView(),
+        () => const OrderHistoryView(),
+        () => const ProfileView(),
+  ];
 
   @override
   void initState() {
-    pageController = PageController();
-    pages = [
-      HomeView(),
-      CartView(),
-      CheckoutView(),
-      ProfileView(),
-    ];
     super.initState();
+    pageController = PageController();
+  }
+
+  @override
+  void dispose() {
+    pageController.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(
+      body: PageView.builder(
+        physics: BouncingScrollPhysics(),
         controller: pageController,
-        children: pages,
+        itemCount: pages.length,
+        onPageChanged: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
+        itemBuilder: (context, index) {
+          return pages[index]();
+        },
       ),
+
       bottomNavigationBar: ClipRRect(
         borderRadius: const BorderRadius.vertical(
           top: Radius.circular(20),
         ),
         child: Container(
           padding: const EdgeInsets.only(
-            bottom: 10,
-            left: 15,
-            right: 15,
+            bottom: 5,
+            left: 20,
+            right: 20,
           ),
           height: 75,
           color: kPrimaryColor,
@@ -61,12 +79,15 @@ class _RootViewState extends State<RootView> {
               elevation: 0,
               selectedItemColor: Colors.white,
               unselectedItemColor: Colors.grey,
+
               onTap: (index) {
                 setState(() {
                   currentIndex = index;
                 });
+
                 pageController.jumpToPage(index);
               },
+
               items: const [
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
@@ -78,7 +99,7 @@ class _RootViewState extends State<RootView> {
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.local_restaurant_sharp),
-                  label: 'CheckOut',
+                  label: 'History',
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.person),

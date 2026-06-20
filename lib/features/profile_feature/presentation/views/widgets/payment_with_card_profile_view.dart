@@ -18,20 +18,21 @@ class PaymentWithCardProfileView extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           side: BorderSide.none,
         ),
-        color: Colors.white,
+        color: kSecondaryColor,
         elevation: 5,
         shadowColor: Colors.black,
         child: Center(
           child: ListTile(
             title: CustomText(
               text: 'Debit card',
-              color: kIntSecondaryColor,
+              color: 0xffffffff,
               fontSize: 14,
               fontWeight: FontWeight.w500,
+
             ),
             subtitle: CustomText(
               text: '3566 **** **** 0505',
-              color: 0xff808080,
+              color: 0xffffffff,
               fontSize: 12,
               fontWeight: FontWeight.w500,
             ),
@@ -42,7 +43,7 @@ class PaymentWithCardProfileView extends StatelessWidget {
             ),
             trailing: Icon(
               Icons.radio_button_checked,
-              color: kPrimaryColor,
+              color: Colors.white,
             ),
           ),
         ),

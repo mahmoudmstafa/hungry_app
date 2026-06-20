@@ -52,23 +52,7 @@ class _TextFieldSignUpViewSectionState
           ),
         ),
         Gap(
-          10,
-        ),
-        CustomAuthTextFormField(
-          obscureText: obscureText,
-          hintText: 'Coniform Password',
-          suffixIcon: CustomTextFieldPasswordIcon(
-            obscureText: obscureText,
-            iconColor: kSecondaryColor,
-            onPressed: () {
-              setState(() {
-                obscureText = !obscureText;
-              });
-            },
-          ),
-        ),
-        Gap(
-          25,
+          35,
         ),
       ],
     );

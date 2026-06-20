@@ -13,17 +13,16 @@ class TextFormFieldsProfileViewSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Gap(25),
         CustomTextFormFieldProfileView(
-          labelText: 'Name',
+          hintText: 'Name',
         ),
         Gap(15),
         CustomTextFormFieldProfileView(
-          labelText: 'Email',
+          hintText: 'Email',
         ),
         Gap(15),
         CustomTextFormFieldProfileView(
-          labelText: 'Delivery address',
+          hintText: 'Delivery address',
         ),
         Gap(15),
         CustomPasswordTextFormFieldProfileView(),

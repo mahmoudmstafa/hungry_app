@@ -21,23 +21,30 @@ class CheckoutViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: kPadding,
-      ),
-      child: Column(
-        children: [
-          CustomBackButton(),
-          OrderSummarySection(),
-          TotalAndDeliveryTimeSection(),
-          PaymentMethodsSection(),
-          Spacer(),
-          PayNowSection(),
-        ],
-      ),
+    return Column(
+      children: [
+        Expanded(
+          child: CustomScrollView(
+            physics: BouncingScrollPhysics(),
+            slivers: [
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    children: [
+                      CustomBackButton(),
+                      OrderSummarySection(),
+                      TotalAndDeliveryTimeSection(),
+                      PaymentMethodsSection(),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        PayNowSection(),
+      ],
     );
   }
 }
-
-
-

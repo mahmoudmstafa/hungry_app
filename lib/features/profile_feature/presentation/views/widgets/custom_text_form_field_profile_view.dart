@@ -6,12 +6,12 @@ import '../../../../../core/widgets/custom_text_form_field.dart';
 class CustomTextFormFieldProfileView extends StatelessWidget {
   const CustomTextFormFieldProfileView({
     super.key,
-    required this.labelText,
+    required this.hintText,
     this.suffixIcon,
     this.obscureText = false,
   });
 
-  final String labelText;
+  final String hintText;
   final Widget? suffixIcon;
 
   final bool obscureText;
@@ -19,19 +19,21 @@ class CustomTextFormFieldProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
+      hintFontWeight: FontWeight.w500,
+      hintFontSize: 18,
       obscureText: obscureText,
       textStyle: TextStyle(
-        color: Colors.white,
+        color: kPrimaryColor,
         fontSize: 18,
       ),
-      labelText: labelText,
+      hintText: hintText,
       filled: false,
       borderRadius: 18,
-      enabledBorderColor: Colors.white,
-      focusedBorderColor: Colors.white,
-      cursorColor: Colors.white,
+      enabledBorderColor: kPrimaryColor,
+      focusedBorderColor: kPrimaryColor,
+      cursorColor: kPrimaryColor,
       suffixIcon: suffixIcon,
-      hintColor: Colors.white,
+      hintColor: Colors.grey.shade600,
     );
   }
 }

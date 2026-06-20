@@ -130,7 +130,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         prefixIcon: widget.prefixIcon,
         suffixIcon: widget.suffixIcon,
         labelStyle: TextStyle(
-          color: Color(0xFF7F7F7F),
+          color: Colors.red,
           fontSize: 18,
         ),
         floatingLabelStyle: const TextStyle(
@@ -144,7 +144,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         hintText: widget.hintText,
         hintStyle: TextStyle(
           color: widget.hintColor ?? Colors.grey,
-          fontSize: widget.hintFontSize ??20,
+          fontSize: widget.hintFontSize ?? 20,
           fontWeight: widget.hintFontWeight ?? FontWeight.w600,
         ),
         errorStyle: const TextStyle(

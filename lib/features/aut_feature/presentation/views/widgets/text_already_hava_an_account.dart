@@ -19,7 +19,7 @@ class TextAlreadyHavaAnAccount extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         CustomText(
-              text: "Already have an account ? ",
+              text: "Already have an account ?  ",
               color: 0xFFFFFFFF,
               fontSize: 15,
             )

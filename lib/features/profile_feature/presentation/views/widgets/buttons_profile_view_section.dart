@@ -20,6 +20,7 @@ class _ButtonsProfileViewSectionState extends State<ButtonsProfileViewSection> {
       children: [
         Expanded(
           child: CustomButtonProfileView(
+            outBorderColor: true,
             text: 'Edit Profile',
             textColor: kPrimaryColor,
             backgroundColor: Colors.white,
@@ -32,7 +33,7 @@ class _ButtonsProfileViewSectionState extends State<ButtonsProfileViewSection> {
             text: 'Log out',
             textColor: Colors.white,
             backgroundColor: kPrimaryColor,
-            image: Assets.assets.images.signOut.path,
+            image: Assets.assets.images.signOut.path, outBorderColor: false,
           ),
         ),
       ],

@@ -13,19 +13,19 @@ class AddToCartSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kPadding),
-      child: Column(
-        children: [
-          CustomAddOrPayWidget(
-            textButton: 'Add To Cart',
-            text: 'Total',
-            textColor: kIntSecondaryColor,
-            price: 18.19,
+    return Column(
+      children: [
+        CustomAddOrPayWidget(
+          padding: EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 10,
           ),
-          Gap(30),
-        ],
-      ),
+          textButton: 'Add To Cart',
+          text: 'Total',
+          textColor: kIntSecondaryColor,
+          price: 18.19,
+        ),
+      ],
     );
   }
 }

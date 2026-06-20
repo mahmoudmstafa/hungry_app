@@ -14,7 +14,8 @@ class ProductDetailsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 25.0),
+      padding: const EdgeInsets.only(right: 25.0 ,
+      top: 10),
       child: Row(
         children: [
           Expanded(
@@ -22,7 +23,7 @@ class ProductDetailsSection extends StatelessWidget {
               Assets.assets.images.productDetails.path,
             ),
           ),
-          Gap(30),
+          Gap(20),
           Expanded(
             child: Column(
               children: [

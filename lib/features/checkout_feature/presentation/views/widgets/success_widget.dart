@@ -9,24 +9,29 @@ import 'package:hungry_app/features/checkout_feature/presentation/views/widgets/
 import 'package:hungry_app/features/checkout_feature/presentation/views/widgets/text_success_view.dart';
 import 'package:hungry_app/features/checkout_feature/presentation/views/widgets/true_icon_success_view.dart';
 
-import '../../../../generated/assets.dart';
+import '../../../../../generated/assets.dart';
 
-class SuccessView extends StatelessWidget {
-  const SuccessView({super.key});
+class SuccessWidget extends StatelessWidget {
+  const SuccessWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(
-        0xffBCBBBB,
-      ),
-      body: SuccessViewBody(
+    return Center(
+      child: Container(
+        height: MediaQuery.sizeOf(context).height * .4,
+        margin: EdgeInsets.symmetric(horizontal: 45),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(
+            18,
+          ),
+        ),
         child: Column(
           children: [
             TrueIconSuccessView(),
             TextSuccessView(),
             Spacer(),
-            CustomButtonSuccessView(),
+            CustomButtonSuccessWidget(),
             Gap(20),
           ],
         ),
@@ -34,7 +39,3 @@ class SuccessView extends StatelessWidget {
     );
   }
 }
-
-
-
-

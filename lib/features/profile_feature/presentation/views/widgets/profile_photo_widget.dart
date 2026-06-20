@@ -12,15 +12,15 @@ class ProfilePhotoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 10),
-      width: 110,
-      height: 110,
+      width: 120,
+      height: 120,
       decoration: BoxDecoration(
+        shape: BoxShape.circle,
         border: BoxBorder.all(
           color: Colors.white,
           width: 1.5,
         ),
         color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
         image: DecorationImage(
           fit: BoxFit.cover,
           image: AssetImage(

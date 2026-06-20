@@ -12,11 +12,8 @@ import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_
 import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_get_started_login_view.dart';
 import 'package:hungry_app/features/aut_feature/presentation/views/widgets/text_welcome_back_login_view.dart';
 
-import '../../../../../core/utils/constant.dart';
-import '../../../../../generated/assets.dart';
-import '../../../../home_feature/presentation/views/home_view.dart';
-import 'custom_auth_logo.dart';
-import 'custom_auth_text_form_field.dart';
+import 'login_form_section.dart';
+import 'login_header_section.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -24,47 +21,46 @@ class LoginViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
+      physics: BouncingScrollPhysics(),
       slivers: [
         SliverFillRemaining(
           hasScrollBody: false,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: kPadding,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Spacer(
-                  flex: 3,
-                ),
-                CustomAuthLogo(),
-                Gap(10),
-                TextWelcomeBackLoginView(),
-                Spacer(
-                  flex: 2,
-                ),
-                TextGetStartedLoginView(),
-                TextFieldsLoginViewSection(),
-                CustomButton(
-                  onTap: () {
-                    Get.offNamed(
-                      AppRoutes.main,
-                    );
-                  },
-                  text: 'Login',
-                  textColor: kPrimaryColor,
-                  textFontSize: 21,
-                  height: 55,
-                  backgroundColor: Colors.white,
-                ),
-                Gap(10),
-                TextDontHaveAnAccount(),
-                Gap(10),
-                Spacer(
-                  flex: 7,
-                ),
-              ],
-            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+
+              // header
+              Expanded(
+                flex: 3,
+                child: LoginHeaderSection(),
+              ),
+
+              // form
+              Expanded(
+                flex: 4,
+                child: LoginFormSection(),
+              ),
+            ],
+          ),
+        )
+      ],
+    );
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(
+                flex: 3,
+                child: LoginHeaderSection(),
+              ),
+              Expanded(
+                flex: 4,
+                child: LoginFormSection(),
+              ),
+            ],
           ),
         ),
       ],

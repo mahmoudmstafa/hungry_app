@@ -1,9 +1,11 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/widgets/custom_text.dart';
 import '../../../../../generated/assets.dart';
-
 
 class ShoppingCartItemDetails extends StatelessWidget {
   const ShoppingCartItemDetails({
@@ -14,10 +16,33 @@ class ShoppingCartItemDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Gap(5),
-        Image.asset(
-          Assets.assets.images.hamburger.path,
-
+        const Gap(5),
+        SizedBox(
+          height: 120,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Positioned(
+                bottom: 5,
+                child: ImageFiltered(
+                  imageFilter: ImageFilter.blur(
+                    sigmaX: 10,
+                    sigmaY: 10,
+                  ),
+                  child: SvgPicture.asset(
+                    Assets.assets.images.shadow.path,
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 10,
+                child: Image.asset(
+                  Assets.assets.images.hamburger.path,
+                  height: 100,
+                ),
+              ),
+            ],
+          ),
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +60,7 @@ class ShoppingCartItemDetails extends StatelessWidget {
             ),
           ],
         ),
-        Gap(15),
+        const Gap(15),
       ],
     );
   }
