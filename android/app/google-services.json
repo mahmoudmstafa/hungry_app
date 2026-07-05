@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1023837237655",
+    "project_id": "hungry-app-4760d",
+    "storage_bucket": "hungry-app-4760d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023837237655:android:225eebdff3799ae948d4d2",
+        "android_client_info": {
+          "package_name": "com.example.hungry_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgwipHClpI9D9MLhAdvRw39mXtoJpv__Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

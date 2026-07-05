@@ -39,6 +39,8 @@ dependencies:
   auto_size_text: ^3.0.0
   flutter_animate: ^4.5.2
   get: ^4.7.3
+  firebase_core: ^4.11.0
+  firebase_auth: ^6.5.4
 
 dev_dependencies:
   flutter_test:

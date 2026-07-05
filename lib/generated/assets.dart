@@ -367,7 +367,7 @@ class $AssetsProductDetailsFeatureGen {
 
   final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
 }
-
+//
 // class $AssetsPresentationGen {
 //   const $AssetsPresentationGen();
 //
@@ -416,7 +416,7 @@ class $AssetsProfileFeatureGen {
 
   final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
 }
-
+//
 // class $AssetsPresentationGen {
 //   const $AssetsPresentationGen();
 //
@@ -444,8 +444,6 @@ class $AssetsProfileFeatureGen {
 //       'lib/features/profile_feature/presentation/views/widgets/custom_text_form_field_profile_view.dart';
 //   final String paymentWithCardProfileView =
 //       'lib/features/profile_feature/presentation/views/widgets/payment_with_card_profile_view.dart';
-//   final String profilePhotoWidget =
-//       'lib/features/profile_feature/presentation/views/widgets/profile_photo_widget.dart';
 //   final String profileViewBody =
 //       'lib/features/profile_feature/presentation/views/widgets/profile_view_body.dart';
 //   final String profileViewForm =
@@ -467,6 +465,7 @@ class $AssetsUtilsGen {
 
   final String appRoutes = 'lib/core/utils/app_routes.dart';
   final String constant = 'lib/core/utils/constant.dart';
+  final String firebaseOptions = 'lib/core/utils/firebase_options.dart';
 }
 
 class $AssetsGeneratedGen {
