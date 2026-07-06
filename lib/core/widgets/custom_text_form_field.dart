@@ -29,9 +29,12 @@ class CustomTextFormField extends StatefulWidget {
     this.borderRadius,
     this.textStyle,
     this.label,
-    this.obscureText = false, this.hintFontSize, this.hintFontWeight,
+    this.obscureText = false,
+    this.hintFontSize,
+    this.hintFontWeight, this.errorStyle, this.focusedErrorBorder,
   });
 
+  final Color? focusedErrorBorder;
   final String? hintText;
   final String? labelText;
   final int maxLines;
@@ -66,6 +69,7 @@ class CustomTextFormField extends StatefulWidget {
   final double? hintFontSize;
   final FontWeight? hintFontWeight;
 
+  final TextStyle? errorStyle;
   final bool obscureText;
 
   @override
@@ -104,15 +108,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       onFieldSubmitted: widget.onSubmitted,
       onSaved: widget.onSaved,
       validator: widget.validator,
-      //     (data) {
-      //   if (data?.isEmpty ?? true) {
-      //     //data == null || data.isEmpty
-      //     return 'Field is required';
-      //   } else {
-      //     return null;
-      //   }
-      // },
-      // autovalidateMode: AutovalidateMode.onUserInteraction,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       controller: widget.controller,
       maxLines: widget.maxLines,
       cursorColor: widget.cursorColor,
@@ -147,9 +143,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           fontSize: widget.hintFontSize ?? 20,
           fontWeight: widget.hintFontWeight ?? FontWeight.w600,
         ),
-        errorStyle: const TextStyle(
-          color: Color(0xFFEF9A9A),
-        ),
+        errorStyle: widget.errorStyle,
         enabledBorder: buildOutlineInputBorder(
           colorBorder: widget.enabledBorderColor ?? Colors.black,
           widthBorder: widget.widthEnabledBorder ?? 1.5,
@@ -163,7 +157,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           widthBorder: widget.widthErrorBorder ?? 1.5,
         ),
         focusedErrorBorder: buildOutlineInputBorder(
-          colorBorder: const Color(0xFFEF9A9A),
+          colorBorder: widget.focusedErrorBorder ?? const Color(0xFFE57373),
           widthBorder: widget.widthFocusedErrorBorder ?? 2.5,
         ),
       ),

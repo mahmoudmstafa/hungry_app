@@ -41,6 +41,12 @@ dependencies:
   get: ^4.7.3
   firebase_core: ^4.11.0
   firebase_auth: ^6.5.4
+  flutter_secure_storage: ^10.3.1
+  dio: ^5.10.0
+  flutter_bloc: ^9.1.1
+  get_it: ^9.2.1
+  modal_progress_hud_nsn: ^0.5.1
+  fpdart: ^1.2.0
 
 dev_dependencies:
   flutter_test:
@@ -88,7 +94,36 @@ flutter:
     - lib/features/cart_feature/
     - lib/features/product_details_feature/presentation/views/widgets/
     - lib/features/profile_feature/presentation/views/widgets/
-    - lib/generated/
+    - lib/features/aut_feature/domain/
+    - lib/features/aut_feature/domain/repos/
+    - lib/features/aut_feature/domain/entities/
+    - lib/core/widgets/
+    - lib/features/aut_feature/
+    - lib/features/aut_feature/data/
+    - lib/features/aut_feature/domain/use_cases/
+    - lib/features/aut_feature/presentation/
+    - lib/features/aut_feature/presentation/views/
+    - lib/features/aut_feature/presentation/views/widgets/
+    - lib/features/cart_feature/presentation/
+    - lib/features/cart_feature/presentation/views/
+    - lib/features/cart_feature/presentation/views/widgets/
+    - lib/features/splash_feature/
+    - lib/features/splash_feature/presentation/
+    - lib/features/splash_feature/presentation/views/
+    - lib/features/splash_feature/presentation/views/widgets/
+    - lib/features/profile_feature/
+    - lib/features/profile_feature/presentation/
+    - lib/features/profile_feature/presentation/views/
+    - lib/features/checkout_feature/
+    - lib/features/checkout_feature/presentation/
+    - lib/features/checkout_feature/presentation/views/
+    - lib/features/checkout_feature/presentation/views/widgets/
+    - lib/features/order_history_feature/
+    - lib/features/order_history_feature/presentation/
+    - lib/features/order_history_feature/presentation/views/
+    - lib/features/order_history_feature/presentation/views/widgets/
+    - lib/features/product_details_feature/presentation/
+    - lib/features/product_details_feature/presentation/views/
 
 
   fonts:

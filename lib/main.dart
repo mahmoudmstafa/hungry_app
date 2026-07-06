@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'app.dart';
 import 'package:firebase_core/firebase_core.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/utils/firebase_options.dart';
+import 'core/utils/service_locator.dart';
+import 'core/utils/simple_bloc_observer.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
+  Bloc.observer = SimpleBlocObserver();
+  setupLocator();
   runApp(
     const HungryApp(),
   );

@@ -8,7 +8,12 @@ import 'custom_auth_text_form_field.dart';
 class TextFieldSignUpViewSection extends StatefulWidget {
   const TextFieldSignUpViewSection({
     super.key,
+    this.onSavedName,
+    this.onSavedEmail,
+    this.onSavedPassword,
   });
+
+  final Function(String?)? onSavedName, onSavedEmail, onSavedPassword;
 
   @override
   State<TextFieldSignUpViewSection> createState() =>
@@ -27,18 +32,57 @@ class _TextFieldSignUpViewSectionState
           10,
         ),
         CustomAuthTextFormField(
+          focusedErrorBorder: Colors.orange[700],
+          errorBorderColor: Colors.orange[700],
+          errorStyle: TextStyle(
+            color: Colors.white,
+          ),
+          validator: (data) {
+            if (data?.isEmpty ?? true) {
+              return 'Name is required';
+            } else {
+              return null;
+            }
+          },
+          onSaved: widget.onSavedName,
           hintText: 'Name',
         ),
         Gap(
           10,
         ),
         CustomAuthTextFormField(
+          errorBorderColor: Colors.orange[700],
+          focusedErrorBorder: Colors.orange[700],
+          errorStyle: TextStyle(
+            color: Colors.white,
+          ),
+          validator: (data) {
+            if (data?.isEmpty ?? true) {
+              return 'Email is required';
+            } else {
+              return null;
+            }
+          },
+          onSaved: widget.onSavedEmail,
           hintText: 'Email Address',
         ),
         Gap(
           10,
         ),
         CustomAuthTextFormField(
+          errorBorderColor: Colors.orange[700],
+          focusedErrorBorder: Colors.orange[700],
+          errorStyle: TextStyle(
+            color: Colors.white,
+          ),
+          validator: (data) {
+            if (data?.isEmpty ?? true) {
+              return 'Password is required';
+            } else {
+              return null;
+            }
+          },
+          onSaved: widget.onSavedPassword,
           obscureText: obscureText,
           hintText: 'Password',
           suffixIcon: CustomTextFieldPasswordIcon(

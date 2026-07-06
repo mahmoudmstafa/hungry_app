@@ -37,7 +37,7 @@ abstract class AppRoutes {
       page: () => RootView(),
       transition: Transition.cupertinoDialog,
       transitionDuration: const Duration(
-        milliseconds: 500,
+        seconds: 2,
       ),
     ),
     GetPage(

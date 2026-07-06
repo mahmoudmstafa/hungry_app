@@ -8,7 +8,11 @@ import 'custom_auth_text_form_field.dart';
 class TextFieldsLoginViewSection extends StatefulWidget {
   const TextFieldsLoginViewSection({
     super.key,
+    this.onEmailSaved,
+    this.onPasswordSaved,
   });
+
+  final Function(String?)? onEmailSaved, onPasswordSaved;
 
   @override
   State<TextFieldsLoginViewSection> createState() =>
@@ -27,12 +31,38 @@ class _TextFieldsLoginViewSectionState
           10,
         ),
         CustomAuthTextFormField(
+          focusedErrorBorder: Colors.green,
+          errorBorderColor: Colors.green,
+          errorStyle: TextStyle(
+            color: kSecondaryColor,
+            fontWeight: FontWeight.w500,
+          ),
+          onSaved: widget.onEmailSaved,
+          validator: (data) {
+            if (data!.isEmpty) {
+              return 'Please enter your email';
+            }
+            return null;
+          },
           hintText: 'Email Address',
         ),
         Gap(
           10,
         ),
         CustomAuthTextFormField(
+          focusedErrorBorder: Colors.green,
+          errorBorderColor: Colors.green,
+          errorStyle: TextStyle(
+            color: kSecondaryColor,
+            fontWeight: FontWeight.w500,
+          ),
+          onSaved: widget.onPasswordSaved,
+          validator: (data) {
+            if (data!.isEmpty) {
+              return 'Please enter your password';
+            }
+            return null;
+          },
           obscureText: obscureText,
           hintText: 'Password',
           suffixIcon: CustomTextFieldPasswordIcon(

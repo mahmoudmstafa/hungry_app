@@ -7,17 +7,35 @@ class CustomAuthTextFormField extends StatelessWidget {
   const CustomAuthTextFormField({
     super.key,
     this.suffixIcon,
-    this.obscureText = false, required this.hintText,
+    this.obscureText = false,
+    required this.hintText,
+    this.onSaved,
+    this.validator,
+    this.errorStyle,
+    this.errorBorderColor,
+    this.focusedErrorBorder,
   });
 
   final Widget? suffixIcon;
 
-  final bool obscureText;
+  final TextStyle? errorStyle;
+  final Color? errorBorderColor;
 
-  final String hintText ;
+  final bool obscureText;
+  final Function(String?)? onSaved;
+  final String hintText;
+
+  final String? Function(String?)? validator;
+  final Color? focusedErrorBorder;
+
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
+      focusedErrorBorder: focusedErrorBorder,
+      errorBorderColor: errorBorderColor,
+      errorStyle: errorStyle,
+      validator: validator,
+      onSaved: onSaved,
       suffixIcon: suffixIcon,
       obscureText: obscureText,
       cursorColor: kSecondaryColor,
