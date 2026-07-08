@@ -1,5 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gap/flutter_gap.dart';
+import 'package:hungry_app/features/aut_feature/domain/entities/user_entity.dart';
+import 'package:hungry_app/features/aut_feature/presentation/manager/cubits/auth_cubit.dart';
 import 'package:hungry_app/features/profile_feature/presentation/views/widgets/payment_with_card_profile_view.dart';
 import 'package:hungry_app/features/profile_feature/presentation/views/widgets/text_form_fields_profile_view_section.dart';
 
@@ -8,11 +13,17 @@ import '../../../../../core/widgets/custom_text.dart';
 import 'buttons_profile_view_section.dart';
 import 'custom_divider_profile_view.dart';
 
-
-class ProfileViewForm extends StatelessWidget {
+class ProfileViewForm extends StatefulWidget {
   const ProfileViewForm({
     super.key,
   });
+
+  @override
+  State<ProfileViewForm> createState() => _ProfileViewFormState();
+}
+
+class _ProfileViewFormState extends State<ProfileViewForm> {
+  String? name;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +45,11 @@ class ProfileViewForm extends StatelessWidget {
             color: kIntPrimaryColor,
           ),
           Gap(15),
-          TextFormFieldsProfileViewSection(),
+          TextFormFieldsProfileViewSection(
+            onChangedName: (data) {
+              name = data;
+            },
+          ),
           CustomDividerProfileView(),
           PaymentWithCardProfileView(),
           Expanded(
@@ -42,7 +57,13 @@ class ProfileViewForm extends StatelessWidget {
               height: 15,
             ),
           ),
-          ButtonsProfileViewSection(),
+          ButtonsProfileViewSection(
+            onTap: () {
+              BlocProvider.of<AuthCubit>(context).updateNameAndPhoto(
+                name: name,
+              );
+            },
+          ),
           Gap(25),
         ],
       ),

@@ -10,8 +10,8 @@ class CustomDividerProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        top: 45,
-        bottom: 25,
+        top: 40,
+        bottom: 10,
       ),
       child: Divider(
         color: Color(

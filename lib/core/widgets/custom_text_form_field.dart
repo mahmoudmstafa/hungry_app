@@ -31,7 +31,7 @@ class CustomTextFormField extends StatefulWidget {
     this.label,
     this.obscureText = false,
     this.hintFontSize,
-    this.hintFontWeight, this.errorStyle, this.focusedErrorBorder,
+    this.hintFontWeight, this.errorStyle, this.focusedErrorBorder, this.enable,
   });
 
   final Color? focusedErrorBorder;
@@ -66,6 +66,7 @@ class CustomTextFormField extends StatefulWidget {
   final Widget? label;
   final double? borderRadius;
 
+  final bool? enable ;
   final double? hintFontSize;
   final FontWeight? hintFontWeight;
 
@@ -100,6 +101,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      enabled: widget.enable ,
       obscuringCharacter: '●',
       obscureText: widget.obscureText,
       style: widget.textStyle,

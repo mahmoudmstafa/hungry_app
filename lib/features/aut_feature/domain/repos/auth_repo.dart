@@ -1,4 +1,4 @@
-
+import 'dart:io';
 
 import '../../../../core/utils/failures.dart';
 import '../entities/user_entity.dart';
@@ -16,12 +16,12 @@ abstract class AuthRepo {
     required String password,
   });
 
-  Future<void> signOut();
+  Future<Either<Failure, UserEntity>> autoLogin();
 
-  Future<UserEntity?> getCurrentUser();
+  Future<Either<Failure, void>> logout();
 
-  Future<void> updateProfile({
+  Future<Either<Failure, UserEntity>> updateName({
     required String name,
-    String? photo,
+    required File? photo,
   });
 }

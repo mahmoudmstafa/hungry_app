@@ -175,4 +175,51 @@ class FirebaseFailure extends Failure {
         );
     }
   }
+
+  factory FirebaseFailure.fromAutoLoginException(
+      FirebaseAuthException exception,
+      ) {
+    switch (exception.code) {
+      case 'user-token-expired':
+        return FirebaseFailure(
+          errMessage: 'Your session has expired. Please log in again.',
+        );
+
+      case 'invalid-user-token':
+        return FirebaseFailure(
+          errMessage: 'Session invalid. Please log in again.',
+        );
+
+      case 'user-disabled':
+        return FirebaseFailure(
+          errMessage: 'This account has been disabled.',
+        );
+
+      case 'user-not-found':
+        return FirebaseFailure(
+          errMessage: 'Your account no longer exists. Please sign up again.',
+        );
+
+      case 'network-request-failed':
+        return FirebaseFailure(
+          errMessage: 'Please check your internet connection.',
+        );
+
+      case 'too-many-requests':
+        return FirebaseFailure(
+          errMessage: 'Too many attempts. Please try again later.',
+        );
+
+      case 'requires-recent-login':
+        return FirebaseFailure(
+          errMessage: 'Please log in again to continue.',
+        );
+
+      default:
+        return FirebaseFailure(
+          errMessage:
+          exception.message ?? 'Auto login failed. Please log in again.',
+        );
+    }
+  }
 }

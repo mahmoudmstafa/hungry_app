@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:hungry_app/core/widgets/profile_photo_widget.dart';
 
 import '../../../../../core/utils/constant.dart';
 import '../../../../../core/widgets/bottom_curve_clipper.dart';
 import '../../../../../core/widgets/custom_back_button.dart';
+import '../../../../aut_feature/presentation/manager/cubits/auth_cubit.dart';
 
 
 
@@ -30,6 +32,10 @@ class ProfileViewHeader extends StatelessWidget {
             ),
             Gap(10),
             ProfilePhotoWidget(
+              photo: context.watch<AuthCubit>().user.photo,
+              onTap: (){
+                context.read<AuthCubit>().pickProfileImage();
+              },
               width: 120,
               height: 120,
             ),

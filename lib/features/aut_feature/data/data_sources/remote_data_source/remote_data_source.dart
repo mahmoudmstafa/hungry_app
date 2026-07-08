@@ -1,9 +1,10 @@
+import 'dart:io';
+
 import 'package:hungry_app/features/aut_feature/domain/entities/user_entity.dart';
 
 import 'package:hungry_app/features/aut_feature/domain/entities/user_entity.dart';
 
 import '../../models/user_model.dart';
-
 
 abstract class AuthRemoteDataSource {
   Future<UserModel> signUp({
@@ -17,12 +18,13 @@ abstract class AuthRemoteDataSource {
     required String password,
   });
 
-  Future<void> signOut();
+  Future<void> logout();
 
-  Future<UserModel?> getCurrentUser();
 
-  Future<void> updateProfile({
+  Future<UserEntity> autoLogin();
+
+  Future<UserModel> updateNameAndPhoto({
     required String name,
-    String? photo,
+    File? photo,
   });
 }

@@ -54,7 +54,6 @@ class _RootViewState extends State<RootView> {
           return pages[index]();
         },
       ),
-
       bottomNavigationBar: ClipRRect(
         borderRadius: const BorderRadius.vertical(
           top: Radius.circular(20),

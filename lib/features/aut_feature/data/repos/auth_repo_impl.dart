@@ -1,9 +1,11 @@
 import 'dart:developer' show log;
+import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fpdart/fpdart.dart';
 
+import '../../../../core/utils/cloudinary_service.dart';
 import '../../../../core/utils/failures.dart';
 import '../../domain/entities/user_entity.dart';
 import '../../domain/repos/auth_repo.dart';
@@ -11,9 +13,9 @@ import '../data_sources/remote_data_source/remote_data_source.dart';
 
 class AuthRepoImpl implements AuthRepo {
   final AuthRemoteDataSource remoteDataSource;
-
   AuthRepoImpl({required this.remoteDataSource});
 
+  // signUp
   @override
   Future<Either<Failure, UserEntity>> signUp({
     required String name,
@@ -41,8 +43,9 @@ class AuthRepoImpl implements AuthRepo {
     }
   }
 
+  // login
   @override
-  Future<Either<Failure, UserEntity>> login ({
+  Future<Either<Failure, UserEntity>> login({
     required String email,
     required String password,
   }) async {
@@ -66,24 +69,72 @@ class AuthRepoImpl implements AuthRepo {
     }
   }
 
+  // logout
   @override
-  Future<void> signOut() {
-    return remoteDataSource.signOut();
+  Future<Either<Failure, void>> logout() async {
+    try {
+      await remoteDataSource.logout();
+      return const Right(null);
+    } catch (e) {
+      return Left(
+        Failure(
+          errMessage: e.toString(),
+        ),
+      );
+    }
   }
 
+  // auto login
   @override
-  Future<UserEntity?> getCurrentUser() {
-    return remoteDataSource.getCurrentUser();
+  Future<Either<Failure, UserEntity>> autoLogin() async {
+    try {
+      UserEntity user = await remoteDataSource.autoLogin();
+      return Right(
+        user,
+      );
+    } on DioException catch (e) {
+      return Left(
+        ServerFailure.fromDioError(e),
+      );
+    } on FirebaseAuthException catch (e) {
+      return Left(
+        FirebaseFailure.fromAutoLoginException(e),
+      );
+    } on Failure catch (e) {
+      return Left(e);
+    } catch (e) {
+      log('the error is --> $e');
+      return Left(
+        Failure(
+          errMessage: e.toString(),
+        ),
+      );
+    }
   }
 
+  // update name and photo and photo
   @override
-  Future<void> updateProfile({
+  Future<Either<Failure, UserEntity>> updateName({
     required String name,
-    String? photo,
-  }) {
-    return remoteDataSource.updateProfile(
-      name: name,
-      photo: photo,
-    );
+    required File? photo,
+  }) async {
+    try {
+      final user = await remoteDataSource.updateNameAndPhoto(
+        photo: photo,
+        name: name,
+      );
+
+      return Right(user);
+    } on DioException catch (e) {
+      return Left(ServerFailure.fromDioError(e));
+    } on Failure catch (e) {
+      return Left(e);
+    } catch (e) {
+      return Left(
+        Failure(
+          errMessage: e.toString(),
+        ),
+      );
+    }
   }
 }

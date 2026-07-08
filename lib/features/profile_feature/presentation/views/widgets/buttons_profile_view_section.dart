@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 
 import '../../../../../core/utils/constant.dart';
 import '../../../../../generated/assets.dart';
+import '../../../../aut_feature/presentation/manager/cubits/auth_cubit.dart';
 import 'custom_button_profile_view.dart';
 
 class ButtonsProfileViewSection extends StatefulWidget {
-  const ButtonsProfileViewSection({super.key});
+  const ButtonsProfileViewSection({super.key, this.onTap});
 
+  final void Function()? onTap ;
   @override
   State<ButtonsProfileViewSection> createState() =>
       _ButtonsProfileViewSectionState();
@@ -20,8 +23,9 @@ class _ButtonsProfileViewSectionState extends State<ButtonsProfileViewSection> {
       children: [
         Expanded(
           child: CustomButtonProfileView(
+            onTap: widget.onTap,
             outBorderColor: true,
-            text: 'Edit Profile',
+            text: 'Edit Name',
             textColor: kPrimaryColor,
             backgroundColor: Colors.white,
             image: Assets.assets.images.edit.path,
@@ -30,6 +34,9 @@ class _ButtonsProfileViewSectionState extends State<ButtonsProfileViewSection> {
         Gap(10),
         Expanded(
           child: CustomButtonProfileView(
+            onTap: () {
+              BlocProvider.of<AuthCubit>(context).logout();
+            },
             text: 'Log out',
             textColor: Colors.white,
             backgroundColor: kPrimaryColor,

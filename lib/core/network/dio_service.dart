@@ -1,4 +1,6 @@
 
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 
 
@@ -28,7 +30,7 @@ class DioService {
       InterceptorsWrapper(
         onRequest: (options, handler) async {
           final token = await secureStorageService.getToken();
-
+          log('Interceptor Token: $token');
           if (token != null) {
             options.headers['Authorization'] = 'Bearer $token';
           }

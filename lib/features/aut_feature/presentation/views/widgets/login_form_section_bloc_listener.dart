@@ -40,10 +40,13 @@ class _LoginFormSectionBlocListenerState
           snackBarMessage(
             context,
             isError: false,
-            message: 'Welcome back ${state.user.name} 🎉\n  We missed you! 😋🍔',
+            message:
+                'Welcome back ${state.user.name} 🎉\n  We missed you! 😋🍔',
           );
           Future.delayed(const Duration(seconds: 3), () {
-            Get.offNamed(AppRoutes.rootView);
+            Get.offNamed(
+              AppRoutes.rootView,
+            );
           });
         } else if (state is AuthFailure) {
           setState(() => isLoading = false);
@@ -52,7 +55,7 @@ class _LoginFormSectionBlocListenerState
             message: state.errMessage,
           );
         } else if (state is AuthLoading) {
-          setState(() => isLoading = true)  ;
+          setState(() => isLoading = true);
         }
       },
       child: CustomModalProgressHud(
@@ -103,4 +106,3 @@ class _LoginFormSectionBlocListenerState
     );
   }
 }
-

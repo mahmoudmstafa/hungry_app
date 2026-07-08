@@ -4,10 +4,11 @@ import '../../../../../core/widgets/custom_text_field_password_icon.dart';
 import 'custom_text_form_field_profile_view.dart';
 
 class CustomPasswordTextFormFieldProfileView extends StatefulWidget {
-  const CustomPasswordTextFormFieldProfileView({super.key, this.iconColor});
+  const CustomPasswordTextFormFieldProfileView({super.key, this.iconColor, this.controller});
 
   final Color? iconColor;
 
+  final TextEditingController? controller;
   @override
   State<CustomPasswordTextFormFieldProfileView> createState() =>
       _CustomPasswordTextFormFieldProfileViewState();
@@ -20,8 +21,9 @@ class _CustomPasswordTextFormFieldProfileViewState
   @override
   Widget build(BuildContext context) {
     return CustomTextFormFieldProfileView(
+      controller: widget.controller,
       obscureText: obscureText,
-      hintText: 'Password',
+      hintText: '*******',
       suffixIcon: CustomTextFieldPasswordIcon(
         obscureText: obscureText,
         onPressed: () {

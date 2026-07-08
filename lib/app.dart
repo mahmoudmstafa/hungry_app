@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'core/utils/app_routes.dart';
+import 'core/utils/constant.dart';
 import 'core/utils/service_locator.dart';
 import 'features/aut_feature/presentation/manager/cubits/auth_cubit.dart';
 import 'package:nested/nested.dart';

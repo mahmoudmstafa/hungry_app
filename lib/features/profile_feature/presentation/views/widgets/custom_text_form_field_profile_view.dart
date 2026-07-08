@@ -9,26 +9,37 @@ class CustomTextFormFieldProfileView extends StatelessWidget {
     required this.hintText,
     this.suffixIcon,
     this.obscureText = false,
+    this.controller,
+    this.enable,
+    this.onChanged,
   });
 
   final String hintText;
   final Widget? suffixIcon;
 
+  final bool? enable;
+
   final bool obscureText;
 
+  final TextEditingController? controller;
+  final Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
+      onChanged: onChanged,
+      enable: enable,
+      controller: controller,
       hintFontWeight: FontWeight.w500,
       hintFontSize: 18,
       obscureText: obscureText,
       textStyle: TextStyle(
         color: kPrimaryColor,
         fontSize: 18,
+        fontWeight: FontWeight.w600,
       ),
       hintText: hintText,
       filled: false,
-      borderRadius: 18,
+      borderRadius: 14,
       enabledBorderColor: kPrimaryColor,
       focusedBorderColor: kPrimaryColor,
       cursorColor: kPrimaryColor,

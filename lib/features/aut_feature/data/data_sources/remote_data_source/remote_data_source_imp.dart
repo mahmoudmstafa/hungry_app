@@ -1,8 +1,12 @@
-import 'package:dio/dio.dart';
+import 'dart:developer' show log;
+import 'dart:io';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:hungry_app/features/aut_feature/data/data_sources/remote_data_source/remote_data_source.dart';
 
 import '../../../../../core/network/dio_service.dart';
+import '../../../../../core/utils/cloudinary_service.dart';
+import '../../../../../core/utils/firebase_storage_service.dart';
 import '../../../../../core/utils/secure_storage_service.dart';
 import '../../models/user_model.dart';
 
@@ -10,13 +14,15 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   final FirebaseAuth firebaseAuth;
   final DioService dioService;
   final SecureStorageService secureStorageService;
+  final CloudinaryService cloudinaryService;
 
   AuthRemoteDataSourceImpl({
     required this.firebaseAuth,
     required this.dioService,
-    required this.secureStorageService,
+    required this.secureStorageService, required this.cloudinaryService,
   });
 
+  // signUp
   @override
   Future<UserModel> signUp({
     required String name,
@@ -73,6 +79,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
     }
   }
 
+  // login
   @override
   Future<UserModel> login({
     required String email,
@@ -91,29 +98,63 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
         'firebaseUid': firebaseUid,
       },
     );
+
     final token = response.data['token'];
     await secureStorageService.saveToken(token);
+    print(await secureStorageService.getToken());
+
     final userResponse = await dioService.dio.get(
       '/users/me',
     );
     return UserModel.fromJson(userResponse.data);
   }
 
+  // logout
   @override
-  Future<void> signOut() {
-    throw UnimplementedError();
+  Future<void> logout() async {
+    await firebaseAuth.signOut();
+
+    await secureStorageService.deleteToken();
   }
 
+  // auto login
   @override
-  Future<UserModel?> getCurrentUser() {
-    throw UnimplementedError();
+  Future<UserModel> autoLogin() async {
+    final token = await secureStorageService.getToken();
+
+    if (token == null) {
+      throw Exception('User is not logged in ?!');
+    }
+
+    final response = await dioService.dio.get(
+      '/users/me',
+    );
+
+    log('Auto Login Token: $token');
+    return UserModel.fromJson(response.data);
   }
 
+  // update name and photo
   @override
-  Future<void> updateProfile({
+  Future<UserModel> updateNameAndPhoto({
     required String name,
-    String? photo,
-  }) {
-    throw UnimplementedError();
+    File? photo,
+  }) async {
+
+    String? photoUrl;
+
+    if (photo != null) {
+      photoUrl = await cloudinaryService.uploadProfileImage(photo);
+    }
+
+    final response = await dioService.dio.patch(
+      '/users',
+      data: {
+        'name': name,
+        if (photoUrl != null) 'photo': photoUrl,
+      },
+    );
+    log(response.data.toString());
+    return UserModel.fromJson(response.data);
   }
 }

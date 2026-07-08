@@ -12,7 +12,7 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   Bloc.observer = SimpleBlocObserver();
-  setupLocator();
+  await setupLocator();
   runApp(
     const HungryApp(),
   );

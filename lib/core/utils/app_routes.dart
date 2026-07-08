@@ -29,7 +29,7 @@ abstract class AppRoutes {
       page: () => const SplashView(),
       transition: Transition.fade,
       transitionDuration: const Duration(
-        milliseconds: 1000,
+        seconds: 2,
       ),
     ),
     GetPage(

@@ -46,7 +46,7 @@ class _SignUpFormSectionBlocListenerState
             message: 'Welcome $name 🎉\n Your account is ready! 🍔',
           );
           Future.delayed(const Duration(seconds: 3), () {
-            Get.offNamed(AppRoutes.rootView);
+            Get.toNamed(AppRoutes.rootView);
           });
         } else if (state is AuthFailure) {
           setState(() => isLoading = false);
@@ -54,7 +54,7 @@ class _SignUpFormSectionBlocListenerState
             context,
             message: state.errMessage,
           );
-        } else if (state is AuthLoading) {
+        } else {
           setState(() => isLoading = true)  ;
         }
       },

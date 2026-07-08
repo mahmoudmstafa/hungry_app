@@ -22,81 +22,61 @@ class $AssetsImagesGen {
 
   final SvgGenImage back = const SvgGenImage('assets/images/back.svg');
   final AssetGenImage burgerPreview = const AssetGenImage(
-    'assets/images/burger_preview.png',
-  );
+      'assets/images/burger_preview.png');
   final SvgGenImage car = const SvgGenImage('assets/images/car.svg');
   final SvgGenImage check = const SvgGenImage('assets/images/check.svg');
   final AssetGenImage chesseBurger = const AssetGenImage(
-    'assets/images/chesse_burger.png',
-  );
+      'assets/images/chesse_burger.png');
   final SvgGenImage cold = const SvgGenImage('assets/images/cold.svg');
   final SvgGenImage comment = const SvgGenImage('assets/images/comment.svg');
   final AssetGenImage dollar = const AssetGenImage('assets/images/dollar.png');
   final SvgGenImage dollarBackgroundRemoved1 = const SvgGenImage(
-    'assets/images/dollar Background Removed 1.svg',
-  );
+      'assets/images/dollar Background Removed 1.svg');
   final AssetGenImage dollarUpscayl4xUpscaylStandard4x = const AssetGenImage(
-    'assets/images/dollar_upscayl_4x_upscayl-standard-4x.png',
-  );
+      'assets/images/dollar_upscayl_4x_upscayl-standard-4x.png');
   final AssetGenImage download = const AssetGenImage(
-    'assets/images/download.png',
-  );
+      'assets/images/download.png');
   final AssetGenImage edit = const AssetGenImage('assets/images/edit.png');
   final AssetGenImage fries = const AssetGenImage('assets/images/fries.png');
   final AssetGenImage greyDollar = const AssetGenImage(
-    'assets/images/grey_dollar.png',
-  );
-  final AssetGenImage greyDollarUpscayl4xUpscaylStandard4x =
-      const AssetGenImage(
-        'assets/images/grey_dollar_upscayl_4x_upscayl-standard-4x.png',
-      );
+      'assets/images/grey_dollar.png');
+  final AssetGenImage greyDollarUpscayl4xUpscaylStandard4x = const AssetGenImage(
+      'assets/images/grey_dollar_upscayl_4x_upscayl-standard-4x.png');
   final AssetGenImage hamburger = const AssetGenImage(
-    'assets/images/hamburger.png',
-  );
+      'assets/images/hamburger.png');
   final SvgGenImage home = const SvgGenImage('assets/images/home.svg');
   final SvgGenImage image1Svg = const SvgGenImage('assets/images/image 1.svg');
   final AssetGenImage image1Png = const AssetGenImage(
-    'assets/images/image1.png',
-  );
+      'assets/images/image1.png');
   final SvgGenImage logo = const SvgGenImage('assets/images/logo.svg');
   final AssetGenImage productDetails = const AssetGenImage(
-    'assets/images/product_details.png',
-  );
+      'assets/images/product_details.png');
   final AssetGenImage profilePng = const AssetGenImage(
-    'assets/images/profile.png',
-  );
+      'assets/images/profile.png');
   final SvgGenImage profileSvg = const SvgGenImage('assets/images/profile.svg');
   final AssetGenImage profileProfile = const AssetGenImage(
-    'assets/images/profile_profile.png',
-  );
+      'assets/images/profile_profile.png');
   final SvgGenImage purgerDetails = const SvgGenImage(
-    'assets/images/purger_details.svg',
-  );
+      'assets/images/purger_details.svg');
   final SvgGenImage search = const SvgGenImage('assets/images/search.svg');
   final SvgGenImage settings = const SvgGenImage('assets/images/settings.svg');
   final SvgGenImage shadow = const SvgGenImage('assets/images/shadow.svg');
   final AssetGenImage signOut = const AssetGenImage(
-    'assets/images/sign-out.png',
-  );
+      'assets/images/sign-out.png');
   final AssetGenImage smallPurgerPng = const AssetGenImage(
-    'assets/images/small_purger.png',
-  );
+      'assets/images/small_purger.png');
   final SvgGenImage smallPurgerSvg = const SvgGenImage(
-    'assets/images/small_purger.svg',
-  );
+      'assets/images/small_purger.svg');
   final SvgGenImage spicy = const SvgGenImage('assets/images/spicy.svg');
   final SvgGenImage splashIcon = const SvgGenImage(
-    'assets/images/splash_icon.svg',
-  );
+      'assets/images/splash_icon.svg');
   final SvgGenImage star = const SvgGenImage('assets/images/star.svg');
   final SvgGenImage success = const SvgGenImage('assets/images/success.svg');
   final AssetGenImage testImage = const AssetGenImage(
-    'assets/images/test_image.png',
-  );
+      'assets/images/test_image.png');
   final SvgGenImage tomatos = const SvgGenImage('assets/images/tomatos.svg');
   final AssetGenImage tomatosPng = const AssetGenImage(
-    'assets/images/tomatos_png.png',
-  );
+      'assets/images/tomatos_png.png');
   final SvgGenImage user = const SvgGenImage('assets/images/user.svg');
   final AssetGenImage visa = const AssetGenImage('assets/images/visa.png');
 }
@@ -112,89 +92,59 @@ class $AssetsInterGen {
   const $AssetsInterGen();
 
   final String inter18ptBlack = 'assets/fonts/Inter/Inter_18pt-Black.ttf';
-  final String inter18ptBlackItalic =
-      'assets/fonts/Inter/Inter_18pt-BlackItalic.ttf';
+  final String inter18ptBlackItalic = 'assets/fonts/Inter/Inter_18pt-BlackItalic.ttf';
   final String inter18ptBold = 'assets/fonts/Inter/Inter_18pt-Bold.ttf';
-  final String inter18ptBoldItalic =
-      'assets/fonts/Inter/Inter_18pt-BoldItalic.ttf';
-  final String inter18ptExtraBold =
-      'assets/fonts/Inter/Inter_18pt-ExtraBold.ttf';
-  final String inter18ptExtraBoldItalic =
-      'assets/fonts/Inter/Inter_18pt-ExtraBoldItalic.ttf';
-  final String inter18ptExtraLight =
-      'assets/fonts/Inter/Inter_18pt-ExtraLight.ttf';
-  final String inter18ptExtraLightItalic =
-      'assets/fonts/Inter/Inter_18pt-ExtraLightItalic.ttf';
+  final String inter18ptBoldItalic = 'assets/fonts/Inter/Inter_18pt-BoldItalic.ttf';
+  final String inter18ptExtraBold = 'assets/fonts/Inter/Inter_18pt-ExtraBold.ttf';
+  final String inter18ptExtraBoldItalic = 'assets/fonts/Inter/Inter_18pt-ExtraBoldItalic.ttf';
+  final String inter18ptExtraLight = 'assets/fonts/Inter/Inter_18pt-ExtraLight.ttf';
+  final String inter18ptExtraLightItalic = 'assets/fonts/Inter/Inter_18pt-ExtraLightItalic.ttf';
   final String inter18ptItalic = 'assets/fonts/Inter/Inter_18pt-Italic.ttf';
   final String inter18ptLight = 'assets/fonts/Inter/Inter_18pt-Light.ttf';
-  final String inter18ptLightItalic =
-      'assets/fonts/Inter/Inter_18pt-LightItalic.ttf';
+  final String inter18ptLightItalic = 'assets/fonts/Inter/Inter_18pt-LightItalic.ttf';
   final String inter18ptMedium = 'assets/fonts/Inter/Inter_18pt-Medium.ttf';
-  final String inter18ptMediumItalic =
-      'assets/fonts/Inter/Inter_18pt-MediumItalic.ttf';
+  final String inter18ptMediumItalic = 'assets/fonts/Inter/Inter_18pt-MediumItalic.ttf';
   final String inter18ptRegular = 'assets/fonts/Inter/Inter_18pt-Regular.ttf';
   final String inter18ptSemiBold = 'assets/fonts/Inter/Inter_18pt-SemiBold.ttf';
-  final String inter18ptSemiBoldItalic =
-      'assets/fonts/Inter/Inter_18pt-SemiBoldItalic.ttf';
+  final String inter18ptSemiBoldItalic = 'assets/fonts/Inter/Inter_18pt-SemiBoldItalic.ttf';
   final String inter18ptThin = 'assets/fonts/Inter/Inter_18pt-Thin.ttf';
-  final String inter18ptThinItalic =
-      'assets/fonts/Inter/Inter_18pt-ThinItalic.ttf';
+  final String inter18ptThinItalic = 'assets/fonts/Inter/Inter_18pt-ThinItalic.ttf';
   final String inter24ptBlack = 'assets/fonts/Inter/Inter_24pt-Black.ttf';
-  final String inter24ptBlackItalic =
-      'assets/fonts/Inter/Inter_24pt-BlackItalic.ttf';
+  final String inter24ptBlackItalic = 'assets/fonts/Inter/Inter_24pt-BlackItalic.ttf';
   final String inter24ptBold = 'assets/fonts/Inter/Inter_24pt-Bold.ttf';
-  final String inter24ptBoldItalic =
-      'assets/fonts/Inter/Inter_24pt-BoldItalic.ttf';
-  final String inter24ptExtraBold =
-      'assets/fonts/Inter/Inter_24pt-ExtraBold.ttf';
-  final String inter24ptExtraBoldItalic =
-      'assets/fonts/Inter/Inter_24pt-ExtraBoldItalic.ttf';
-  final String inter24ptExtraLight =
-      'assets/fonts/Inter/Inter_24pt-ExtraLight.ttf';
-  final String inter24ptExtraLightItalic =
-      'assets/fonts/Inter/Inter_24pt-ExtraLightItalic.ttf';
+  final String inter24ptBoldItalic = 'assets/fonts/Inter/Inter_24pt-BoldItalic.ttf';
+  final String inter24ptExtraBold = 'assets/fonts/Inter/Inter_24pt-ExtraBold.ttf';
+  final String inter24ptExtraBoldItalic = 'assets/fonts/Inter/Inter_24pt-ExtraBoldItalic.ttf';
+  final String inter24ptExtraLight = 'assets/fonts/Inter/Inter_24pt-ExtraLight.ttf';
+  final String inter24ptExtraLightItalic = 'assets/fonts/Inter/Inter_24pt-ExtraLightItalic.ttf';
   final String inter24ptItalic = 'assets/fonts/Inter/Inter_24pt-Italic.ttf';
   final String inter24ptLight = 'assets/fonts/Inter/Inter_24pt-Light.ttf';
-  final String inter24ptLightItalic =
-      'assets/fonts/Inter/Inter_24pt-LightItalic.ttf';
+  final String inter24ptLightItalic = 'assets/fonts/Inter/Inter_24pt-LightItalic.ttf';
   final String inter24ptMedium = 'assets/fonts/Inter/Inter_24pt-Medium.ttf';
-  final String inter24ptMediumItalic =
-      'assets/fonts/Inter/Inter_24pt-MediumItalic.ttf';
+  final String inter24ptMediumItalic = 'assets/fonts/Inter/Inter_24pt-MediumItalic.ttf';
   final String inter24ptRegular = 'assets/fonts/Inter/Inter_24pt-Regular.ttf';
   final String inter24ptSemiBold = 'assets/fonts/Inter/Inter_24pt-SemiBold.ttf';
-  final String inter24ptSemiBoldItalic =
-      'assets/fonts/Inter/Inter_24pt-SemiBoldItalic.ttf';
+  final String inter24ptSemiBoldItalic = 'assets/fonts/Inter/Inter_24pt-SemiBoldItalic.ttf';
   final String inter24ptThin = 'assets/fonts/Inter/Inter_24pt-Thin.ttf';
-  final String inter24ptThinItalic =
-      'assets/fonts/Inter/Inter_24pt-ThinItalic.ttf';
+  final String inter24ptThinItalic = 'assets/fonts/Inter/Inter_24pt-ThinItalic.ttf';
   final String inter28ptBlack = 'assets/fonts/Inter/Inter_28pt-Black.ttf';
-  final String inter28ptBlackItalic =
-      'assets/fonts/Inter/Inter_28pt-BlackItalic.ttf';
+  final String inter28ptBlackItalic = 'assets/fonts/Inter/Inter_28pt-BlackItalic.ttf';
   final String inter28ptBold = 'assets/fonts/Inter/Inter_28pt-Bold.ttf';
-  final String inter28ptBoldItalic =
-      'assets/fonts/Inter/Inter_28pt-BoldItalic.ttf';
-  final String inter28ptExtraBold =
-      'assets/fonts/Inter/Inter_28pt-ExtraBold.ttf';
-  final String inter28ptExtraBoldItalic =
-      'assets/fonts/Inter/Inter_28pt-ExtraBoldItalic.ttf';
-  final String inter28ptExtraLight =
-      'assets/fonts/Inter/Inter_28pt-ExtraLight.ttf';
-  final String inter28ptExtraLightItalic =
-      'assets/fonts/Inter/Inter_28pt-ExtraLightItalic.ttf';
+  final String inter28ptBoldItalic = 'assets/fonts/Inter/Inter_28pt-BoldItalic.ttf';
+  final String inter28ptExtraBold = 'assets/fonts/Inter/Inter_28pt-ExtraBold.ttf';
+  final String inter28ptExtraBoldItalic = 'assets/fonts/Inter/Inter_28pt-ExtraBoldItalic.ttf';
+  final String inter28ptExtraLight = 'assets/fonts/Inter/Inter_28pt-ExtraLight.ttf';
+  final String inter28ptExtraLightItalic = 'assets/fonts/Inter/Inter_28pt-ExtraLightItalic.ttf';
   final String inter28ptItalic = 'assets/fonts/Inter/Inter_28pt-Italic.ttf';
   final String inter28ptLight = 'assets/fonts/Inter/Inter_28pt-Light.ttf';
-  final String inter28ptLightItalic =
-      'assets/fonts/Inter/Inter_28pt-LightItalic.ttf';
+  final String inter28ptLightItalic = 'assets/fonts/Inter/Inter_28pt-LightItalic.ttf';
   final String inter28ptMedium = 'assets/fonts/Inter/Inter_28pt-Medium.ttf';
-  final String inter28ptMediumItalic =
-      'assets/fonts/Inter/Inter_28pt-MediumItalic.ttf';
+  final String inter28ptMediumItalic = 'assets/fonts/Inter/Inter_28pt-MediumItalic.ttf';
   final String inter28ptRegular = 'assets/fonts/Inter/Inter_28pt-Regular.ttf';
   final String inter28ptSemiBold = 'assets/fonts/Inter/Inter_28pt-SemiBold.ttf';
-  final String inter28ptSemiBoldItalic =
-      'assets/fonts/Inter/Inter_28pt-SemiBoldItalic.ttf';
+  final String inter28ptSemiBoldItalic = 'assets/fonts/Inter/Inter_28pt-SemiBoldItalic.ttf';
   final String inter28ptThin = 'assets/fonts/Inter/Inter_28pt-Thin.ttf';
-  final String inter28ptThinItalic =
-      'assets/fonts/Inter/Inter_28pt-ThinItalic.ttf';
+  final String inter28ptThinItalic = 'assets/fonts/Inter/Inter_28pt-ThinItalic.ttf';
 }
 
 class $AssetsRobotoGen {
@@ -205,115 +155,71 @@ class $AssetsRobotoGen {
   final String robotoBold = 'assets/fonts/Roboto/Roboto-Bold.ttf';
   final String robotoBoldItalic = 'assets/fonts/Roboto/Roboto-BoldItalic.ttf';
   final String robotoExtraBold = 'assets/fonts/Roboto/Roboto-ExtraBold.ttf';
-  final String robotoExtraBoldItalic =
-      'assets/fonts/Roboto/Roboto-ExtraBoldItalic.ttf';
+  final String robotoExtraBoldItalic = 'assets/fonts/Roboto/Roboto-ExtraBoldItalic.ttf';
   final String robotoExtraLight = 'assets/fonts/Roboto/Roboto-ExtraLight.ttf';
-  final String robotoExtraLightItalic =
-      'assets/fonts/Roboto/Roboto-ExtraLightItalic.ttf';
+  final String robotoExtraLightItalic = 'assets/fonts/Roboto/Roboto-ExtraLightItalic.ttf';
   final String robotoItalic = 'assets/fonts/Roboto/Roboto-Italic.ttf';
   final String robotoLight = 'assets/fonts/Roboto/Roboto-Light.ttf';
   final String robotoLightItalic = 'assets/fonts/Roboto/Roboto-LightItalic.ttf';
   final String robotoMedium = 'assets/fonts/Roboto/Roboto-Medium.ttf';
-  final String robotoMediumItalic =
-      'assets/fonts/Roboto/Roboto-MediumItalic.ttf';
+  final String robotoMediumItalic = 'assets/fonts/Roboto/Roboto-MediumItalic.ttf';
   final String robotoRegular = 'assets/fonts/Roboto/Roboto-Regular.ttf';
   final String robotoSemiBold = 'assets/fonts/Roboto/Roboto-SemiBold.ttf';
-  final String robotoSemiBoldItalic =
-      'assets/fonts/Roboto/Roboto-SemiBoldItalic.ttf';
+  final String robotoSemiBoldItalic = 'assets/fonts/Roboto/Roboto-SemiBoldItalic.ttf';
   final String robotoThin = 'assets/fonts/Roboto/Roboto-Thin.ttf';
   final String robotoThinItalic = 'assets/fonts/Roboto/Roboto-ThinItalic.ttf';
-  final String robotoCondensedBlack =
-      'assets/fonts/Roboto/Roboto_Condensed-Black.ttf';
-  final String robotoCondensedBlackItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-BlackItalic.ttf';
-  final String robotoCondensedBold =
-      'assets/fonts/Roboto/Roboto_Condensed-Bold.ttf';
-  final String robotoCondensedBoldItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-BoldItalic.ttf';
-  final String robotoCondensedExtraBold =
-      'assets/fonts/Roboto/Roboto_Condensed-ExtraBold.ttf';
-  final String robotoCondensedExtraBoldItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-ExtraBoldItalic.ttf';
-  final String robotoCondensedExtraLight =
-      'assets/fonts/Roboto/Roboto_Condensed-ExtraLight.ttf';
-  final String robotoCondensedExtraLightItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-ExtraLightItalic.ttf';
-  final String robotoCondensedItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-Italic.ttf';
-  final String robotoCondensedLight =
-      'assets/fonts/Roboto/Roboto_Condensed-Light.ttf';
-  final String robotoCondensedLightItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-LightItalic.ttf';
-  final String robotoCondensedMedium =
-      'assets/fonts/Roboto/Roboto_Condensed-Medium.ttf';
-  final String robotoCondensedMediumItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-MediumItalic.ttf';
-  final String robotoCondensedRegular =
-      'assets/fonts/Roboto/Roboto_Condensed-Regular.ttf';
-  final String robotoCondensedSemiBold =
-      'assets/fonts/Roboto/Roboto_Condensed-SemiBold.ttf';
-  final String robotoCondensedSemiBoldItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-SemiBoldItalic.ttf';
-  final String robotoCondensedThin =
-      'assets/fonts/Roboto/Roboto_Condensed-Thin.ttf';
-  final String robotoCondensedThinItalic =
-      'assets/fonts/Roboto/Roboto_Condensed-ThinItalic.ttf';
-  final String robotoSemiCondensedBlack =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Black.ttf';
-  final String robotoSemiCondensedBlackItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-BlackItalic.ttf';
-  final String robotoSemiCondensedBold =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Bold.ttf';
-  final String robotoSemiCondensedBoldItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-BoldItalic.ttf';
-  final String robotoSemiCondensedExtraBold =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraBold.ttf';
-  final String robotoSemiCondensedExtraBoldItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraBoldItalic.ttf';
-  final String robotoSemiCondensedExtraLight =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraLight.ttf';
-  final String robotoSemiCondensedExtraLightItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraLightItalic.ttf';
-  final String robotoSemiCondensedItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Italic.ttf';
-  final String robotoSemiCondensedLight =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Light.ttf';
-  final String robotoSemiCondensedLightItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-LightItalic.ttf';
-  final String robotoSemiCondensedMedium =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Medium.ttf';
-  final String robotoSemiCondensedMediumItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-MediumItalic.ttf';
-  final String robotoSemiCondensedRegular =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Regular.ttf';
-  final String robotoSemiCondensedSemiBold =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-SemiBold.ttf';
-  final String robotoSemiCondensedSemiBoldItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-SemiBoldItalic.ttf';
-  final String robotoSemiCondensedThin =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-Thin.ttf';
-  final String robotoSemiCondensedThinItalic =
-      'assets/fonts/Roboto/Roboto_SemiCondensed-ThinItalic.ttf';
+  final String robotoCondensedBlack = 'assets/fonts/Roboto/Roboto_Condensed-Black.ttf';
+  final String robotoCondensedBlackItalic = 'assets/fonts/Roboto/Roboto_Condensed-BlackItalic.ttf';
+  final String robotoCondensedBold = 'assets/fonts/Roboto/Roboto_Condensed-Bold.ttf';
+  final String robotoCondensedBoldItalic = 'assets/fonts/Roboto/Roboto_Condensed-BoldItalic.ttf';
+  final String robotoCondensedExtraBold = 'assets/fonts/Roboto/Roboto_Condensed-ExtraBold.ttf';
+  final String robotoCondensedExtraBoldItalic = 'assets/fonts/Roboto/Roboto_Condensed-ExtraBoldItalic.ttf';
+  final String robotoCondensedExtraLight = 'assets/fonts/Roboto/Roboto_Condensed-ExtraLight.ttf';
+  final String robotoCondensedExtraLightItalic = 'assets/fonts/Roboto/Roboto_Condensed-ExtraLightItalic.ttf';
+  final String robotoCondensedItalic = 'assets/fonts/Roboto/Roboto_Condensed-Italic.ttf';
+  final String robotoCondensedLight = 'assets/fonts/Roboto/Roboto_Condensed-Light.ttf';
+  final String robotoCondensedLightItalic = 'assets/fonts/Roboto/Roboto_Condensed-LightItalic.ttf';
+  final String robotoCondensedMedium = 'assets/fonts/Roboto/Roboto_Condensed-Medium.ttf';
+  final String robotoCondensedMediumItalic = 'assets/fonts/Roboto/Roboto_Condensed-MediumItalic.ttf';
+  final String robotoCondensedRegular = 'assets/fonts/Roboto/Roboto_Condensed-Regular.ttf';
+  final String robotoCondensedSemiBold = 'assets/fonts/Roboto/Roboto_Condensed-SemiBold.ttf';
+  final String robotoCondensedSemiBoldItalic = 'assets/fonts/Roboto/Roboto_Condensed-SemiBoldItalic.ttf';
+  final String robotoCondensedThin = 'assets/fonts/Roboto/Roboto_Condensed-Thin.ttf';
+  final String robotoCondensedThinItalic = 'assets/fonts/Roboto/Roboto_Condensed-ThinItalic.ttf';
+  final String robotoSemiCondensedBlack = 'assets/fonts/Roboto/Roboto_SemiCondensed-Black.ttf';
+  final String robotoSemiCondensedBlackItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-BlackItalic.ttf';
+  final String robotoSemiCondensedBold = 'assets/fonts/Roboto/Roboto_SemiCondensed-Bold.ttf';
+  final String robotoSemiCondensedBoldItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-BoldItalic.ttf';
+  final String robotoSemiCondensedExtraBold = 'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraBold.ttf';
+  final String robotoSemiCondensedExtraBoldItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraBoldItalic.ttf';
+  final String robotoSemiCondensedExtraLight = 'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraLight.ttf';
+  final String robotoSemiCondensedExtraLightItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-ExtraLightItalic.ttf';
+  final String robotoSemiCondensedItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-Italic.ttf';
+  final String robotoSemiCondensedLight = 'assets/fonts/Roboto/Roboto_SemiCondensed-Light.ttf';
+  final String robotoSemiCondensedLightItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-LightItalic.ttf';
+  final String robotoSemiCondensedMedium = 'assets/fonts/Roboto/Roboto_SemiCondensed-Medium.ttf';
+  final String robotoSemiCondensedMediumItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-MediumItalic.ttf';
+  final String robotoSemiCondensedRegular = 'assets/fonts/Roboto/Roboto_SemiCondensed-Regular.ttf';
+  final String robotoSemiCondensedSemiBold = 'assets/fonts/Roboto/Roboto_SemiCondensed-SemiBold.ttf';
+  final String robotoSemiCondensedSemiBoldItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-SemiBoldItalic.ttf';
+  final String robotoSemiCondensedThin = 'assets/fonts/Roboto/Roboto_SemiCondensed-Thin.ttf';
+  final String robotoSemiCondensedThinItalic = 'assets/fonts/Roboto/Roboto_SemiCondensed-ThinItalic.ttf';
 }
 
 class $AssetsLibGen {
   const $AssetsLibGen();
 
   final $AssetsCoreGen core = const $AssetsCoreGen();
-  final $AssetsFeaturesGen features = const $AssetsFeaturesGen();
   final String app = 'lib/app.dart';
   final String main = 'lib/main.dart';
   final String rootView = 'lib/root_view.dart';
 }
 
 class $AssetsFeaturesGen {
-  const $AssetsFeaturesGen();
 
   final $AssetsHomeFeatureGen homeFeature = const $AssetsHomeFeatureGen();
-  final $AssetsProductDetailsFeatureGen productDetailsFeature =
-      const $AssetsProductDetailsFeatureGen();
-  final $AssetsProfileFeatureGen profileFeature =
-      const $AssetsProfileFeatureGen();
+  final $AssetsProductDetailsFeatureGen productDetailsFeature = const $AssetsProductDetailsFeatureGen();
+  final $AssetsProfileFeatureGen profileFeature = const $AssetsProfileFeatureGen();
 }
 
 class $AssetsHomeFeatureGen {
@@ -332,33 +238,22 @@ class $AssetsViewsGen {
   const $AssetsViewsGen();
 
   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
-  final String homeView =
-      'lib/features/home_feature/presentation/views/home_view.dart';
+  final String homeView = 'lib/features/home_feature/presentation/views/home_view.dart';
 }
 
 class $AssetsWidgetsGen {
   const $AssetsWidgetsGen();
 
-  final String acitveAndInactiveMenu =
-      'lib/features/home_feature/presentation/views/widgets/acitve_and_inactive_menu.dart';
-  final String appBarHomeView =
-      'lib/features/home_feature/presentation/views/widgets/app_bar_home_view.dart';
-  final String favouriteButton =
-      'lib/features/home_feature/presentation/views/widgets/favourite_button.dart';
-  final String foodCard =
-      'lib/features/home_feature/presentation/views/widgets/food_card.dart';
-  final String foodCardGridView =
-      'lib/features/home_feature/presentation/views/widgets/food_card_grid_view.dart';
-  final String homeViewAppBarSection =
-      'lib/features/home_feature/presentation/views/widgets/home_view_app_bar_section.dart';
-  final String homeViewBody =
-      'lib/features/home_feature/presentation/views/widgets/home_view_body.dart';
-  final String menuButtonsListView =
-      'lib/features/home_feature/presentation/views/widgets/menu_buttons_list_view.dart';
-  final String searchAndMenuAndFoodCardSection =
-      'lib/features/home_feature/presentation/views/widgets/search_and_menu_and_food_card_section.dart';
-  final String textFieldHomeView =
-      'lib/features/home_feature/presentation/views/widgets/text_field_home_view.dart';
+  final String acitveAndInactiveMenu = 'lib/features/home_feature/presentation/views/widgets/acitve_and_inactive_menu.dart';
+  final String appBarHomeView = 'lib/features/home_feature/presentation/views/widgets/app_bar_home_view.dart';
+  final String favouriteButton = 'lib/features/home_feature/presentation/views/widgets/favourite_button.dart';
+  final String foodCard = 'lib/features/home_feature/presentation/views/widgets/food_card.dart';
+  final String foodCardGridView = 'lib/features/home_feature/presentation/views/widgets/food_card_grid_view.dart';
+  final String homeViewAppBarSection = 'lib/features/home_feature/presentation/views/widgets/home_view_app_bar_section.dart';
+  final String homeViewBody = 'lib/features/home_feature/presentation/views/widgets/home_view_body.dart';
+  final String menuButtonsListView = 'lib/features/home_feature/presentation/views/widgets/menu_buttons_list_view.dart';
+  final String searchAndMenuAndFoodCardSection = 'lib/features/home_feature/presentation/views/widgets/search_and_menu_and_food_card_section.dart';
+  final String textFieldHomeView = 'lib/features/home_feature/presentation/views/widgets/text_field_home_view.dart';
 }
 
 class $AssetsProductDetailsFeatureGen {
@@ -366,12 +261,272 @@ class $AssetsProductDetailsFeatureGen {
 
   final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
 }
+//
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String productDetailsView = 'lib/features/product_details_feature/presentation/views/product_details_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String addToCartSection = 'lib/features/product_details_feature/presentation/views/widgets/add_to_cart_section.dart';
+//   final String coldAndSpicyIcons = 'lib/features/product_details_feature/presentation/views/widgets/cold_and_spicy_icons.dart';
+//   final String editingWidget = 'lib/features/product_details_feature/presentation/views/widgets/editing_widget.dart';
+//   final String productDetailsSection = 'lib/features/product_details_feature/presentation/views/widgets/product_details_section.dart';
+//   final String productDetailsText = 'lib/features/product_details_feature/presentation/views/widgets/product_details_text.dart';
+//   final String productDetailsViewBody = 'lib/features/product_details_feature/presentation/views/widgets/product_details_view_body.dart';
+//   final String sideOptionsListView = 'lib/features/product_details_feature/presentation/views/widgets/side_options_list_view.dart';
+//   final String sideOptionsSection = 'lib/features/product_details_feature/presentation/views/widgets/side_options_section.dart';
+//   final String sliderWidget = 'lib/features/product_details_feature/presentation/views/widgets/slider_widget.dart';
+//   final String spicySection = 'lib/features/product_details_feature/presentation/views/widgets/spicy_section.dart';
+//   final String toppingsAndSideOptionsSections = 'lib/features/product_details_feature/presentation/views/widgets/toppings_and_side_options_sections.dart';
+//   final String toppingsListView = 'lib/features/product_details_feature/presentation/views/widgets/toppings_list_view.dart';
+//   final String toppingsSection = 'lib/features/product_details_feature/presentation/views/widgets/toppings_section.dart';
+// }
+//
+// class $AssetsCartFeatureGen {
+//   const $AssetsCartFeatureGen();
+//
+//   final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
+// }
+//
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String cartView = 'lib/features/cart_feature/presentation/views/cart_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String cartViewBody = 'lib/features/cart_feature/presentation/views/widgets/cart_view_body.dart';
+//   final String customAddOrRemoveWidget = 'lib/features/cart_feature/presentation/views/widgets/custom_add_or_remove_widget.dart';
+//   final String shoppingCartItem = 'lib/features/cart_feature/presentation/views/widgets/shopping_cart_item.dart';
+//   final String shoppingCartItemDetails = 'lib/features/cart_feature/presentation/views/widgets/shopping_cart_item_details.dart';
+//   final String shoppingCartItemListView = 'lib/features/cart_feature/presentation/views/widgets/shopping_cart_item_list_view.dart';
+//   final String shoppingCartItemQuantityCounter = 'lib/features/cart_feature/presentation/views/widgets/shopping_cart_item_quantity_counter.dart';
+// }
 
 class $AssetsProfileFeatureGen {
   const $AssetsProfileFeatureGen();
 
   final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
 }
+//
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String profileView = 'lib/features/profile_feature/presentation/views/profile_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String buttonsProfileViewSection = 'lib/features/profile_feature/presentation/views/widgets/buttons_profile_view_section.dart';
+//   final String customButtonProfileView = 'lib/features/profile_feature/presentation/views/widgets/custom_button_profile_view.dart';
+//   final String customDividerProfileView = 'lib/features/profile_feature/presentation/views/widgets/custom_divider_profile_view.dart';
+//   final String customPasswordTextFormFieldProfileView = 'lib/features/profile_feature/presentation/views/widgets/custom_password_text_form_field_profile_view.dart';
+//   final String customTextFormFieldProfileView = 'lib/features/profile_feature/presentation/views/widgets/custom_text_form_field_profile_view.dart';
+//   final String paymentWithCardProfileView = 'lib/features/profile_feature/presentation/views/widgets/payment_with_card_profile_view.dart';
+//   final String profileViewBody = 'lib/features/profile_feature/presentation/views/widgets/profile_view_body.dart';
+//   final String profileViewForm = 'lib/features/profile_feature/presentation/views/widgets/profile_view_form.dart';
+//   final String profileViewHeader = 'lib/features/profile_feature/presentation/views/widgets/profile_view_header.dart';
+//   final String textFormFieldsProfileViewSection = 'lib/features/profile_feature/presentation/views/widgets/text_form_fields_profile_view_section.dart';
+// }
+//
+// class $AssetsAutFeatureGen {
+//   const $AssetsAutFeatureGen();
+//
+//   final $AssetsDomainGen domain = const $AssetsDomainGen();
+//   final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
+// }
+//
+// class $AssetsDomainGen {
+//   const $AssetsDomainGen();
+//
+//   final $AssetsEntitiesGen entities = const $AssetsEntitiesGen();
+//   final $AssetsReposGen repos = const $AssetsReposGen();
+//   final $AssetsUseCasesGen useCases = const $AssetsUseCasesGen();
+// }
+//
+// class $AssetsReposGen {
+//   const $AssetsReposGen();
+//
+//   final String authRepo = 'lib/features/aut_feature/domain/repos/auth_repo.dart';
+// }
+//
+// class $AssetsEntitiesGen {
+//   const $AssetsEntitiesGen();
+//
+//   final String userEntity = 'lib/features/aut_feature/domain/entities/user_entity.dart';
+// }
+//
+// class $AssetsUseCasesGen {
+//   const $AssetsUseCasesGen();
+//
+//   final String autoLoginUseCase = 'lib/features/aut_feature/domain/use_cases/auto_login_use_case.dart';
+//   final String loginUseCase = 'lib/features/aut_feature/domain/use_cases/login_use_case.dart';
+//   final String logoutUseCase = 'lib/features/aut_feature/domain/use_cases/logout_use_case.dart';
+//   final String signUpUseCase = 'lib/features/aut_feature/domain/use_cases/sign_up_use_case.dart';
+//   final String updateNamUseCase = 'lib/features/aut_feature/domain/use_cases/update_nam_use_case.dart';
+// }
+//
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String loginView = 'lib/features/aut_feature/presentation/views/login_view.dart';
+//   final String signUpView = 'lib/features/aut_feature/presentation/views/sign_up_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String customAuthLogo = 'lib/features/aut_feature/presentation/views/widgets/custom_auth_logo.dart';
+//   final String customAuthTextFormField = 'lib/features/aut_feature/presentation/views/widgets/custom_auth_text_form_field.dart';
+//   final String loginFormSection = 'lib/features/aut_feature/presentation/views/widgets/login_form_section.dart';
+//   final String loginFormSectionBlocListener = 'lib/features/aut_feature/presentation/views/widgets/login_form_section_bloc_listener.dart';
+//   final String loginHeaderSection = 'lib/features/aut_feature/presentation/views/widgets/login_header_section.dart';
+//   final String loginViewBody = 'lib/features/aut_feature/presentation/views/widgets/login_view_body.dart';
+//   final String signUpFormSection = 'lib/features/aut_feature/presentation/views/widgets/sign_up_form_section.dart';
+//   final String signUpFormSectionBlocListener = 'lib/features/aut_feature/presentation/views/widgets/sign_up_form_section_bloc_listener.dart';
+//   final String signUpHeaderSection = 'lib/features/aut_feature/presentation/views/widgets/sign_up_header_section.dart';
+//   final String signUpViewBody = 'lib/features/aut_feature/presentation/views/widgets/sign_up_view_body.dart';
+//   final String textAlreadyHavaAnAccount = 'lib/features/aut_feature/presentation/views/widgets/text_already_hava_an_account.dart';
+//   final String textDontHaveAnAccount = 'lib/features/aut_feature/presentation/views/widgets/text_dont_have_an_account.dart';
+//   final String textFieldsLoginViewSection = 'lib/features/aut_feature/presentation/views/widgets/text_fields_login_view_section.dart';
+//   final String textFieldsSignUpViewSection = 'lib/features/aut_feature/presentation/views/widgets/text_fields_sign_up_view_section.dart';
+//   final String textGetStartedLoginView = 'lib/features/aut_feature/presentation/views/widgets/text_get_started_login_view.dart';
+//   final String textJoinUsSignUpView = 'lib/features/aut_feature/presentation/views/widgets/text_join_us_sign_up_view.dart';
+//   final String textWelcomeBackLoginView = 'lib/features/aut_feature/presentation/views/widgets/text_welcome_back_login_view.dart';
+// }
+//
+// class $AssetsSplashFeatureGen {
+//   const $AssetsSplashFeatureGen();
+//
+//   final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
+// }
+//
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String splashView = 'lib/features/splash_feature/presentation/views/splash_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String animationLogoSplashView = 'lib/features/splash_feature/presentation/views/widgets/animation_logo_splash_view.dart';
+//   final String animationPurgerSplashView = 'lib/features/splash_feature/presentation/views/widgets/animation_purger_splash_view.dart';
+//   final String animationTextFastFreshDeliSplashView = 'lib/features/splash_feature/presentation/views/widgets/animation_text_fast_fresh_deli_splash_view.dart';
+//   final String splashViewBody = 'lib/features/splash_feature/presentation/views/widgets/splash_view_body.dart';
+// }
+//
+// class $AssetsCheckoutFeatureGen {
+//   const $AssetsCheckoutFeatureGen();
+//
+//   final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
+// }
+//
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String checkoutView = 'lib/features/checkout_feature/presentation/views/checkout_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String buttonSaveCardDetailsAndListTile = 'lib/features/checkout_feature/presentation/views/widgets/button_save_card_details_and_list_tile.dart';
+//   final String checkoutViewBody = 'lib/features/checkout_feature/presentation/views/widgets/checkout_view_body.dart';
+//   final String customButtonSuccessView = 'lib/features/checkout_feature/presentation/views/widgets/custom_button_success_view.dart';
+//   final String estimatedDeliveryTime = 'lib/features/checkout_feature/presentation/views/widgets/estimated_delivery_time.dart';
+//   final String orderSummarySection = 'lib/features/checkout_feature/presentation/views/widgets/order_summary_section.dart';
+//   final String paymentMethodText = 'lib/features/checkout_feature/presentation/views/widgets/payment_method_text.dart';
+//   final String paymentMethodWithDebitCard = 'lib/features/checkout_feature/presentation/views/widgets/payment_method_with_debit_card.dart';
+//   final String paymentMethodWithDelivery = 'lib/features/checkout_feature/presentation/views/widgets/payment_method_with_delivery.dart';
+//   final String paymentMethodsSection = 'lib/features/checkout_feature/presentation/views/widgets/payment_methods_section.dart';
+//   final String paynowSection = 'lib/features/checkout_feature/presentation/views/widgets/paynow_section.dart';
+//   final String priceBreakDownWidget = 'lib/features/checkout_feature/presentation/views/widgets/price_break_down_widget.dart';
+//   final String priceBreakdownWidgetListView = 'lib/features/checkout_feature/presentation/views/widgets/price_breakdown_widget_list_view.dart';
+//   final String saveCardDetailsCheckButton = 'lib/features/checkout_feature/presentation/views/widgets/save_card_details_check_button.dart';
+//   final String successViewBody = 'lib/features/checkout_feature/presentation/views/widgets/success_view_body.dart';
+//   final String successWidget = 'lib/features/checkout_feature/presentation/views/widgets/success_widget.dart';
+//   final String textSuccessView = 'lib/features/checkout_feature/presentation/views/widgets/text_success_view.dart';
+//   final String totalAndDeliveryTimeSection = 'lib/features/checkout_feature/presentation/views/widgets/total_and_delivery_time_section.dart';
+//   final String trueIconSuccessView = 'lib/features/checkout_feature/presentation/views/widgets/true_icon_success_view.dart';
+// }
+//
+// class $AssetsOrderHistoryFeatureGen {
+//   const $AssetsOrderHistoryFeatureGen();
+//
+//   final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
+// }
+//
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String orderHistoryView = 'lib/features/order_history_feature/presentation/views/order_history_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String orderHistoryItem = 'lib/features/order_history_feature/presentation/views/widgets/order_history_item.dart';
+//   final String orderHistoryItemDetails = 'lib/features/order_history_feature/presentation/views/widgets/order_history_item_details.dart';
+//   final String orderHistoryItemListView = 'lib/features/order_history_feature/presentation/views/widgets/order_history_item_list_view.dart';
+//   final String orderHistoryViewBody = 'lib/features/order_history_feature/presentation/views/widgets/order_history_view_body.dart';
+// }
 
 class $AssetsCoreGen {
   const $AssetsCoreGen();
@@ -387,17 +542,36 @@ class $AssetsUtilsGen {
   final String constant = 'lib/core/utils/constant.dart';
   final String failures = 'lib/core/utils/failures.dart';
   final String firebaseOptions = 'lib/core/utils/firebase_options.dart';
-  final String secureStorageService =
-      'lib/core/utils/secure_storage_service.dart';
+  final String imagePickerService = 'lib/core/utils/image_picker_service.dart';
+  final String secureStorageService = 'lib/core/utils/secure_storage_service.dart';
   final String serviceLocator = 'lib/core/utils/service_locator.dart';
   final String simpleBlocObserver = 'lib/core/utils/simple_bloc_observer.dart';
   final String useCase = 'lib/core/utils/use_case.dart';
 }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String bottomCurveClipper = 'lib/core/widgets/bottom_curve_clipper.dart';
+//   final String customAddOrPayWidget = 'lib/core/widgets/custom_add_or_pay_widget.dart';
+//   final String customBackButton = 'lib/core/widgets/custom_back_button.dart';
+//   final String customBottomBar = 'lib/core/widgets/custom_bottom_bar.dart';
+//   final String customButton = 'lib/core/widgets/custom_button.dart';
+//   final String customErrorMessage = 'lib/core/widgets/custom_error_message.dart';
+//   final String customModalProgressHud = 'lib/core/widgets/custom_modal_progress_hud.dart';
+//   final String customScaffold = 'lib/core/widgets/custom_scaffold.dart';
+//   final String customShadowWidget = 'lib/core/widgets/custom_shadow_widget.dart';
+//   final String customText = 'lib/core/widgets/custom_text.dart';
+//   final String customTextFieldPasswordIcon = 'lib/core/widgets/custom_text_field_password_icon.dart';
+//   final String customTextFormField = 'lib/core/widgets/custom_text_form_field.dart';
+//   final String profilePhotoWidget = 'lib/core/widgets/profile_photo_widget.dart';
+// }
 
 class AssetGenImage {
   const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
 
   final String _assetName;
+
 
   final Size? size;
   final Set<String> flavors;
@@ -541,3 +715,4 @@ class SvgGenImage {
 
   String get keyName => _assetName;
 }
+

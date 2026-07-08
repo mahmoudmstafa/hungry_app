@@ -17,4 +17,19 @@ final class AuthFailure extends AuthState
   AuthFailure({required this.errMessage});
 
 }
+
+
 final class AuthLoading extends AuthState {}
+class LogoutSuccess extends AuthState {}
+
+class UpdateNameSuccess extends AuthState {
+  final UserEntity user;
+
+  UpdateNameSuccess({required this.user});
+}
+
+final class UpdateNameFailure extends AuthState {
+  final String errMessage;
+
+  UpdateNameFailure({required this.errMessage});
+}
