@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hungry_app/features/home_feature/domain/entities/category_entity.dart';
 
 import '../../../../../core/utils/constant.dart';
 import '../../../../../core/widgets/custom_button.dart';
@@ -6,17 +7,17 @@ import '../../../../../core/widgets/custom_button.dart';
 class ActiveAndInActiveButtonMenu extends StatelessWidget {
   const ActiveAndInActiveButtonMenu({
     super.key,
-    required this.isActive, required this.text,
+    required this.isActive, required this.categoryEntity,
   });
 
   final bool isActive;
 
-  final String text;
+  final CategoryEntity categoryEntity;
 
   @override
   Widget build(BuildContext context) {
     return CustomButton(
-      text: text ,
+      text: categoryEntity.name ,
       textColor: isActive ? Colors.white : Color(0xff6A6A6A),
       padding: EdgeInsets.symmetric(
         horizontal: 20,

@@ -8,9 +8,9 @@ import '../../../../aut_feature/presentation/manager/cubits/auth_cubit.dart';
 import 'custom_button_profile_view.dart';
 
 class ButtonsProfileViewSection extends StatefulWidget {
-  const ButtonsProfileViewSection({super.key, this.onTap});
+  const ButtonsProfileViewSection({super.key, this.onTapButtonEditProfile});
 
-  final void Function()? onTap ;
+  final void Function()? onTapButtonEditProfile ;
   @override
   State<ButtonsProfileViewSection> createState() =>
       _ButtonsProfileViewSectionState();
@@ -23,7 +23,7 @@ class _ButtonsProfileViewSectionState extends State<ButtonsProfileViewSection> {
       children: [
         Expanded(
           child: CustomButtonProfileView(
-            onTap: widget.onTap,
+            onTap: widget.onTapButtonEditProfile,
             outBorderColor: true,
             text: 'Edit Name',
             textColor: kPrimaryColor,

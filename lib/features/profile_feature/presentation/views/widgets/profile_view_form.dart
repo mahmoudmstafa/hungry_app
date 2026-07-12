@@ -58,7 +58,7 @@ class _ProfileViewFormState extends State<ProfileViewForm> {
             ),
           ),
           ButtonsProfileViewSection(
-            onTap: () {
+            onTapButtonEditProfile: () {
               BlocProvider.of<AuthCubit>(context).updateNameAndPhoto(
                 name: name,
               );

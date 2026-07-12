@@ -10,3 +10,4 @@ const double kPadding = 20;
 const double kTopSpace = 50;
 final String kLogo = Assets.assets.images.logo.path;
 final String kProfilePhoto = Assets.assets.images.profileProfile.path;
+final String productBox = 'productsBox';

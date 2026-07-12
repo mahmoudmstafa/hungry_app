@@ -9,8 +9,8 @@ import '../../../../../core/widgets/custom_text.dart';
 import '../../../../aut_feature/presentation/manager/cubits/auth_cubit.dart';
 import 'app_bar_home_view.dart';
 
-class HomeViewAppBarSection extends StatelessWidget {
-  const HomeViewAppBarSection({super.key});
+class HomeViewAppBarAndSearchSection extends StatelessWidget {
+  const HomeViewAppBarAndSearchSection({super.key});
 
   @override
   Widget build(BuildContext context) {

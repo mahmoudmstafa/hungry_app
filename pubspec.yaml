@@ -50,6 +50,11 @@ dependencies:
   image_picker: ^1.2.3
   firebase_storage: ^13.4.3
   cloudinary_public: ^0.23.1
+  cached_network_image: ^3.4.1
+  # Migrated from hive/hive_flutter (unmaintained, blocked modern build_runner)
+  # to Hive CE (Community Edition) — actively maintained fork.
+  hive_ce: ^2.16.0
+  hive_ce_flutter: ^2.3.3
 
 dev_dependencies:
   flutter_test:
@@ -62,9 +67,9 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
   flutter_launcher_icons:
-  build_runner: ^2.4.15
   flutter_gen_runner: ^5.10.0
-
+  build_runner: ^2.15.1
+  hive_ce_generator: ^1.11.1
 flutter_gen:
   integrations:
     flutter_svg: true
@@ -220,4 +225,3 @@ flutter:
 
         - asset: assets/fonts/Roboto/Roboto-Black.ttf
           weight: 900
-

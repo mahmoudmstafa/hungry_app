@@ -1,14 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/utils/constant.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../../generated/assets.dart';
+import '../../manager/cubits/search_products_cubit/search_products_cubit.dart';
 
-class TextFieldHomeView extends StatelessWidget {
+class TextFieldHomeView extends StatefulWidget {
   const TextFieldHomeView({
     super.key,
   });
+
+  @override
+  State<TextFieldHomeView> createState() => _TextFieldHomeViewState();
+}
+
+class _TextFieldHomeViewState extends State<TextFieldHomeView> {
+  late TextEditingController searchTextController;
+
+  @override
+  void initState() {
+    super.initState();
+    searchTextController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    searchTextController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +46,12 @@ class TextFieldHomeView extends StatelessWidget {
         ],
       ),
       child: CustomTextFormField(
+        controller: searchTextController,
+        onChanged: (searchQuery) {
+          context.read<SearchProductsCubit>().onSearchQueryChanged(
+            searchQuery,
+          );
+        },
         cursorColor: kSecondaryColor,
         textStyle: TextStyle(
           color: kSecondaryColor,
