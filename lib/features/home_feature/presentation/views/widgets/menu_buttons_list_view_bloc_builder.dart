@@ -31,8 +31,7 @@ class _MenuButtonsListViewBlocBuilderState
       builder: (context, state) {
         if (state is GetCategoryError) {
           return CustomErrorMessage(errMessage: state.message);
-        }
-        else if (state is GetCategoryLoaded) {
+        } else if (state is GetCategoryLoaded) {
           final allCategories = [
             CategoryEntity(id: 'all', name: 'All', image: ''),
             ...state.categories,
@@ -44,6 +43,13 @@ class _MenuButtonsListViewBlocBuilderState
               setState(() {
                 activeIndex = index;
               });
+              if (index == 0) {
+                context.read<GetProductCubit>().getProducts();
+              } else {
+                context.read<GetProductCubit>().getProducts(
+                  categoryId: allCategories[index].id,
+                );
+              }
             },
           );
         } else {

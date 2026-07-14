@@ -26,18 +26,18 @@ class _FoodCardGridViewBlocBuilderState
     extends State<FoodCardGridViewBlocBuilder> {
   List<ProductEntity> products = [];
 
+  final Set<String> alreadyCachedImageUrls = {};
+
   @override
   void initState() {
     super.initState();
 
     final cubit = context.read<GetProductCubit>();
-
     if (cubit.products.isEmpty) {
       cubit.getProducts();
     }
   }
 
-  @override
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -45,12 +45,17 @@ class _FoodCardGridViewBlocBuilderState
     final cubit = context.read<GetProductCubit>();
 
     for (final product in cubit.products) {
-      if (!mounted) {
-        return;
+      if (alreadyCachedImageUrls.contains(product.productImage)) {
+        continue;
       }
 
+      alreadyCachedImageUrls.add(product.productImage);
+
       precacheImage(
-        CachedNetworkImageProvider(product.productImage),
+        ResizeImage(
+          CachedNetworkImageProvider(product.productImage),
+          width: 400,
+        ),
         context,
       );
     }
@@ -62,15 +67,25 @@ class _FoodCardGridViewBlocBuilderState
       builder: (context, state) {
         // الحالة الأولى: لسه بيحمل البيانات لأول مرة
         if (state is GetProductsLoading || state is GetProductInitial) {
-          return LoadingFoodCardGridViewWidget();
+          return SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: kPadding),
+            sliver: SliverToBoxAdapter(
+              child: LoadingFoodCardGridViewWidget(),
+            ),
+          );
         }
 
         // الحالة الثانية: حصل خطأ في تحميل البيانات
         if (state is GetProductsFailure) {
-          return Padding(
-            padding: const EdgeInsets.only(top: 40),
-            child: CustomErrorMessage(
-              errMessage: state.errMessage,
+          return SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: kPadding),
+            sliver: SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 40),
+                child: CustomErrorMessage(
+                  errMessage: state.errMessage,
+                ),
+              ),
             ),
           );
         }
@@ -90,34 +105,42 @@ class _FoodCardGridViewBlocBuilderState
         bool isLoadingMoreProducts = state is GetProductsLoadingMore;
         bool didPaginationFail = state is GetProductsPaginationError;
 
-        return Column(
-          children: [
-            // لو بيحمل صفحة إضافية، نعرض دائرة تحميل صغيرة تحت
+        return SliverMainAxisGroup(
+          slivers: [
+            // لو بيحمل صفحة إضافية، نعرض دائرة تحميل صغيرة فوق الشبكة
             if (isLoadingMoreProducts)
-              Container(
-                padding: EdgeInsets.symmetric(vertical: 16),
-                child: Center(
-                  child: CustomCircleLoading(
-                    color: kSecondaryColor,
-                    height: 35,
-                    width: 35,
+              SliverToBoxAdapter(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  child: Center(
+                    child: CustomCircleLoading(
+                      color: kSecondaryColor,
+                      height: 35,
+                      width: 35,
+                    ),
                   ),
                 ),
               ),
 
             // لو فشل تحميل الصفحة الإضافية، نعرض زرار لإعادة المحاولة
             if (didPaginationFail)
-              Container(
-                height: 200,
-                padding: const EdgeInsets.symmetric(vertical: 16),
-                child: TextButton(
-                  onPressed: () {
-                    context.read<GetProductCubit>().loadNextPage();
-                  },
-                  child: const Text('Failed to load more. Tap to retry'),
+              SliverToBoxAdapter(
+                child: Container(
+                  height: 200,
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  child: TextButton(
+                    onPressed: () {
+                      context.read<GetProductCubit>().loadNextPage();
+                    },
+                    child: const Text('Failed to load more. Tap to retry'),
+                  ),
                 ),
               ),
-            FoodCardGridView(products: products),
+
+            SliverPadding(
+              padding: const EdgeInsets.symmetric(horizontal: kPadding),
+              sliver: FoodCardGridView(products: products),
+            ),
           ],
         );
       },
