@@ -7,6 +7,9 @@ import 'core/utils/service_locator.dart';
 import 'features/aut_feature/presentation/manager/cubits/auth_cubit.dart';
 import 'package:nested/nested.dart';
 
+import 'features/cart_feature/presentation/manager/cubits/cart_cubit/cart_cubit.dart';
+import 'features/home_feature/presentation/manager/cubits/get_category_cubit/get_category_cubit.dart';
+
 
 class HungryApp extends StatelessWidget {
   const HungryApp({super.key});
@@ -30,6 +33,12 @@ class HungryApp extends StatelessWidget {
     return [
       BlocProvider<AuthCubit>(
         create: (_) => getIt<AuthCubit>(),
+      ),
+      BlocProvider<GetCategoryCubit>(
+        create: (_) => getIt<GetCategoryCubit>()..fetchCategories(),
+      ),
+      BlocProvider<CartCubit>(
+        create: (_) => getIt<CartCubit>(),
       ),
     ];
   }

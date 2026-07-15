@@ -3,16 +3,25 @@
 // Check in to version control
 
 import 'package:hive_ce/hive_ce.dart';
+import 'package:hungry_app/features/cart_feature/data/models/cart_item_model.dart';
 import 'package:hungry_app/features/home_feature/data/models/product_model.dart';
+import 'package:hungry_app/features/product_details_feature/data/models/side_options_model.dart';
+import 'package:hungry_app/features/product_details_feature/data/models/toppings_model.dart';
 
 extension HiveRegistrar on HiveInterface {
   void registerAdapters() {
+    registerAdapter(CartItemModelAdapter());
     registerAdapter(ProductModelAdapter());
+    registerAdapter(SideOptionsModelAdapter());
+    registerAdapter(ToppingModelAdapter());
   }
 }
 
 extension IsolatedHiveRegistrar on IsolatedHiveInterface {
   void registerAdapters() {
+    registerAdapter(CartItemModelAdapter());
     registerAdapter(ProductModelAdapter());
+    registerAdapter(SideOptionsModelAdapter());
+    registerAdapter(ToppingModelAdapter());
   }
 }

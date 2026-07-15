@@ -22,7 +22,8 @@ class FoodCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Get.toNamed(
-          AppRoutes.productDetails ,
+          AppRoutes.productDetails,
+          arguments: products,
         );
       },
       child: Container(
@@ -98,4 +99,3 @@ class FoodCard extends StatelessWidget {
     );
   }
 }
-

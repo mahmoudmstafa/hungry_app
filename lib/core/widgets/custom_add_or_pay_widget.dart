@@ -16,18 +16,22 @@ class CustomAddOrPayWidget extends StatelessWidget {
     this.textColor,
     this.textWeight,
     this.price,
-    this.fontSize, this.padding, this.onTap,
+    this.fontSize,
+    this.padding,
+    this.onTap,
   });
 
   final String textButton;
   final String text;
   final int? textColor;
   final FontWeight? textWeight;
-  final double? price, fontSize;
+  final double? fontSize;
 
-  final EdgeInsets? padding ;
+  final int? price;
+  final EdgeInsets? padding;
 
-  final VoidCallback? onTap ;
+  final VoidCallback? onTap;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -54,7 +58,6 @@ class CustomAddOrPayWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Gap(10),
                   CustomText(
                     text: text,
                     color: textColor ?? kIntSecondaryColor,
@@ -63,8 +66,12 @@ class CustomAddOrPayWidget extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Image.asset(
-                        Assets.assets.images.dollar.path,
+                      CustomText(
+                        fontFamily: 'ReemKufiInk',
+                        text: '\$',
+                        color: kIntPrimaryColor,
+                        fontWeight: textWeight,
+                        fontSize: 32,
                       ),
                       CustomText(
                         fontFamily: 'ReemKufiInk',
@@ -80,7 +87,7 @@ class CustomAddOrPayWidget extends StatelessWidget {
             ),
             Expanded(
               child: CustomButton(
-                onTap: onTap ,
+                onTap: onTap,
                 height: 55,
                 text: textButton,
                 backgroundColor: kPrimaryColor,

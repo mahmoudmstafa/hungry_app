@@ -30,7 +30,7 @@ class PayNowSection extends StatelessWidget {
           text: 'Total price',
           textColor: 0xFF9E9E9E,
           textWeight: FontWeight.w400,
-          price: 18.19,
+          price: 18,
           fontSize: 14,
         ),
       ],

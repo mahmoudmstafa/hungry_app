@@ -34,7 +34,7 @@ class CartViewBody extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
           textButton: 'Checkout',
           text: 'Total',
-          price: 99.19,
+          price: 99,
         ),
       ],
     );

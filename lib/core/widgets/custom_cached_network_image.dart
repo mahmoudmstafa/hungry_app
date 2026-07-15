@@ -18,8 +18,10 @@ class CustomCachedNetworkImage extends StatelessWidget {
     this.fit = BoxFit.cover,
     this.borderRadius,
     this.boxShadow,
+    this.borderRadiusLoadingImage,
   });
 
+  final BorderRadius? borderRadiusLoadingImage;
   final String? placeHolderImage;
   final Widget? errorWidget;
   final String imageUrl;
@@ -44,10 +46,12 @@ class CustomCachedNetworkImage extends StatelessWidget {
                 height: 120,
                 decoration: BoxDecoration(
                   color: Colors.grey,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(16),
-                    topRight: Radius.circular(16),
-                  ),
+                  borderRadius:
+                      borderRadiusLoadingImage ??
+                      BorderRadius.only(
+                        topLeft: Radius.circular(16),
+                        topRight: Radius.circular(16),
+                      ),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.2),
@@ -59,15 +63,6 @@ class CustomCachedNetworkImage extends StatelessWidget {
                 ),
               ),
             )
-          // Center(
-          //         child: SizedBox(
-          //           width: 30,
-          //           height: 30,
-          //           child: CircularProgressIndicator(
-          //             color: colorCircleIndicator ?? Colors.blue,
-          //           ),
-          //         ),
-          //       )
           : Image.network(placeHolderImage!),
       imageUrl: imageUrl,
       errorWidget: (context, url, error) =>

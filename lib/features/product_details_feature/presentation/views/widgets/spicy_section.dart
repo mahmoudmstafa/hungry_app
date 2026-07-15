@@ -15,7 +15,7 @@ class SpicySection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Gap(20),
+        Gap(10),
         CustomText(
           text: 'Spicy',
           color: kIntSecondaryColor,

@@ -19,7 +19,6 @@ class ToppingsAndSideOptionsSections extends StatelessWidget {
         Gap(10),
         SideOptionSection(),
         Gap(10),
-
       ],
     );
   }

@@ -83,8 +83,6 @@ class HomeRepoImpl implements HomeRepo {
       );
       return Right(products);
     } on DioException catch (e) {
-      // لو السيرفر رجع 404 يعني مفيش نتائج، ده مش خطأ حقيقي
-      // فبنرجع قائمة فاضية بدل ما نظهر رسالة خطأ لليوزر
       if (e.response?.statusCode == 404) {
         return const Right([]);
       }

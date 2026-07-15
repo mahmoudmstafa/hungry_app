@@ -11,7 +11,6 @@ class ProductModelAdapter extends TypeAdapter<ProductModel> {
   final typeId = 0;
 
   @override
-  @override
   ProductModel read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
@@ -22,30 +21,33 @@ class ProductModelAdapter extends TypeAdapter<ProductModel> {
       title: fields[1] as String,
       desc: fields[2] as String,
       productImage: fields[3] as String,
-      price: fields[4] as double,
+      price: (fields[4] as num).toDouble(),
       rate: fields[5] as num,
       isFavourite: fields[6] as bool,
+      categoryId: fields[7] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, ProductModel obj) {
     writer
-      ..writeByte(7)
+      ..writeByte(8)
       ..writeByte(0)
-      ..write(obj.hiveId)
+      ..write(obj.id)
       ..writeByte(1)
-      ..write(obj.hiveTitle)
+      ..write(obj.title)
       ..writeByte(2)
-      ..write(obj.hiveDesc)
+      ..write(obj.desc)
       ..writeByte(3)
-      ..write(obj.hiveProductImage)
+      ..write(obj.productImage)
       ..writeByte(4)
-      ..write(obj.hivePrice)
+      ..write(obj.price)
       ..writeByte(5)
-      ..write(obj.hiveRate)
+      ..write(obj.rate)
       ..writeByte(6)
-      ..write(obj.hiveIsFavourite);
+      ..write(obj.isFavourite)
+      ..writeByte(7)
+      ..write(obj.categoryId);
   }
 
   @override

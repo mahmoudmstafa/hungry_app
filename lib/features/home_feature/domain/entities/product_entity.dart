@@ -3,7 +3,7 @@ class ProductEntity {
 
 
 
-
+  final String categoryId ;
   final String productImage, title, desc;
 
   final double price;
@@ -18,7 +18,7 @@ class ProductEntity {
     required this.price,
     required this.isFavourite,
     required this.rate,
-    required this.id,
+    required this.id, required this.categoryId,
   });
 }
 

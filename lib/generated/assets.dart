@@ -302,6 +302,7 @@ class $AssetsLibGen {
   final $AssetsCoreGen core = const $AssetsCoreGen();
   final $AssetsFeaturesGen features = const $AssetsFeaturesGen();
   final String app = 'lib/app.dart';
+  final String hiveRegistrarG = 'lib/hive_registrar.g.dart';
   final String main = 'lib/main.dart';
   final String rootView = 'lib/root_view.dart';
 }
@@ -309,11 +310,18 @@ class $AssetsLibGen {
 class $AssetsFeaturesGen {
   const $AssetsFeaturesGen();
 
+  final $AssetsAutFeatureGen autFeature = const $AssetsAutFeatureGen();
+  final $AssetsCartFeatureGen cartFeature = const $AssetsCartFeatureGen();
+  final $AssetsCheckoutFeatureGen checkoutFeature =
+      const $AssetsCheckoutFeatureGen();
   final $AssetsHomeFeatureGen homeFeature = const $AssetsHomeFeatureGen();
+  final $AssetsOrderHistoryFeatureGen orderHistoryFeature =
+      const $AssetsOrderHistoryFeatureGen();
   final $AssetsProductDetailsFeatureGen productDetailsFeature =
       const $AssetsProductDetailsFeatureGen();
   final $AssetsProfileFeatureGen profileFeature =
       const $AssetsProfileFeatureGen();
+  final $AssetsSplashFeatureGen splashFeature = const $AssetsSplashFeatureGen();
 }
 
 class $AssetsHomeFeatureGen {
@@ -351,16 +359,16 @@ class $AssetsWidgetsGen {
       'lib/features/home_feature/presentation/views/widgets/food_card_grid_view.dart';
   final String foodCardGridViewBlocBuilder =
       'lib/features/home_feature/presentation/views/widgets/food_card_grid_view_bloc_builder.dart';
-  final String homeViewAppBarSection =
+  final String homeViewAppBarAndSearchSection =
       'lib/features/home_feature/presentation/views/widgets/home_view_app_bar_and_search_section.dart';
   final String homeViewBody =
       'lib/features/home_feature/presentation/views/widgets/home_view_body.dart';
-  final String menuButtonsListView =
+  final String menuAndFoodCardSection =
+      'lib/features/home_feature/presentation/views/widgets/menu_and_food_card_section.dart';
+  final String menuButtonsListViewBlocBuilder =
       'lib/features/home_feature/presentation/views/widgets/menu_buttons_list_view_bloc_builder.dart';
   final String ratingWidget =
       'lib/features/home_feature/presentation/views/widgets/rating_widget.dart';
-  final String searchAndMenuAndFoodCardSection =
-      'lib/features/home_feature/presentation/views/widgets/menu_and_food_card_section.dart';
   final String textFieldHomeView =
       'lib/features/home_feature/presentation/views/widgets/text_field_home_view.dart';
 }
@@ -370,12 +378,363 @@ class $AssetsProductDetailsFeatureGen {
 
   final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
 }
+//
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String productDetailsView =
+//       'lib/features/product_details_feature/presentation/views/product_details_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String addToCartSection =
+//       'lib/features/product_details_feature/presentation/views/widgets/add_to_cart_section.dart';
+//   final String buttonsAddAndAddDoneAndAnimation =
+//       'lib/features/product_details_feature/presentation/views/widgets/buttons_add_and_add_done_and_animation.dart';
+//   final String coldAndSpicyIcons =
+//       'lib/features/product_details_feature/presentation/views/widgets/cold_and_spicy_icons.dart';
+//   final String customToppingsAndSideOptionsLoadingWidget =
+//       'lib/features/product_details_feature/presentation/views/widgets/custom_toppings_and_side_options_loading_widget.dart';
+//   final String editingWidget =
+//       'lib/features/product_details_feature/presentation/views/widgets/editing_widget.dart';
+//   final String productDetailsSection =
+//       'lib/features/product_details_feature/presentation/views/widgets/product_details_section.dart';
+//   final String productDetailsText =
+//       'lib/features/product_details_feature/presentation/views/widgets/product_details_text.dart';
+//   final String productDetailsViewBody =
+//       'lib/features/product_details_feature/presentation/views/widgets/product_details_view_body.dart';
+//   final String sideOptionsListView =
+//       'lib/features/product_details_feature/presentation/views/widgets/side_options_list_view.dart';
+//   final String sideOptionsSection =
+//       'lib/features/product_details_feature/presentation/views/widgets/side_options_section.dart';
+//   final String sliderWidget =
+//       'lib/features/product_details_feature/presentation/views/widgets/slider_widget.dart';
+//   final String spicySection =
+//       'lib/features/product_details_feature/presentation/views/widgets/spicy_section.dart';
+//   final String toppingsAndSideOptionsSections =
+//       'lib/features/product_details_feature/presentation/views/widgets/toppings_and_side_options_sections.dart';
+//   final String toppingsListView =
+//       'lib/features/product_details_feature/presentation/views/widgets/toppings_list_view.dart';
+//   final String toppingsSection =
+//       'lib/features/product_details_feature/presentation/views/widgets/toppings_section.dart';
+// }
+
+class $AssetsCartFeatureGen {
+  const $AssetsCartFeatureGen();
+
+  final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
+}
+//
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String cartView =
+//       'lib/features/cart_feature/presentation/views/cart_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String cartViewBody =
+//       'lib/features/cart_feature/presentation/views/widgets/cart_view_body.dart';
+//   final String customAddOrRemoveWidget =
+//       'lib/features/cart_feature/presentation/views/widgets/custom_add_or_remove_widget.dart';
+//   final String shoppingCartItem =
+//       'lib/features/cart_feature/presentation/views/widgets/shopping_cart_item.dart';
+//   final String shoppingCartItemDetails =
+//       'lib/features/cart_feature/presentation/views/widgets/shopping_cart_item_details.dart';
+//   final String shoppingCartItemListView =
+//       'lib/features/cart_feature/presentation/views/widgets/shopping_cart_item_list_view.dart';
+//   final String shoppingCartItemQuantityCounter =
+//       'lib/features/cart_feature/presentation/views/widgets/shopping_cart_item_quantity_counter.dart';
+// }
 
 class $AssetsProfileFeatureGen {
   const $AssetsProfileFeatureGen();
 
   final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
 }
+//
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String profileView =
+//       'lib/features/profile_feature/presentation/views/profile_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String buttonsProfileViewSection =
+//       'lib/features/profile_feature/presentation/views/widgets/buttons_profile_view_section.dart';
+//   final String customButtonProfileView =
+//       'lib/features/profile_feature/presentation/views/widgets/custom_button_profile_view.dart';
+//   final String customDividerProfileView =
+//       'lib/features/profile_feature/presentation/views/widgets/custom_divider_profile_view.dart';
+//   final String customPasswordTextFormFieldProfileView =
+//       'lib/features/profile_feature/presentation/views/widgets/custom_password_text_form_field_profile_view.dart';
+//   final String customTextFormFieldProfileView =
+//       'lib/features/profile_feature/presentation/views/widgets/custom_text_form_field_profile_view.dart';
+//   final String paymentWithCardProfileView =
+//       'lib/features/profile_feature/presentation/views/widgets/payment_with_card_profile_view.dart';
+//   final String profileViewBody =
+//       'lib/features/profile_feature/presentation/views/widgets/profile_view_body.dart';
+//   final String profileViewForm =
+//       'lib/features/profile_feature/presentation/views/widgets/profile_view_form.dart';
+//   final String profileViewHeader =
+//       'lib/features/profile_feature/presentation/views/widgets/profile_view_header.dart';
+//   final String textFormFieldsProfileViewSection =
+//       'lib/features/profile_feature/presentation/views/widgets/text_form_fields_profile_view_section.dart';
+// }
+
+class $AssetsAutFeatureGen {
+  const $AssetsAutFeatureGen();
+
+  final $AssetsDomainGen domain = const $AssetsDomainGen();
+  final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
+}
+
+class $AssetsDomainGen {
+  const $AssetsDomainGen();
+
+  final $AssetsEntitiesGen entities = const $AssetsEntitiesGen();
+  final $AssetsReposGen repos = const $AssetsReposGen();
+  final $AssetsUseCasesGen useCases = const $AssetsUseCasesGen();
+}
+
+class $AssetsReposGen {
+  const $AssetsReposGen();
+
+  final String authRepo =
+      'lib/features/aut_feature/domain/repos/auth_repo.dart';
+}
+
+class $AssetsEntitiesGen {
+  const $AssetsEntitiesGen();
+
+  final String userEntity =
+      'lib/features/aut_feature/domain/entities/user_entity.dart';
+}
+
+class $AssetsUseCasesGen {
+  const $AssetsUseCasesGen();
+
+  final String autoLoginUseCase =
+      'lib/features/aut_feature/domain/use_cases/auto_login_use_case.dart';
+  final String loginUseCase =
+      'lib/features/aut_feature/domain/use_cases/login_use_case.dart';
+  final String logoutUseCase =
+      'lib/features/aut_feature/domain/use_cases/logout_use_case.dart';
+  final String signUpUseCase =
+      'lib/features/aut_feature/domain/use_cases/sign_up_use_case.dart';
+  final String updateNamUseCase =
+      'lib/features/aut_feature/domain/use_cases/update_nam_use_case.dart';
+}
+
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String loginView =
+//       'lib/features/aut_feature/presentation/views/login_view.dart';
+//   final String signUpView =
+//       'lib/features/aut_feature/presentation/views/sign_up_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String customAuthLogo =
+//       'lib/features/aut_feature/presentation/views/widgets/custom_auth_logo.dart';
+//   final String customAuthTextFormField =
+//       'lib/features/aut_feature/presentation/views/widgets/custom_auth_text_form_field.dart';
+//   final String loginFormSection =
+//       'lib/features/aut_feature/presentation/views/widgets/login_form_section.dart';
+//   final String loginFormSectionBlocListener =
+//       'lib/features/aut_feature/presentation/views/widgets/login_form_section_bloc_listener.dart';
+//   final String loginHeaderSection =
+//       'lib/features/aut_feature/presentation/views/widgets/login_header_section.dart';
+//   final String loginViewBody =
+//       'lib/features/aut_feature/presentation/views/widgets/login_view_body.dart';
+//   final String signUpFormSection =
+//       'lib/features/aut_feature/presentation/views/widgets/sign_up_form_section.dart';
+//   final String signUpFormSectionBlocListener =
+//       'lib/features/aut_feature/presentation/views/widgets/sign_up_form_section_bloc_listener.dart';
+//   final String signUpHeaderSection =
+//       'lib/features/aut_feature/presentation/views/widgets/sign_up_header_section.dart';
+//   final String signUpViewBody =
+//       'lib/features/aut_feature/presentation/views/widgets/sign_up_view_body.dart';
+//   final String textAlreadyHavaAnAccount =
+//       'lib/features/aut_feature/presentation/views/widgets/text_already_hava_an_account.dart';
+//   final String textDontHaveAnAccount =
+//       'lib/features/aut_feature/presentation/views/widgets/text_dont_have_an_account.dart';
+//   final String textFieldsLoginViewSection =
+//       'lib/features/aut_feature/presentation/views/widgets/text_fields_login_view_section.dart';
+//   final String textFieldsSignUpViewSection =
+//       'lib/features/aut_feature/presentation/views/widgets/text_fields_sign_up_view_section.dart';
+//   final String textGetStartedLoginView =
+//       'lib/features/aut_feature/presentation/views/widgets/text_get_started_login_view.dart';
+//   final String textJoinUsSignUpView =
+//       'lib/features/aut_feature/presentation/views/widgets/text_join_us_sign_up_view.dart';
+//   final String textWelcomeBackLoginView =
+//       'lib/features/aut_feature/presentation/views/widgets/text_welcome_back_login_view.dart';
+// }
+
+class $AssetsSplashFeatureGen {
+  const $AssetsSplashFeatureGen();
+
+  final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
+}
+//
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String splashView =
+//       'lib/features/splash_feature/presentation/views/splash_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String animationLogoSplashView =
+//       'lib/features/splash_feature/presentation/views/widgets/animation_logo_splash_view.dart';
+//   final String animationPurgerSplashView =
+//       'lib/features/splash_feature/presentation/views/widgets/animation_purger_splash_view.dart';
+//   final String animationTextFastFreshDeliSplashView =
+//       'lib/features/splash_feature/presentation/views/widgets/animation_text_fast_fresh_deli_splash_view.dart';
+//   final String splashViewBody =
+//       'lib/features/splash_feature/presentation/views/widgets/splash_view_body.dart';
+// }
+
+class $AssetsCheckoutFeatureGen {
+  const $AssetsCheckoutFeatureGen();
+
+  final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
+}
+//
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String checkoutView =
+//       'lib/features/checkout_feature/presentation/views/checkout_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String buttonSaveCardDetailsAndListTile =
+//       'lib/features/checkout_feature/presentation/views/widgets/button_save_card_details_and_list_tile.dart';
+//   final String checkoutViewBody =
+//       'lib/features/checkout_feature/presentation/views/widgets/checkout_view_body.dart';
+//   final String customButtonSuccessView =
+//       'lib/features/checkout_feature/presentation/views/widgets/custom_button_success_view.dart';
+//   final String estimatedDeliveryTime =
+//       'lib/features/checkout_feature/presentation/views/widgets/estimated_delivery_time.dart';
+//   final String orderSummarySection =
+//       'lib/features/checkout_feature/presentation/views/widgets/order_summary_section.dart';
+//   final String paymentMethodText =
+//       'lib/features/checkout_feature/presentation/views/widgets/payment_method_text.dart';
+//   final String paymentMethodWithDebitCard =
+//       'lib/features/checkout_feature/presentation/views/widgets/payment_method_with_debit_card.dart';
+//   final String paymentMethodWithDelivery =
+//       'lib/features/checkout_feature/presentation/views/widgets/payment_method_with_delivery.dart';
+//   final String paymentMethodsSection =
+//       'lib/features/checkout_feature/presentation/views/widgets/payment_methods_section.dart';
+//   final String paynowSection =
+//       'lib/features/checkout_feature/presentation/views/widgets/paynow_section.dart';
+//   final String priceBreakDownWidget =
+//       'lib/features/checkout_feature/presentation/views/widgets/price_break_down_widget.dart';
+//   final String priceBreakdownWidgetListView =
+//       'lib/features/checkout_feature/presentation/views/widgets/price_breakdown_widget_list_view.dart';
+//   final String saveCardDetailsCheckButton =
+//       'lib/features/checkout_feature/presentation/views/widgets/save_card_details_check_button.dart';
+//   final String successViewBody =
+//       'lib/features/checkout_feature/presentation/views/widgets/success_view_body.dart';
+//   final String successWidget =
+//       'lib/features/checkout_feature/presentation/views/widgets/success_widget.dart';
+//   final String textSuccessView =
+//       'lib/features/checkout_feature/presentation/views/widgets/text_success_view.dart';
+//   final String totalAndDeliveryTimeSection =
+//       'lib/features/checkout_feature/presentation/views/widgets/total_and_delivery_time_section.dart';
+//   final String trueIconSuccessView =
+//       'lib/features/checkout_feature/presentation/views/widgets/true_icon_success_view.dart';
+// }
+
+class $AssetsOrderHistoryFeatureGen {
+  const $AssetsOrderHistoryFeatureGen();
+
+  final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
+}
+//
+// class $AssetsPresentationGen {
+//   const $AssetsPresentationGen();
+//
+//   final $AssetsViewsGen views = const $AssetsViewsGen();
+// }
+//
+// class $AssetsViewsGen {
+//   const $AssetsViewsGen();
+//
+//   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
+//   final String orderHistoryView =
+//       'lib/features/order_history_feature/presentation/views/order_history_view.dart';
+// }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String orderHistoryItem =
+//       'lib/features/order_history_feature/presentation/views/widgets/order_history_item.dart';
+//   final String orderHistoryItemDetails =
+//       'lib/features/order_history_feature/presentation/views/widgets/order_history_item_details.dart';
+//   final String orderHistoryItemListView =
+//       'lib/features/order_history_feature/presentation/views/widgets/order_history_item_list_view.dart';
+//   final String orderHistoryViewBody =
+//       'lib/features/order_history_feature/presentation/views/widgets/order_history_view_body.dart';
+// }
 
 class $AssetsCoreGen {
   const $AssetsCoreGen();
@@ -401,6 +760,44 @@ class $AssetsUtilsGen {
   final String simpleBlocObserver = 'lib/core/utils/simple_bloc_observer.dart';
   final String useCase = 'lib/core/utils/use_case.dart';
 }
+//
+// class $AssetsWidgetsGen {
+//   const $AssetsWidgetsGen();
+//
+//   final String bottomCurveClipper =
+//       'lib/core/widgets/bottom_curve_clipper.dart';
+//   final String customAddOrPayWidget =
+//       'lib/core/widgets/custom_add_or_pay_widget.dart';
+//   final String customAnimationLoadingWidget =
+//       'lib/core/widgets/custom_animation_loading_widget.dart';
+//   final String customBackButton = 'lib/core/widgets/custom_back_button.dart';
+//   final String customBottomBar = 'lib/core/widgets/custom_bottom_bar.dart';
+//   final String customButton = 'lib/core/widgets/custom_button.dart';
+//   final String customCachedNetworkImage =
+//       'lib/core/widgets/custom_cached_network_image.dart';
+//   final String customCircleLoading =
+//       'lib/core/widgets/custom_circle_loading.dart';
+//   final String customErrorMessage =
+//       'lib/core/widgets/custom_error_message.dart';
+//   final String customModalProgressHud =
+//       'lib/core/widgets/custom_modal_progress_hud.dart';
+//   final String customScaffold = 'lib/core/widgets/custom_scaffold.dart';
+//   final String customShadowWidget =
+//       'lib/core/widgets/custom_shadow_widget.dart';
+//   final String customText = 'lib/core/widgets/custom_text.dart';
+//   final String customTextFieldPasswordIcon =
+//       'lib/core/widgets/custom_text_field_password_icon.dart';
+//   final String customTextFormField =
+//       'lib/core/widgets/custom_text_form_field.dart';
+//   final String loadingCategoriesWidget =
+//       'lib/core/widgets/loading_categories_widget.dart';
+//   final String loadingFoodCardGridViewWidget =
+//       'lib/core/widgets/loading_food_card_grid_view_widget.dart';
+//   final String menuButtonsListView =
+//       'lib/core/widgets/menu_buttons_list_view.dart';
+//   final String profilePhotoWidget =
+//       'lib/core/widgets/profile_photo_widget.dart';
+// }
 
 class AssetGenImage {
   const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
