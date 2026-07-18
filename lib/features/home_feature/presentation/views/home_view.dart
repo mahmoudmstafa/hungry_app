@@ -30,10 +30,6 @@ class HomeView extends StatelessWidget {
 
   List<SingleChildWidget> providers() {
     return [
-      BlocProvider<GetProductCubit>(
-        create: (_) => getIt<GetProductCubit>()..getProducts(),
-      ),
-
       BlocProvider<SearchProductsCubit>(
         create: (_) => getIt<SearchProductsCubit>(),
       ),

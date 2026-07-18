@@ -16,9 +16,9 @@ class CartItemEntity {
 
   final double totalPrice;
 
-  final int quantity;
+  int quantity;
   final String userId;
-  const CartItemEntity({
+   CartItemEntity({
     required this.userId,
     required this.productId,
     required this.name,

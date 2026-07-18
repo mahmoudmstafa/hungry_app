@@ -3,64 +3,36 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hungry_app/core/widgets/custom_cached_network_image.dart';
+import 'package:hungry_app/features/cart_feature/domain/entities/cart_item_entity.dart';
 
+import '../../../../../core/utils/constant.dart';
 import '../../../../../core/widgets/custom_text.dart';
 import '../../../../../generated/assets.dart';
 
 class ShoppingCartItemDetails extends StatelessWidget {
   const ShoppingCartItemDetails({
     super.key,
+    required this.cartItem,
   });
+
+  final CartItemEntity cartItem;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const Gap(5),
-        SizedBox(
-          height: 120,
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Positioned(
-                bottom: 5,
-                child: ImageFiltered(
-                  imageFilter: ImageFilter.blur(
-                    sigmaX: 10,
-                    sigmaY: 10,
-                  ),
-                  child: SvgPicture.asset(
-                    Assets.assets.images.shadow.path,
-                  ),
-                ),
-              ),
-              Positioned(
-                bottom: 10,
-                child: Image.asset(
-                  Assets.assets.images.hamburger.path,
-                  height: 100,
-                ),
-              ),
-            ],
-          ),
+    return CustomCachedNetworkImage(
+      borderRadiusLoadingImage: BorderRadius.circular(16),
+      height: 150,
+      imageUrl: cartItem.image,
+      width: double.infinity,
+      borderRadius: BorderRadius.circular(16),
+      boxShadow: [
+        BoxShadow(
+          color: kSecondaryColor.withOpacity(0.3),
+          spreadRadius: 2,
+          blurRadius: 12,
+          offset: const Offset(0, 6),
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomText(
-              text: 'Hamburger',
-              fontSize: 15,
-              fontWeight: FontWeight.bold,
-              color: 0xff3C2F2F,
-            ),
-            CustomText(
-              text: "Veggie Burger",
-              fontSize: 14,
-              color: 0xff3C2F2F,
-            ),
-          ],
-        ),
-        const Gap(15),
       ],
     );
   }

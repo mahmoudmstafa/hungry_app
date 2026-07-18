@@ -21,7 +21,8 @@ class CustomAddOrRemoveWidget extends StatelessWidget {
         width: 30,
         decoration: BoxDecoration(
           color: kPrimaryColor,
-          borderRadius: BorderRadius.circular(6),
+          // borderRadius: BorderRadius.circular(6),
+          shape: BoxShape.circle,
         ),
         child: Center(
           child: Icon(

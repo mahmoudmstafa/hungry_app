@@ -12,7 +12,7 @@ class CustomAddOrPayWidget extends StatelessWidget {
   const CustomAddOrPayWidget({
     super.key,
     required this.textButton,
-    required this.text,
+    this.text,
     this.textColor,
     this.textWeight,
     this.price,
@@ -22,7 +22,7 @@ class CustomAddOrPayWidget extends StatelessWidget {
   });
 
   final String textButton;
-  final String text;
+  final String? text;
   final int? textColor;
   final FontWeight? textWeight;
   final double? fontSize;
@@ -51,44 +51,52 @@ class CustomAddOrPayWidget extends StatelessWidget {
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.only(bottom: 8.0),
+        padding: const EdgeInsets.only(bottom: 25.0 , top: 5),
         child: Row(
           children: [
             Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CustomText(
-                    text: text,
-                    color: textColor ?? kIntSecondaryColor,
-                    fontSize: fontSize ?? 18,
-                    fontWeight: textWeight ?? FontWeight.bold,
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 3,
+                ),
+                decoration: BoxDecoration(
+                  color: kSecondaryColor,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Center(
+                  child: AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 300),
+                    switchInCurve: Curves.easeOut,
+                    switchOutCurve: Curves.easeIn,
+                    transitionBuilder: (child, animation) {
+                      return FadeTransition(
+                        opacity: animation,
+                        child: ScaleTransition(
+                          scale: Tween<double>(
+                            begin: 0.7,
+                            end: 1.0,
+                          ).animate(animation),
+                          child: child,
+                        ),
+                      );
+                    },
+                    child: CustomText(
+                      key: ValueKey<int?>(price),
+                      fontFamily: 'ReemKufiInk',
+                      text: '\$ $price',
+                      color: 0xFFFFFFFF,
+                      fontWeight: textWeight,
+                      fontSize: 28,
+                    ),
                   ),
-                  Row(
-                    children: [
-                      CustomText(
-                        fontFamily: 'ReemKufiInk',
-                        text: '\$',
-                        color: kIntPrimaryColor,
-                        fontWeight: textWeight,
-                        fontSize: 32,
-                      ),
-                      CustomText(
-                        fontFamily: 'ReemKufiInk',
-                        text: ' $price',
-                        color: 0xFF000000,
-                        fontWeight: textWeight,
-                        fontSize: 32,
-                      ),
-                    ],
-                  ),
-                ],
+                ),
               ),
             ),
             Expanded(
               child: CustomButton(
+                borderRadius: 20,
                 onTap: onTap,
-                height: 55,
                 text: textButton,
                 backgroundColor: kPrimaryColor,
               ),

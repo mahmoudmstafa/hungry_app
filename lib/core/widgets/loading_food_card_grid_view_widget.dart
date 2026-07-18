@@ -87,7 +87,10 @@ class LoadingFoodCardGridViewWidget extends StatelessWidget {
                       ),
                     ),
                     CustomAnimationLoadingWidget(
-                      child: RatingWidget(),
+                      child: RatingWidget(
+                        isFavourite: false,
+                        onPressedFavouriteButton: () {},
+                      ),
                     ),
                   ],
                 ),

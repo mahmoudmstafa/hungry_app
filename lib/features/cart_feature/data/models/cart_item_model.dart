@@ -7,32 +7,41 @@ part 'cart_item_model.g.dart';
 
 @HiveType(typeId: 5)
 class CartItemModel extends HiveObject implements CartItemEntity {
+  @override
   @HiveField(0)
   final String userId;
 
+  @override
   @HiveField(1)
   final String productId;
 
+  @override
   @HiveField(2)
   final String name;
 
+  @override
   @HiveField(3)
   final String image;
 
+  @override
   @HiveField(4)
   final double basePrice;
 
+  @override
   @HiveField(5)
   final List<ToppingModel> toppings;
 
+  @override
   @HiveField(6)
   final List<SideOptionsModel> sideOptions;
 
+  @override
   @HiveField(7)
   final double totalPrice;
 
+  @override
   @HiveField(8)
-  final int quantity;
+  int quantity;
   CartItemModel({
     required this.userId,
     required this.productId,
@@ -45,7 +54,7 @@ class CartItemModel extends HiveObject implements CartItemEntity {
     required this.quantity,
   });
 
-  factory CartItemModel.fromEntity(CartItemEntity entity) {
+  factory CartItemModel.fromEntity(CartItemEntity entity  ) {
     return CartItemModel(
       userId: entity.userId,
       productId: entity.productId,

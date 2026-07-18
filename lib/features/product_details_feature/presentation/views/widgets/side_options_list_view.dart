@@ -48,7 +48,7 @@ class SideOptionListView extends StatelessWidget {
               },
               separatorBuilder: (BuildContext context, int index) {
                 return SizedBox(
-                  width: 20,
+                  width: 10,
                 );
               },
             ),

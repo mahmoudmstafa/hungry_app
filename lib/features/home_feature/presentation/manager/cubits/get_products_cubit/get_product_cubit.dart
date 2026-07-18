@@ -54,6 +54,7 @@ class GetProductCubit extends Cubit<GetProductState> {
       },
       (data) {
         products = _removeDuplicateProducts(data.products);
+        products.shuffle(); // ترتيب عشوائي
         total = data.total;
         emit(
           GetProductsSuccess(

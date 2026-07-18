@@ -7,7 +7,7 @@ class RemoveCartItemUseCase {
     required this.repo,
   });
 
-  Future<void> call(int index) {
-    return repo.removeCartItem(index);
+  Future<void> call(int index , String userId) {
+    return repo.removeCartItem(index , userId);
   }
 }

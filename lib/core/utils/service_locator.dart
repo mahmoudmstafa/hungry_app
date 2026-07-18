@@ -25,7 +25,18 @@ import '../../features/cart_feature/domain/use_cases/add_to_cart_use_case.dart';
 import '../../features/cart_feature/domain/use_cases/clear_cart_item_use_case.dart';
 import '../../features/cart_feature/domain/use_cases/get_cart_items_use_case.dart';
 import '../../features/cart_feature/domain/use_cases/remove_cart_item_use_case.dart';
+import '../../features/cart_feature/domain/use_cases/updata_cart_item_use_case.dart';
 import '../../features/cart_feature/presentation/manager/cubits/cart_cubit/cart_cubit.dart';
+import '../../features/favourite_feature/data/data_sources/remote_data_source/local_data_source.dart';
+import '../../features/favourite_feature/data/data_sources/remote_data_source/local_data_source_imp.dart';
+import '../../features/favourite_feature/data/models/favorite_model.dart';
+import '../../features/favourite_feature/data/repos/favorite_repo_impl.dart';
+import '../../features/favourite_feature/domain/repos/favorite_repo.dart';
+import '../../features/favourite_feature/domain/use_cases/add_favorite_use_case.dart';
+import '../../features/favourite_feature/domain/use_cases/get_favorite_use_case.dart';
+import '../../features/favourite_feature/domain/use_cases/is_favorite_use_case.dart';
+import '../../features/favourite_feature/domain/use_cases/remove_favorite_use_case.dart';
+import '../../features/favourite_feature/presentation/manager/cubits/favorite_cubit/favorite_cubit.dart';
 import '../../features/home_feature/data/data_sources/local_data_source/local_data_source.dart';
 import '../../features/home_feature/data/data_sources/local_data_source/local_data_source_impl.dart';
 import '../../features/home_feature/data/data_sources/remote_data_source/remote_data_source.dart';
@@ -58,26 +69,25 @@ Future<void> setupLocator() async {
   //=========================//
 
   getIt.registerLazySingleton<ImagePickerService>(
-        () => ImagePickerService(),
+    () => ImagePickerService(),
   );
 
   getIt.registerLazySingleton<FirebaseAuth>(
-        () => FirebaseAuth.instance,
+    () => FirebaseAuth.instance,
   );
 
   getIt.registerLazySingleton<CloudinaryService>(
-        () => CloudinaryService(),
+    () => CloudinaryService(),
   );
 
   getIt.registerLazySingleton<SecureStorageService>(
-        () => SecureStorageService(),
+    () => SecureStorageService(),
   );
 
   getIt.registerLazySingleton<DioService>(
-        () =>
-        DioService(
-          secureStorageService: getIt<SecureStorageService>(),
-        ),
+    () => DioService(
+      secureStorageService: getIt<SecureStorageService>(),
+    ),
   );
 
   //=========================//
@@ -85,11 +95,14 @@ Future<void> setupLocator() async {
   //=========================//
 
   getIt.registerLazySingleton<Box<ProductModel>>(
-        () => Hive.box<ProductModel>(productBox),
+    () => Hive.box<ProductModel>(productBox),
   );
 
   getIt.registerLazySingleton<Box<CartItemModel>>(
-        () => Hive.box<CartItemModel>(cartBox),
+    () => Hive.box<CartItemModel>(cartBox),
+  );
+  getIt.registerLazySingleton<Box<FavouriteModel>>(
+    () => Hive.box<FavouriteModel>(favoriteBox),
   );
 
   //=========================//
@@ -97,74 +110,74 @@ Future<void> setupLocator() async {
   //=========================//
 
   getIt.registerLazySingleton<AuthRemoteDataSource>(
-        () =>
-        AuthRemoteDataSourceImpl(
-          firebaseAuth: getIt<FirebaseAuth>(),
-          secureStorageService: getIt<SecureStorageService>(),
-          dioService: getIt<DioService>(),
-          cloudinaryService: getIt<CloudinaryService>(),
-        ),
+    () => AuthRemoteDataSourceImpl(
+      firebaseAuth: getIt<FirebaseAuth>(),
+      secureStorageService: getIt<SecureStorageService>(),
+      dioService: getIt<DioService>(),
+      cloudinaryService: getIt<CloudinaryService>(),
+    ),
   );
 
   getIt.registerLazySingleton<ProductRemoteDataSource>(
-        () =>
-        ProductRemoteDataSourceImpl(
-          dioService: getIt<DioService>(),
-        ),
+    () => ProductRemoteDataSourceImpl(
+      dioService: getIt<DioService>(),
+    ),
   );
 
   getIt.registerLazySingleton<ToppingRemoteDataSource>(
-        () =>
-        ToppingRemoteDataSourceImpl(
-          dioService: getIt<DioService>(),
-        ),
+    () => ToppingRemoteDataSourceImpl(
+      dioService: getIt<DioService>(),
+    ),
   );
 
   getIt.registerLazySingleton<LocalDataSource>(
-        () =>
-        LocalDataSourceImpl(
-          productsBox: getIt(),
-        ),
+    () => LocalDataSourceImpl(
+      productsBox: getIt(),
+    ),
   );
 
   getIt.registerLazySingleton<CartLocalDataSource>(
-        () =>
-        CartLocalDataSourceImpl(
-          cartBox: getIt<Box<CartItemModel>>(),
-        ),
+    () => CartLocalDataSourceImpl(
+      cartBox: getIt<Box<CartItemModel>>(),
+    ),
   );
-
+  getIt.registerLazySingleton<FavouriteLocalDataSource>(
+    () => FavouriteLocalDataSourceImpl(
+      favouriteBox: getIt(),
+    ),
+  );
   //=========================//
   // Repositories
   //=========================//
 
   getIt.registerLazySingleton<AuthRepo>(
-        () =>
-        AuthRepoImpl(
-          remoteDataSource: getIt<AuthRemoteDataSource>(),
-        ),
+    () => AuthRepoImpl(
+      remoteDataSource: getIt<AuthRemoteDataSource>(),
+    ),
   );
 
   getIt.registerLazySingleton<HomeRepo>(
-        () =>
-        HomeRepoImpl(
-          remoteDataSource: getIt<ProductRemoteDataSource>(),
-          localDataSource: getIt<LocalDataSource>(),
-        ),
+    () => HomeRepoImpl(
+      remoteDataSource: getIt<ProductRemoteDataSource>(),
+      localDataSource: getIt<LocalDataSource>(),
+    ),
   );
 
   getIt.registerLazySingleton<SideOptionsAndToppingsRepo>(
-        () =>
-        SideOptionsAndToppingsRepoRepoImpl(
-          remoteDataSource: getIt<ToppingRemoteDataSource>(),
-        ),
+    () => SideOptionsAndToppingsRepoRepoImpl(
+      remoteDataSource: getIt<ToppingRemoteDataSource>(),
+    ),
   );
 
   getIt.registerLazySingleton<CartRepo>(
-        () =>
-        CartRepoImpl(
-          localDataSource: getIt<CartLocalDataSource>(),
-        ),
+    () => CartRepoImpl(
+      localDataSource: getIt<CartLocalDataSource>(),
+    ),
+  );
+  getIt.registerLazySingleton<FavouriteRepository>(
+    () => FavouriteRepositoryImpl(
+      localDataSource: getIt<FavouriteLocalDataSource>(),
+    ),
   );
 
   //=========================//
@@ -172,101 +185,113 @@ Future<void> setupLocator() async {
   //=========================//
 
   getIt.registerLazySingleton(
-        () =>
-        SignUpUseCase(
-          repository: getIt<AuthRepo>(),
-        ),
+    () => SignUpUseCase(
+      repository: getIt<AuthRepo>(),
+    ),
   );
 
   getIt.registerLazySingleton(
-        () =>
-        LoginUseCase(
-          repository: getIt<AuthRepo>(),
-        ),
+    () => LoginUseCase(
+      repository: getIt<AuthRepo>(),
+    ),
   );
 
   getIt.registerLazySingleton(
-        () =>
-        LogoutUseCase(
-          repository: getIt<AuthRepo>(),
-        ),
+    () => LogoutUseCase(
+      repository: getIt<AuthRepo>(),
+    ),
   );
 
   getIt.registerLazySingleton(
-        () =>
-        AutoLoginUseCase(
-          repository: getIt<AuthRepo>(),
-        ),
+    () => AutoLoginUseCase(
+      repository: getIt<AuthRepo>(),
+    ),
   );
 
   getIt.registerLazySingleton(
-        () =>
-        UpdateNameUseCase(
-          repository: getIt<AuthRepo>(),
-        ),
+    () => UpdateNameUseCase(
+      repository: getIt<AuthRepo>(),
+    ),
   );
 
   getIt.registerLazySingleton(
-        () =>
-        GetProductsUseCase(
-          homeRepo: getIt<HomeRepo>(),
-        ),
+    () => GetProductsUseCase(
+      homeRepo: getIt<HomeRepo>(),
+    ),
   );
 
   getIt.registerLazySingleton(
-        () =>
-        GetCategoriesUseCase(
-          homeRepo: getIt<HomeRepo>(),
-        ),
+    () => GetCategoriesUseCase(
+      homeRepo: getIt<HomeRepo>(),
+    ),
   );
 
   getIt.registerLazySingleton(
-        () =>
-        SearchProductsUseCase(
-          homeRepo: getIt<HomeRepo>(),
-        ),
+    () => SearchProductsUseCase(
+      homeRepo: getIt<HomeRepo>(),
+    ),
   );
 
   getIt.registerLazySingleton(
-        () =>
-        GetToppingsUseCase(
-          repo: getIt<SideOptionsAndToppingsRepo>(),
-        ),
+    () => GetToppingsUseCase(
+      repo: getIt<SideOptionsAndToppingsRepo>(),
+    ),
   );
 
   getIt.registerLazySingleton(
-        () =>
-        GetSideOptionsUseCase(
-          repo: getIt<SideOptionsAndToppingsRepo>(),
-        ),
+    () => GetSideOptionsUseCase(
+      repo: getIt<SideOptionsAndToppingsRepo>(),
+    ),
   );
 
   getIt.registerLazySingleton(
-        () =>
-        AddToCartUseCase(
-          repo: getIt<CartRepo>(),
-        ),
+    () => AddToCartUseCase(
+      repo: getIt<CartRepo>(),
+    ),
   );
 
   getIt.registerLazySingleton(
-        () =>
-        GetCartItemsUseCase(
-          repo: getIt<CartRepo>(),
-        ),
+    () => GetCartItemsUseCase(
+      repo: getIt<CartRepo>(),
+    ),
   );
 
   getIt.registerLazySingleton(
-        () =>
-        RemoveCartItemUseCase(
-          repo: getIt<CartRepo>(),
-        ),
+    () => RemoveCartItemUseCase(
+      repo: getIt<CartRepo>(),
+    ),
   );
 
   getIt.registerLazySingleton(
-        () =>
-        ClearCartUseCase(
-          repo: getIt<CartRepo>(),
-        ),
+    () => ClearCartUseCase(
+      repo: getIt<CartRepo>(),
+    ),
+  );
+
+  getIt.registerLazySingleton<UpdateCartItemUseCase>(
+    () => UpdateCartItemUseCase(
+      repo: getIt<CartRepo>(),
+    ),
+  );
+  getIt.registerLazySingleton<AddFavouriteUseCase>(
+    () => AddFavouriteUseCase(
+      getIt<FavouriteRepository>(),
+    ),
+  );
+  getIt.registerLazySingleton<RemoveFavouriteUseCase>(
+    () => RemoveFavouriteUseCase(
+      getIt<FavouriteRepository>(),
+    ),
+  );
+  getIt.registerLazySingleton<GetFavouriteUseCase>(
+    () => GetFavouriteUseCase(
+      getIt<FavouriteRepository>(),
+    ),
+  );
+  getIt.registerLazySingleton<IsFavouriteUseCase>(
+    () => IsFavouriteUseCase(
+      getIt<FavouriteRepository>(),
+    ),
   );
 
   //=========================//
@@ -274,67 +299,69 @@ Future<void> setupLocator() async {
   //=========================//
 
   getIt.registerLazySingleton<AuthCubit>(
-        () =>
-        AuthCubit(
-          autoLoginUseCase: getIt<AutoLoginUseCase>(),
-          logoutUseCase: getIt<LogoutUseCase>(),
-          loginUseCase: getIt<LoginUseCase>(),
-          signUpUseCase: getIt<SignUpUseCase>(),
-          updateNameUseCase: getIt<UpdateNameUseCase>(),
-          imagePickerService: getIt<ImagePickerService>(),
-        ),
+    () => AuthCubit(
+      autoLoginUseCase: getIt<AutoLoginUseCase>(),
+      logoutUseCase: getIt<LogoutUseCase>(),
+      loginUseCase: getIt<LoginUseCase>(),
+      signUpUseCase: getIt<SignUpUseCase>(),
+      updateNameUseCase: getIt<UpdateNameUseCase>(),
+      imagePickerService: getIt<ImagePickerService>(),
+    ),
   );
 
   getIt.registerFactory(
-        () =>
-        GetProductCubit(
-          getProductsUseCase: getIt<GetProductsUseCase>(),
-        ),
+    () => GetProductCubit(
+      getProductsUseCase: getIt<GetProductsUseCase>(),
+    ),
   );
 
   getIt.registerFactory(
-        () =>
-        GetCategoryCubit(
-          getCategories: getIt<GetCategoriesUseCase>(),
-        ),
+    () => GetCategoryCubit(
+      getCategories: getIt<GetCategoriesUseCase>(),
+    ),
   );
 
   getIt.registerFactory(
-        () =>
-        SearchProductsCubit(
-          searchProductsUseCase: getIt<SearchProductsUseCase>(),
-        ),
+    () => SearchProductsCubit(
+      searchProductsUseCase: getIt<SearchProductsUseCase>(),
+    ),
   );
 
   getIt.registerFactory(
-        () =>
-        GetToppingsCubit(
-          getToppingsUseCase: getIt<GetToppingsUseCase>(),
-        ),
+    () => GetToppingsCubit(
+      getToppingsUseCase: getIt<GetToppingsUseCase>(),
+    ),
   );
 
   getIt.registerFactory(
-        () =>
-        GetSideOptionsCubit(
-          getSideOptionsUseCase: getIt<GetSideOptionsUseCase>(),
-        ),
+    () => GetSideOptionsCubit(
+      getSideOptionsUseCase: getIt<GetSideOptionsUseCase>(),
+    ),
   );
 
   getIt.registerFactory(
-        () =>
-        CartCubit(
-          firebaseAuth: getIt<FirebaseAuth>(),
-          addToCartUseCase: getIt<AddToCartUseCase>(),
-          getCartItemsUseCase: getIt<GetCartItemsUseCase>(),
-          removeCartItemUseCase: getIt<RemoveCartItemUseCase>(),
-          clearCartUseCase: getIt<ClearCartUseCase>(),
-        ),
+    () => CartCubit(
+      updateCartItemUseCase: getIt<UpdateCartItemUseCase>(),
+      firebaseAuth: getIt<FirebaseAuth>(),
+      addToCartUseCase: getIt<AddToCartUseCase>(),
+      getCartItemsUseCase: getIt<GetCartItemsUseCase>(),
+      removeCartItemUseCase: getIt<RemoveCartItemUseCase>(),
+      clearCartUseCase: getIt<ClearCartUseCase>(),
+    ),
+  );
+  getIt.registerFactory(
+    () => FavoriteCubit(
+      firebaseAuth: getIt<FirebaseAuth>(),
+      addFavouriteUseCase: getIt<AddFavouriteUseCase>(),
+      removeFavouriteUseCase: getIt<RemoveFavouriteUseCase>(),
+      getFavouriteUseCase: getIt<GetFavouriteUseCase>(),
+      isFavouriteUseCase: getIt<IsFavouriteUseCase>(),
+    ),
   );
 
   getIt.registerFactory(
-        () =>
-        TotalProductPriceAndToppingsAndSideOptionsCubit(
-          productPrice: 0,
-        ),
+    () => TotalProductPriceAndToppingsAndSideOptionsCubit(
+      productPrice: 0,
+    ),
   );
 }

@@ -8,7 +8,7 @@ class AddToCartUseCase {
     required this.repo,
   });
 
-  Future<void> call(CartItemEntity item) {
-    return repo.addToCart(item);
+  Future<void> call(CartItemEntity item , String userId) {
+    return repo.addToCart(item , userId);
   }
 }

@@ -4,6 +4,7 @@
 
 import 'package:hive_ce/hive_ce.dart';
 import 'package:hungry_app/features/cart_feature/data/models/cart_item_model.dart';
+import 'package:hungry_app/features/favourite_feature/data/models/favorite_model.dart';
 import 'package:hungry_app/features/home_feature/data/models/product_model.dart';
 import 'package:hungry_app/features/product_details_feature/data/models/side_options_model.dart';
 import 'package:hungry_app/features/product_details_feature/data/models/toppings_model.dart';
@@ -11,6 +12,7 @@ import 'package:hungry_app/features/product_details_feature/data/models/toppings
 extension HiveRegistrar on HiveInterface {
   void registerAdapters() {
     registerAdapter(CartItemModelAdapter());
+    registerAdapter(FavouriteModelAdapter());
     registerAdapter(ProductModelAdapter());
     registerAdapter(SideOptionsModelAdapter());
     registerAdapter(ToppingModelAdapter());
@@ -20,6 +22,7 @@ extension HiveRegistrar on HiveInterface {
 extension IsolatedHiveRegistrar on IsolatedHiveInterface {
   void registerAdapters() {
     registerAdapter(CartItemModelAdapter());
+    registerAdapter(FavouriteModelAdapter());
     registerAdapter(ProductModelAdapter());
     registerAdapter(SideOptionsModelAdapter());
     registerAdapter(ToppingModelAdapter());

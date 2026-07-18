@@ -5,25 +5,19 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/constant.dart';
 
-class FavouriteButton extends StatefulWidget {
-  const FavouriteButton({super.key});
 
-  @override
-  State<FavouriteButton> createState() => _FavouriteButtonState();
-}
+class FavouriteButton extends StatelessWidget {
+  const FavouriteButton({super.key, this.onPressedFavouriteButton, required this.isFavourite });
 
-class _FavouriteButtonState extends State<FavouriteButton> {
-  bool isFavourite = false;
+  final void Function()? onPressedFavouriteButton;
+
+  final bool isFavourite ;
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
       padding: EdgeInsets.zero,
-      onPressed: () {
-        setState(() {
-          isFavourite = !isFavourite;
-        });
-      },
+      onPressed: onPressedFavouriteButton,
       icon: Icon(
         isFavourite ? Icons.favorite : Icons.favorite_border,
         color: isFavourite ? kPrimaryColor : kSecondaryColor,

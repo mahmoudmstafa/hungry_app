@@ -38,7 +38,6 @@ class AddToCartSection extends StatelessWidget {
             vertical: 10,
           ),
           textButton: 'Add To Cart',
-          text: 'Total',
           textColor: kIntSecondaryColor,
           price: total.toInt(),
         );
@@ -46,11 +45,15 @@ class AddToCartSection extends StatelessWidget {
     );
   }
 
-  void _addProductToCart(BuildContext context, ProductEntity product, double total) {
+  Future<void> _addProductToCart(
+    BuildContext context,
+    ProductEntity product,
+    double total,
+  ) async {
     final detailsCubit = context
         .read<TotalProductPriceAndToppingsAndSideOptionsCubit>();
 
-    context.read<CartCubit>().addToCart(
+    await context.read<CartCubit>().addToCart(
       CartItemEntity(
         userId: FirebaseAuth.instance.currentUser!.uid,
         productId: product.id,
@@ -67,6 +70,8 @@ class AddToCartSection extends StatelessWidget {
     snackBarMessage(
       isError: false,
       context,
-      message: "Added to your cart !  😁💜\n Let's get cooking ... 🍟🌭🍔",
+      message:
+          "Added Successfully !!  😁💜\n Let's get cooking ... 🍟🌭🍔\n Go to Cart  ...",
     );
-  }}
+  }
+}

@@ -14,9 +14,11 @@ import 'favourite_button.dart';
 
 class RatingWidget extends StatefulWidget {
   const RatingWidget({
-    super.key,
+    super.key, this.onPressedFavouriteButton, required this.isFavourite,
   });
 
+  final bool isFavourite;
+  final void Function()? onPressedFavouriteButton;
   @override
   State<RatingWidget> createState() => _RatingWidgetState();
 }
@@ -26,28 +28,29 @@ class _RatingWidgetState extends State<RatingWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 18.0, right: 10, top: 0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            children: [
-              SvgPicture.asset(
-                Assets.assets.images.star.path,
-              ),
-              Gap(5),
-              CustomText(
-                text: rating.toStringAsFixed(1),
-                color: kIntSecondaryColor,
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-              ),
-            ],
-          ),
-          FavouriteButton(),
-        ],
-      ),
+    return Row(
+      children: [
+        Row(
+          children: [
+            SvgPicture.asset(
+              Assets.assets.images.star.path,
+            ),
+            Gap(5),
+            CustomText(
+              text: rating.toStringAsFixed(1),
+              color: kIntSecondaryColor,
+              fontSize: 17,
+              fontWeight: FontWeight.w600,
+            ),
+          ],
+        ),
+        FavouriteButton(
+          onPressedFavouriteButton: widget.onPressedFavouriteButton,
+          isFavourite: widget.isFavourite,
+        ),
+      ],
     );
   }
 }
+
+

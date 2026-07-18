@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../core/utils/constant.dart';
 import 'features/cart_feature/presentation/views/cart_view.dart';
 import 'features/checkout_feature/presentation/views/checkout_view.dart';
+import 'features/favourite_feature/presentation/views/favourites_view.dart';
 import 'features/home_feature/presentation/views/home_view.dart';
 import 'features/order_history_feature/presentation/views/order_history_view.dart';
 import 'features/profile_feature/presentation/views/profile_view.dart';
@@ -22,6 +23,7 @@ class _RootViewState extends State<RootView> {
   final List<Widget Function()> pages = [
         () => const HomeView(),
         () => const CartView(),
+        () => const FavouritesView(),
         () => const OrderHistoryView(),
         () => const ProfileView(),
   ];
@@ -38,11 +40,16 @@ class _RootViewState extends State<RootView> {
     super.dispose();
   }
 
+  bool get _isFavouritesPage => pages[currentIndex]() is FavouritesView;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: _isFavouritesPage
+          ? kSecondaryColor
+          : Colors.white,
       body: PageView.builder(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         controller: pageController,
         itemCount: pages.length,
         onPageChanged: (index) {
@@ -78,15 +85,12 @@ class _RootViewState extends State<RootView> {
               elevation: 0,
               selectedItemColor: Colors.white,
               unselectedItemColor: Colors.grey,
-
               onTap: (index) {
                 setState(() {
                   currentIndex = index;
                 });
-
                 pageController.jumpToPage(index);
               },
-
               items: const [
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
@@ -95,6 +99,10 @@ class _RootViewState extends State<RootView> {
                 BottomNavigationBarItem(
                   icon: Icon(Icons.shopping_cart_rounded),
                   label: 'Cart',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.favorite),
+                  label: 'Favorite',
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.local_restaurant_sharp),

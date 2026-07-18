@@ -10,5 +10,9 @@ const double kPadding = 20;
 const double kTopSpace = 50;
 final String kLogo = Assets.assets.images.logo.path;
 final String kProfilePhoto = Assets.assets.images.profileProfile.path;
+
+
+// hive boxes
 final String productBox = 'productsBox';
 const String cartBox = 'cartBox';
+const String favoriteBox = 'favoriteBox';

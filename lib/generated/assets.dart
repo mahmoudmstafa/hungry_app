@@ -32,6 +32,7 @@ class $AssetsImagesGen {
   final SvgGenImage cold = const SvgGenImage('assets/images/cold.svg');
   final SvgGenImage comment = const SvgGenImage('assets/images/comment.svg');
   final AssetGenImage dollar = const AssetGenImage('assets/images/dollar.png');
+  final AssetGenImage bac = const AssetGenImage('assets/images/bac.png');
   final SvgGenImage dollarBackgroundRemoved1 = const SvgGenImage(
     'assets/images/dollar Background Removed 1.svg',
   );
@@ -565,7 +566,7 @@ class $AssetsUseCasesGen {
 //
 //   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
 //   final String loginView =
-//       'lib/features/aut_feature/presentation/views/login_view.dart';
+//       'lib/features/aut_feature/presentation/views/favourite_view.dart';
 //   final String signUpView =
 //       'lib/features/aut_feature/presentation/views/sign_up_view.dart';
 // }
