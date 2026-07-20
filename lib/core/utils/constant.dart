@@ -16,3 +16,4 @@ final String kProfilePhoto = Assets.assets.images.profileProfile.path;
 final String productBox = 'productsBox';
 const String cartBox = 'cartBox';
 const String favoriteBox = 'favoriteBox';
+const String ordersBox = 'ordersBox';

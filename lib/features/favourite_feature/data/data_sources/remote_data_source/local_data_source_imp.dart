@@ -3,8 +3,7 @@ import 'package:hive_ce/hive.dart';
 import '../../models/favorite_model.dart';
 import 'local_data_source.dart';
 
-class FavouriteLocalDataSourceImpl
-    implements FavouriteLocalDataSource {
+class FavouriteLocalDataSourceImpl implements FavouriteLocalDataSource {
   final Box<FavouriteModel> favouriteBox;
 
   FavouriteLocalDataSourceImpl({
@@ -18,33 +17,32 @@ class FavouriteLocalDataSourceImpl
 
   @override
   Future<void> removeFavourite(
-      String productId,
-      String userId,
-      ) async {
+    String productId,
+    String userId,
+  ) async {
     final item = favouriteBox.values.firstWhere(
-          (e) =>
-      e.id == productId &&
-          e.userId == userId,
+      (e) => e.id == productId && e.userId == userId,
     );
 
     await item.delete();
   }
+
   @override
   List<FavouriteModel> getFavourites(String userId) {
     return favouriteBox.values
-        .where((e) => e.userId == userId)
+        .where(
+          (e) => e.userId == userId,
+        )
         .toList();
   }
 
   @override
   bool isFavourite(
-      String productId,
-      String userId,
-      ) {
+    String productId,
+    String userId,
+  ) {
     return favouriteBox.values.any(
-          (e) =>
-      e.id == productId &&
-          e.userId == userId,
+      (e) => e.id == productId && e.userId == userId,
     );
   }
 }

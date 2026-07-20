@@ -32,9 +32,10 @@ class CartCubit extends Cubit<CartState> {
 
   List<CartItemEntity> cartItems = [];
 
-  // methods
+  // =======================
+  // Add To Cart
+  // =======================
 
-  // add to cart
   Future<void> addToCart(CartItemEntity item) async {
     await addToCartUseCase(item, userId);
 
@@ -43,14 +44,20 @@ class CartCubit extends Cubit<CartState> {
     getCartItems();
   }
 
-  // get cart items
+  // =======================
+  // Get Cart Items
+  // =======================
+
   void getCartItems() {
     cartItems = getCartItemsUseCase(userId);
 
     emit(CartLoaded(cartItems));
   }
 
-  // delete item
+  // =======================
+  // Delete Item
+  // =======================
+
   Future<void> deleteItem(int index) async {
     await removeCartItemUseCase(
       index,
@@ -60,7 +67,10 @@ class CartCubit extends Cubit<CartState> {
     getCartItems();
   }
 
-  // clear cart
+  // =======================
+  // Clear Cart
+  // =======================
+
   Future<void> clearCart() async {
     await clearCartUseCase(userId);
 
@@ -69,8 +79,25 @@ class CartCubit extends Cubit<CartState> {
     emit(CartLoaded([]));
   }
 
+  // =======================
+  // Getters
+  // =======================
 
-  // total price
+  /// عدد المنتجات المختلفة داخل السلة
+  int get itemsCount => cartItems.length;
+
+  /// إجمالي عدد القطع (مع الكميات)
+  int get totalItemsCount {
+    int total = 0;
+
+    for (final item in cartItems) {
+      total += item.quantity;
+    }
+
+    return total;
+  }
+
+  /// إجمالي السعر
   double get totalPrice {
     double total = 0;
 
@@ -81,7 +108,10 @@ class CartCubit extends Cubit<CartState> {
     return total;
   }
 
-  // increase quantity
+  // =======================
+  // Increase Quantity
+  // =======================
+
   Future<void> increaseQuantity(int index) async {
     final item = cartItems[index];
 
@@ -96,7 +126,10 @@ class CartCubit extends Cubit<CartState> {
     getCartItems();
   }
 
-  // decrease quantity
+  // =======================
+  // Decrease Quantity
+  // =======================
+
   Future<void> decreaseQuantity(int index) async {
     final item = cartItems[index];
 
@@ -109,6 +142,31 @@ class CartCubit extends Cubit<CartState> {
       index,
       userId,
     );
+
+    getCartItems();
+  }
+  // =======================
+  // Re Order
+  // =======================
+
+
+  Future<void> reOrder(
+      List<CartItemEntity> items, {
+        required bool replace,
+      }) async {
+    if (replace) {
+      await clearCartUseCase(userId);
+
+      print("After Clear = ${getCartItemsUseCase(userId).length}");
+    }
+
+    for (final item in items) {
+      await addToCartUseCase(item, userId);
+
+      print("Added ${item.name}");
+    }
+
+    print("Final = ${getCartItemsUseCase(userId).length}");
 
     getCartItems();
   }

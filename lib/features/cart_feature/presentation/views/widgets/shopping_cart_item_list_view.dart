@@ -14,19 +14,22 @@ class ShoppingCartItemListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cartCubit = context.watch<CartCubit>();
+    final items = cartCubit.cartItems.reversed.toList();
+
     return ListView.separated(
       padding: EdgeInsets.only(bottom: 25),
-      itemCount: cartCubit.cartItems.length,
+      itemCount: items.length,
       physics: BouncingScrollPhysics(),
       itemBuilder: (context, index) {
         return ShoppingCartItem(
-          key: ObjectKey(cartCubit.cartItems[index]),
+          key: ObjectKey(items[index]),
           index: index,
-          cartItem: cartCubit.cartItems[index],
+          cartItem: items[index],
         );
-      }, separatorBuilder: (BuildContext context, int index) {
-      return Gap(25);
-    },
+      },
+      separatorBuilder: (BuildContext context, int index) {
+        return Gap(25);
+      },
     );
   }
 }

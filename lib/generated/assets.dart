@@ -7,7 +7,6 @@ class Assets {
   Assets._();
 
   static const $AssetsAssetsGen assets = $AssetsAssetsGen();
-  static const $AssetsLibGen lib = $AssetsLibGen();
 }
 
 class $AssetsAssetsGen {
@@ -298,10 +297,10 @@ class $AssetsRobotoGen {
 }
 
 class $AssetsLibGen {
-  const $AssetsLibGen();
+  $AssetsLibGen();
 
   final $AssetsCoreGen core = const $AssetsCoreGen();
-  final $AssetsFeaturesGen features = const $AssetsFeaturesGen();
+  final $AssetsFeaturesGen features = $AssetsFeaturesGen();
   final String app = 'lib/app.dart';
   final String hiveRegistrarG = 'lib/hive_registrar.g.dart';
   final String main = 'lib/main.dart';
@@ -309,7 +308,7 @@ class $AssetsLibGen {
 }
 
 class $AssetsFeaturesGen {
-  const $AssetsFeaturesGen();
+  $AssetsFeaturesGen();
 
   final $AssetsAutFeatureGen autFeature = const $AssetsAutFeatureGen();
   final $AssetsCartFeatureGen cartFeature = const $AssetsCartFeatureGen();
@@ -320,8 +319,6 @@ class $AssetsFeaturesGen {
       const $AssetsOrderHistoryFeatureGen();
   final $AssetsProductDetailsFeatureGen productDetailsFeature =
       const $AssetsProductDetailsFeatureGen();
-  final $AssetsProfileFeatureGen profileFeature =
-      const $AssetsProfileFeatureGen();
   final $AssetsSplashFeatureGen splashFeature = const $AssetsSplashFeatureGen();
 }
 
@@ -408,13 +405,8 @@ class $AssetsProductDetailsFeatureGen {
 //   final String editingWidget =
 //       'lib/features/product_details_feature/presentation/views/widgets/editing_widget.dart';
 //   final String productDetailsSection =
-//       'lib/features/product_details_feature/presentation/views/widgets/product_details_section.dart';
-//   final String productDetailsText =
-//       'lib/features/product_details_feature/presentation/views/widgets/product_details_text.dart';
 //   final String productDetailsViewBody =
 //       'lib/features/product_details_feature/presentation/views/widgets/product_details_view_body.dart';
-//   final String sideOptionsListView =
-//       'lib/features/product_details_feature/presentation/views/widgets/side_options_list_view.dart';
 //   final String sideOptionsSection =
 //       'lib/features/product_details_feature/presentation/views/widgets/side_options_section.dart';
 //   final String sliderWidget =
@@ -463,14 +455,8 @@ class $AssetsCartFeatureGen {
 //   final String shoppingCartItemListView =
 //       'lib/features/cart_feature/presentation/views/widgets/shopping_cart_item_list_view.dart';
 //   final String shoppingCartItemQuantityCounter =
-//       'lib/features/cart_feature/presentation/views/widgets/shopping_cart_item_quantity_counter.dart';
 // }
 
-class $AssetsProfileFeatureGen {
-  const $AssetsProfileFeatureGen();
-
-  final $AssetsPresentationGen presentation = const $AssetsPresentationGen();
-}
 //
 // class $AssetsPresentationGen {
 //   const $AssetsPresentationGen();
@@ -478,8 +464,6 @@ class $AssetsProfileFeatureGen {
 //   final $AssetsViewsGen views = const $AssetsViewsGen();
 // }
 //
-// class $AssetsViewsGen {
-//   const $AssetsViewsGen();
 //
 //   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
 //   final String profileView =
@@ -498,12 +482,7 @@ class $AssetsProfileFeatureGen {
 //   final String customPasswordTextFormFieldProfileView =
 //       'lib/features/profile_feature/presentation/views/widgets/custom_password_text_form_field_profile_view.dart';
 //   final String customTextFormFieldProfileView =
-//       'lib/features/profile_feature/presentation/views/widgets/custom_text_form_field_profile_view.dart';
 //   final String paymentWithCardProfileView =
-//       'lib/features/profile_feature/presentation/views/widgets/payment_with_card_profile_view.dart';
-//   final String profileViewBody =
-//       'lib/features/profile_feature/presentation/views/widgets/profile_view_body.dart';
-//   final String profileViewForm =
 //       'lib/features/profile_feature/presentation/views/widgets/profile_view_form.dart';
 //   final String profileViewHeader =
 //       'lib/features/profile_feature/presentation/views/widgets/profile_view_header.dart';
@@ -581,14 +560,11 @@ class $AssetsUseCasesGen {
 //   final String loginFormSection =
 //       'lib/features/aut_feature/presentation/views/widgets/login_form_section.dart';
 //   final String loginFormSectionBlocListener =
-//       'lib/features/aut_feature/presentation/views/widgets/login_form_section_bloc_listener.dart';
 //   final String loginHeaderSection =
-//       'lib/features/aut_feature/presentation/views/widgets/login_header_section.dart';
 //   final String loginViewBody =
 //       'lib/features/aut_feature/presentation/views/widgets/login_view_body.dart';
 //   final String signUpFormSection =
 //       'lib/features/aut_feature/presentation/views/widgets/sign_up_form_section.dart';
-//   final String signUpFormSectionBlocListener =
 //       'lib/features/aut_feature/presentation/views/widgets/sign_up_form_section_bloc_listener.dart';
 //   final String signUpHeaderSection =
 //       'lib/features/aut_feature/presentation/views/widgets/sign_up_header_section.dart';
@@ -640,7 +616,6 @@ class $AssetsSplashFeatureGen {
 //   final String animationTextFastFreshDeliSplashView =
 //       'lib/features/splash_feature/presentation/views/widgets/animation_text_fast_fresh_deli_splash_view.dart';
 //   final String splashViewBody =
-//       'lib/features/splash_feature/presentation/views/widgets/splash_view_body.dart';
 // }
 
 class $AssetsCheckoutFeatureGen {
@@ -650,7 +625,6 @@ class $AssetsCheckoutFeatureGen {
 }
 //
 // class $AssetsPresentationGen {
-//   const $AssetsPresentationGen();
 //
 //   final $AssetsViewsGen views = const $AssetsViewsGen();
 // }
@@ -660,48 +634,45 @@ class $AssetsCheckoutFeatureGen {
 //
 //   final $AssetsWidgetsGen widgets = const $AssetsWidgetsGen();
 //   final String checkoutView =
-//       'lib/features/checkout_feature/presentation/views/checkout_view.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/checkout_view.dart';
 // }
 //
 // class $AssetsWidgetsGen {
 //   const $AssetsWidgetsGen();
 //
 //   final String buttonSaveCardDetailsAndListTile =
-//       'lib/features/checkout_feature/presentation/views/widgets/button_save_card_details_and_list_tile.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/button_save_card_details_and_list_tile.dart';
 //   final String checkoutViewBody =
-//       'lib/features/checkout_feature/presentation/views/widgets/checkout_view_body.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/checkout_view_body.dart';
 //   final String customButtonSuccessView =
-//       'lib/features/checkout_feature/presentation/views/widgets/custom_button_success_view.dart';
-//   final String estimatedDeliveryTime =
-//       'lib/features/checkout_feature/presentation/views/widgets/estimated_delivery_time.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/estimated_delivery_time.dart';
 //   final String orderSummarySection =
-//       'lib/features/checkout_feature/presentation/views/widgets/order_summary_section.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/order_summary_section.dart';
 //   final String paymentMethodText =
-//       'lib/features/checkout_feature/presentation/views/widgets/payment_method_text.dart';
 //   final String paymentMethodWithDebitCard =
-//       'lib/features/checkout_feature/presentation/views/widgets/payment_method_with_debit_card.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/payment_method_with_debit_card.dart';
 //   final String paymentMethodWithDelivery =
-//       'lib/features/checkout_feature/presentation/views/widgets/payment_method_with_delivery.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/payment_method_with_delivery.dart';
 //   final String paymentMethodsSection =
-//       'lib/features/checkout_feature/presentation/views/widgets/payment_methods_section.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/payment_methods_section.dart';
 //   final String paynowSection =
-//       'lib/features/checkout_feature/presentation/views/widgets/paynow_section.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/paynow_section.dart';
 //   final String priceBreakDownWidget =
-//       'lib/features/checkout_feature/presentation/views/widgets/price_break_down_widget.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/price_break_down_section.dart';
 //   final String priceBreakdownWidgetListView =
-//       'lib/features/checkout_feature/presentation/views/widgets/price_breakdown_widget_list_view.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/total_widget.dart';
 //   final String saveCardDetailsCheckButton =
-//       'lib/features/checkout_feature/presentation/views/widgets/save_card_details_check_button.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/save_card_details_check_button.dart';
 //   final String successViewBody =
-//       'lib/features/checkout_feature/presentation/views/widgets/success_view_body.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/success_view_body.dart';
 //   final String successWidget =
-//       'lib/features/checkout_feature/presentation/views/widgets/success_widget.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/success_widget.dart';
 //   final String textSuccessView =
-//       'lib/features/checkout_feature/presentation/views/widgets/text_success_view.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/text_success_view.dart';
 //   final String totalAndDeliveryTimeSection =
-//       'lib/features/checkout_feature/presentation/views/widgets/total_and_delivery_time_section.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/total_and_delivery_time_section.dart';
 //   final String trueIconSuccessView =
-//       'lib/features/checkout_feature/presentation/views/widgets/true_icon_success_view.dart';
+//       'lib/features/checkout_and_order_history_feature/presentation/views/widgets/true_icon_success_view.dart';
 // }
 
 class $AssetsOrderHistoryFeatureGen {

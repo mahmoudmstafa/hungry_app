@@ -36,27 +36,28 @@ class FavouritesCardsSliderState extends State<FavouritesCardsSlider>
       curve: const Interval(0.0, 0.7, curve: Curves.easeOut),
     );
 
-    _scaleAnimation = Tween<double>(
-      begin: 0.9,
-      end: 1.0,
-    ).animate(
-      CurvedAnimation(
-        parent: _entranceController,
-        curve: Curves.easeOutCubic,
-      ),
-    );
+    _scaleAnimation =
+        Tween<double>(
+          begin: 0.9,
+          end: 1.0,
+        ).animate(
+          CurvedAnimation(
+            parent: _entranceController,
+            curve: Curves.easeOutCubic,
+          ),
+        );
 
-    _slideAnimation = Tween<Offset>(
-      begin: const Offset(0, 0.15),
-      end: Offset.zero,
-    ).animate(
-      CurvedAnimation(
-        parent: _entranceController,
-        curve: Curves.easeOutCubic,
-      ),
-    );
+    _slideAnimation =
+        Tween<Offset>(
+          begin: const Offset(0, 0.15),
+          end: Offset.zero,
+        ).animate(
+          CurvedAnimation(
+            parent: _entranceController,
+            curve: Curves.easeOutCubic,
+          ),
+        );
 
-    // بيبدأ بعد الـ Header والنص عشان يكمل التتابع (staggered)
     Future.delayed(const Duration(milliseconds: 700), () {
       if (mounted) _entranceController.forward();
     });
@@ -81,8 +82,9 @@ class FavouritesCardsSliderState extends State<FavouritesCardsSlider>
             child: ScaleTransition(
               scale: _scaleAnimation,
               child: SizedBox(
-                height: 260,
+                height: 270,
                 child: PageView.builder(
+                  clipBehavior: Clip.none,
                   controller: _pageController,
                   physics: const BouncingScrollPhysics(),
                   itemCount: favourites.length,

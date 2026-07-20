@@ -22,8 +22,6 @@ class MenuAndFoodCardSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<SearchProductsCubit, SearchProductsState>(
       builder: (context, searchState) {
-        // الحالة الأولى: اليوزر لسه مكتبش حاجة في السيرش
-        // في الحالة دي، نعرض الوضع الطبيعي: الكاتيجوريز + المنتجات مع الـ Pagination
         if (searchState is SearchProductsInitial) {
           return SliverMainAxisGroup(
             slivers: [

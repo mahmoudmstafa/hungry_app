@@ -1,12 +1,11 @@
 import 'package:get/get.dart';
-import 'package:hungry_app/features/order_history_feature/presentation/views/widgets/order_history_view_body.dart';
 
 import '../../features/aut_feature/presentation/views/login_view.dart';
 import '../../features/aut_feature/presentation/views/sign_up_view.dart';
 import '../../features/cart_feature/presentation/views/cart_view.dart';
-import '../../features/checkout_feature/presentation/views/checkout_view.dart';
+import '../../features/checkout_and_order_history_feature/presentation/views/checkout_view.dart';
 import '../../features/home_feature/presentation/views/home_view.dart';
-import '../../features/order_history_feature/presentation/views/order_history_view.dart';
+import '../../features/checkout_and_order_history_feature/presentation/views/order_history_view.dart';
 import '../../features/product_details_feature/presentation/views/product_details_view.dart';
 import '../../features/profile_feature/presentation/views/profile_view.dart';
 import '../../features/splash_feature/presentation/views/splash_view.dart';
@@ -109,7 +108,5 @@ abstract class AppRoutes {
         milliseconds: 700,
       ),
     ),
-
-
   ];
 }

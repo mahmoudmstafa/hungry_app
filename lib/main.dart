@@ -1,6 +1,8 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:hive_ce_flutter/adapters.dart';
 import 'app.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -9,7 +11,9 @@ import 'core/utils/constant.dart';
 import 'core/utils/firebase_options.dart';
 import 'core/utils/service_locator.dart';
 import 'core/utils/simple_bloc_observer.dart';
+import 'core/widgets/root_controller.dart';
 import 'features/cart_feature/data/models/cart_item_model.dart';
+import 'features/checkout_and_order_history_feature/data/models/order_model.dart';
 import 'features/favourite_feature/data/models/favorite_model.dart';
 import 'features/home_feature/data/models/product_model.dart';
 import 'hive_registrar.g.dart';
@@ -22,6 +26,7 @@ void main() async {
   Hive.registerAdapters();
 
   await Hive.openBox<FavouriteModel>(favoriteBox);
+  await Hive.openBox<OrderModel>(ordersBox);
   await Hive.openBox<ProductModel>(productBox);
   await Hive.openBox<CartItemModel>(cartBox);
 
@@ -32,6 +37,7 @@ void main() async {
   Bloc.observer = SimpleBlocObserver();
 
   await setupLocator();
+  Get.put(RootController(), permanent: true);
 
   runApp(const HungryApp());
 }

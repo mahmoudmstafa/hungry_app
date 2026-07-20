@@ -24,7 +24,7 @@ class FavouritesViewBody extends StatelessWidget {
               const CurvedHeaderImage(),
               const Gap(5),
               AnimatedLovedMealsTitle(),
-              const Gap(20),
+              const Gap(15),
               const FavouritesCardsSliderBlocBuilder(),
             ],
           ),

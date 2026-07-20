@@ -94,7 +94,7 @@ class _FavouriteCardState extends State<FavouriteCard>
           );
         },
         child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 10),
+          margin: const EdgeInsets.symmetric(horizontal: 20 ),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(16),
@@ -111,7 +111,7 @@ class _FavouriteCardState extends State<FavouriteCard>
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomCachedNetworkImage(
-                height: 140,
+                height: 150,
                 width: double.infinity,
                 colorCircleIndicator: kSecondaryColor,
                 imageUrl: widget.products.productImage,
@@ -138,7 +138,7 @@ class _FavouriteCardState extends State<FavouriteCard>
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       text: widget.products.title,
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w700,
                       color: 0xff3C2F2F,
                     ),
@@ -146,7 +146,7 @@ class _FavouriteCardState extends State<FavouriteCard>
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                       text: widget.products.desc,
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.w500,
                       color: 0xff3C2F2F,
                     ),

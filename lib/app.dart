@@ -8,6 +8,7 @@ import 'features/aut_feature/presentation/manager/cubits/auth_cubit.dart';
 import 'package:nested/nested.dart';
 
 import 'features/cart_feature/presentation/manager/cubits/cart_cubit/cart_cubit.dart';
+import 'features/checkout_and_order_history_feature/presentation/manger/cubits/checkout_cubit.dart';
 import 'features/favourite_feature/presentation/manager/cubits/favorite_cubit/favorite_cubit.dart';
 import 'features/home_feature/presentation/manager/cubits/get_category_cubit/get_category_cubit.dart';
 import 'features/home_feature/presentation/manager/cubits/get_products_cubit/get_product_cubit.dart';
@@ -46,6 +47,9 @@ class HungryApp extends StatelessWidget {
       ),
       BlocProvider<FavoriteCubit>(
         create: (_) => getIt<FavoriteCubit>(),
+      ),
+      BlocProvider<CheckoutCubit>(
+        create: (_) => getIt<CheckoutCubit>(),
       ),
     ];
   }

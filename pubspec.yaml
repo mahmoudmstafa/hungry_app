@@ -56,6 +56,7 @@ dependencies:
   hive_ce: ^2.16.0
   hive_ce_flutter: ^2.3.3
   video_player: ^2.11.1
+  intl: ^0.20.3
 
 dev_dependencies:
   flutter_test:
@@ -123,14 +124,10 @@ flutter:
     - lib/features/profile_feature/
     - lib/features/profile_feature/presentation/
     - lib/features/profile_feature/presentation/views/
-    - lib/features/checkout_feature/
-    - lib/features/checkout_feature/presentation/
-    - lib/features/checkout_feature/presentation/views/
-    - lib/features/checkout_feature/presentation/views/widgets/
-    - lib/features/order_history_feature/
-    - lib/features/order_history_feature/presentation/
-    - lib/features/order_history_feature/presentation/views/
-    - lib/features/order_history_feature/presentation/views/widgets/
+    - lib/features/checkout_and_order_history_feature/
+    - lib/features/checkout_and_order_history_feature/presentation/
+    - lib/features/checkout_and_order_history_feature/presentation/views/
+    - lib/features/checkout_and_order_history_feature/presentation/views/widgets/
     - lib/features/product_details_feature/presentation/
     - lib/features/product_details_feature/presentation/views/
 

@@ -26,11 +26,11 @@ class ProfileViewHeader extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: CustomBackButton(
-                settings: true,
-                colorOfBackIcon: Colors.white,
+                settings: false,
+                colorOfBackIcon: kPrimaryColor,
               ),
             ),
-            Gap(10),
+            Gap(15),
             ProfilePhotoWidget(
               photo: context.watch<AuthCubit>().user.photo,
               onTap: (){

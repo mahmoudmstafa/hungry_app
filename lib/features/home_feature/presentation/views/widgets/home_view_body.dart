@@ -28,7 +28,6 @@ class _HomeViewBodyState extends State<HomeViewBody> with AutomaticKeepAliveClie
   }
 
   void _onScroll() {
-    // لما نقرب من آخر 300 بكسل من نهاية الصفحة، هات الصفحة الجاية
     if (_scrollController.position.pixels >=
         _scrollController.position.maxScrollExtent - 300) {
       context.read<GetProductCubit>().loadNextPage();

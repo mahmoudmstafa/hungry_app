@@ -27,6 +27,14 @@ import '../../features/cart_feature/domain/use_cases/get_cart_items_use_case.dar
 import '../../features/cart_feature/domain/use_cases/remove_cart_item_use_case.dart';
 import '../../features/cart_feature/domain/use_cases/updata_cart_item_use_case.dart';
 import '../../features/cart_feature/presentation/manager/cubits/cart_cubit/cart_cubit.dart';
+import '../../features/checkout_and_order_history_feature/data/data_sources/local_data_source/checkout_local_data_source.dart';
+import '../../features/checkout_and_order_history_feature/data/data_sources/local_data_source/checkout_local_data_source_impl.dart';
+import '../../features/checkout_and_order_history_feature/data/models/order_model.dart';
+import '../../features/checkout_and_order_history_feature/data/repos/checkout_repo_impl.dart';
+import '../../features/checkout_and_order_history_feature/domain/repos/checkout_repo.dart';
+import '../../features/checkout_and_order_history_feature/domain/use_cases/get_orders_use_case.dart';
+import '../../features/checkout_and_order_history_feature/domain/use_cases/place_order_use_case.dart';
+import '../../features/checkout_and_order_history_feature/presentation/manger/cubits/checkout_cubit.dart';
 import '../../features/favourite_feature/data/data_sources/remote_data_source/local_data_source.dart';
 import '../../features/favourite_feature/data/data_sources/remote_data_source/local_data_source_imp.dart';
 import '../../features/favourite_feature/data/models/favorite_model.dart';
@@ -105,6 +113,9 @@ Future<void> setupLocator() async {
     () => Hive.box<FavouriteModel>(favoriteBox),
   );
 
+  getIt.registerLazySingleton<Box<OrderModel>>(
+    () => Hive.box<OrderModel>(ordersBox),
+  );
   //=========================//
   // Data Sources
   //=========================//
@@ -146,6 +157,13 @@ Future<void> setupLocator() async {
       favouriteBox: getIt(),
     ),
   );
+  getIt.registerLazySingleton<CheckoutLocalDataSource>(
+    () => CheckoutLocalDataSourceImpl(
+      ordersBox: getIt<Box<OrderModel>>(),
+      cartBox: getIt<Box<CartItemModel>>(),
+    ),
+  );
+
   //=========================//
   // Repositories
   //=========================//
@@ -177,6 +195,12 @@ Future<void> setupLocator() async {
   getIt.registerLazySingleton<FavouriteRepository>(
     () => FavouriteRepositoryImpl(
       localDataSource: getIt<FavouriteLocalDataSource>(),
+    ),
+  );
+
+  getIt.registerLazySingleton<CheckoutRepo>(
+    () => CheckoutRepoImpl(
+      localDataSource: getIt<CheckoutLocalDataSource>(),
     ),
   );
 
@@ -293,6 +317,17 @@ Future<void> setupLocator() async {
       getIt<FavouriteRepository>(),
     ),
   );
+  getIt.registerLazySingleton<PlaceOrderUseCase>(
+    () => PlaceOrderUseCase(
+      getIt<CheckoutRepo>(),
+    ),
+  );
+  getIt.registerLazySingleton<GetOrdersUseCase>(
+    () => GetOrdersUseCase(
+      getIt<CheckoutRepo>(),
+    ),
+  );
+
 
   //=========================//
   // Cubits
@@ -362,6 +397,14 @@ Future<void> setupLocator() async {
   getIt.registerFactory(
     () => TotalProductPriceAndToppingsAndSideOptionsCubit(
       productPrice: 0,
+    ),
+  );
+  getIt.registerFactory(
+    () => CheckoutCubit(
+      placeOrderUseCase: getIt<PlaceOrderUseCase>(),
+      getOrdersUseCase: getIt<GetOrdersUseCase>(),
+      clearCartUseCase: getIt<ClearCartUseCase>(),
+      firebaseAuth: getIt<FirebaseAuth>(),
     ),
   );
 }
