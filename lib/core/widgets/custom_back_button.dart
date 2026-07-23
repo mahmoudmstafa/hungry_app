@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:hungry_app/core/constants/app_spaces.dart';
 
 import '../../generated/assets.dart';
-import '../utils/constant.dart';
 
 class CustomBackButton extends StatelessWidget {
   const CustomBackButton({
@@ -21,7 +21,7 @@ class CustomBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Gap(kTopSpace),
+        const Gap(AppSpaces.kTopSpace),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

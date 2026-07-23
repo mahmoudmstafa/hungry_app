@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_text.dart';
 import '../../../../../generated/assets.dart';
 
@@ -18,19 +18,19 @@ class PaymentWithCardProfileView extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           side: BorderSide.none,
         ),
-        color: kSecondaryColor,
+        color: AppColors.kSecondaryColor,
         elevation: 5,
         shadowColor: Colors.black,
         child: Center(
           child: ListTile(
-            title: CustomText(
+            title: const CustomText(
               text: 'Debit card',
               color: 0xffffffff,
               fontSize: 14,
               fontWeight: FontWeight.w500,
 
             ),
-            subtitle: CustomText(
+            subtitle: const CustomText(
               text: '3566 **** **** 0505',
               color: 0xffffffff,
               fontSize: 12,
@@ -41,7 +41,7 @@ class PaymentWithCardProfileView extends StatelessWidget {
               width: 65,
               Assets.assets.images.visa.path,
             ),
-            trailing: Icon(
+            trailing: const Icon(
               Icons.radio_button_checked,
               color: Colors.white,
             ),

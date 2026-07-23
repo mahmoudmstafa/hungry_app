@@ -83,10 +83,7 @@ class CartCubit extends Cubit<CartState> {
   // Getters
   // =======================
 
-  /// عدد المنتجات المختلفة داخل السلة
   int get itemsCount => cartItems.length;
-
-  /// إجمالي عدد القطع (مع الكميات)
   int get totalItemsCount {
     int total = 0;
 
@@ -97,7 +94,6 @@ class CartCubit extends Cubit<CartState> {
     return total;
   }
 
-  /// إجمالي السعر
   double get totalPrice {
     double total = 0;
 
@@ -157,17 +153,12 @@ class CartCubit extends Cubit<CartState> {
     if (replace) {
       await clearCartUseCase(userId);
 
-      print("After Clear = ${getCartItemsUseCase(userId).length}");
     }
 
     for (final item in items) {
       await addToCartUseCase(item, userId);
 
-      print("Added ${item.name}");
     }
-
-    print("Final = ${getCartItemsUseCase(userId).length}");
-
     getCartItems();
   }
 }

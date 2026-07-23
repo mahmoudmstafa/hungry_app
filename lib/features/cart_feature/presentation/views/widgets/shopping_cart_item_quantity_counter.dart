@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gap/flutter_gap.dart';
-import 'package:hungry_app/core/widgets/custom_button.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_text.dart';
-import '../../../../../generated/assets.dart';
 import '../../../domain/entities/cart_item_entity.dart';
 import '../../manager/cubits/cart_cubit/cart_cubit.dart';
+import 'animated_press_wrapper.dart';
 import 'custom_add_or_remove_widget.dart';
 
 class ShoppingCartItemQuantityCounter extends StatelessWidget {
@@ -50,7 +49,7 @@ class ShoppingCartItemQuantityCounter extends StatelessWidget {
               vertical: 2,
             ),
             decoration: BoxDecoration(
-              color: kSecondaryColor,
+              color: AppColors.kSecondaryColor,
               borderRadius: BorderRadius.circular(8),
             ),
             child: AnimatedSwitcher(
@@ -99,7 +98,7 @@ class ShoppingCartItemQuantityCounter extends StatelessWidget {
                 child: const AnimatedPressWrapper(
                   child: CircleAvatar(
                     radius: 15,
-                    backgroundColor: kPrimaryColor,
+                    backgroundColor: AppColors.kPrimaryColor,
                     child: Icon(
                       Icons.delete,
                       color: Colors.white,
@@ -111,49 +110,6 @@ class ShoppingCartItemQuantityCounter extends StatelessWidget {
             ],
           ),
         ],
-      ),
-    );
-  }
-}
-
-class AnimatedPressWrapper extends StatefulWidget {
-  const AnimatedPressWrapper({
-    super.key,
-    required this.child,
-  });
-
-  final Widget child;
-
-  @override
-  State<AnimatedPressWrapper> createState() => _AnimatedPressWrapperState();
-}
-
-class _AnimatedPressWrapperState extends State<AnimatedPressWrapper> {
-  double _scale = 1.0;
-
-  void _onPointerDown(PointerDownEvent event) {
-    setState(() => _scale = 0.70);
-  }
-
-  void _onPointerUp(PointerUpEvent event) {
-    setState(() => _scale = 1.0);
-  }
-
-  void _onPointerCancel(PointerCancelEvent event) {
-    setState(() => _scale = 1.0);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Listener(
-      onPointerDown: _onPointerDown,
-      onPointerUp: _onPointerUp,
-      onPointerCancel: _onPointerCancel,
-      child: AnimatedScale(
-        scale: _scale,
-        duration: const Duration(milliseconds: 400),
-        curve: Curves.easeOut,
-        child: widget.child,
       ),
     );
   }

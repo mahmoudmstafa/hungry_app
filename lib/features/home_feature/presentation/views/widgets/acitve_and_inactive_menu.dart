@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hungry_app/features/home_feature/domain/entities/category_entity.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_button.dart';
 
 class ActiveAndInActiveButtonMenu extends StatelessWidget {
@@ -18,11 +18,11 @@ class ActiveAndInActiveButtonMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomButton(
       text: categoryEntity.name ,
-      textColor: isActive ? Colors.white : Color(0xff6A6A6A),
-      padding: EdgeInsets.symmetric(
+      textColor: isActive ? Colors.white : const Color(0xff6A6A6A),
+      padding: const EdgeInsets.symmetric(
         horizontal: 20,
       ),
-      backgroundColor: isActive ? kPrimaryColor : Color(0xffF3F4F6),
+      backgroundColor: isActive ? AppColors.kPrimaryColor : const Color(0xffF3F4F6),
     );
   }
 }

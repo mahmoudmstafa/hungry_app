@@ -5,16 +5,15 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:hungry_app/features/aut_feature/data/data_sources/remote_data_source/remote_data_source.dart';
 
 import '../../../../../core/network/dio_service.dart';
-import '../../../../../core/utils/cloudinary_service.dart';
-import '../../../../../core/utils/firebase_storage_service.dart';
-import '../../../../../core/utils/secure_storage_service.dart';
+import '../../../../../core/network/profile_image_upload_service.dart';
+import '../../../../../core/network/secure_storage_service.dart';
 import '../../models/user_model.dart';
 
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   final FirebaseAuth firebaseAuth;
   final DioService dioService;
   final SecureStorageService secureStorageService;
-  final CloudinaryService cloudinaryService;
+  final ProfileImageUploadService cloudinaryService;
 
   AuthRemoteDataSourceImpl({
     required this.firebaseAuth,
@@ -94,18 +93,17 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
 
     final response = await dioService.dio.post(
       '/auth/jwt',
-      data: {
-        'firebaseUid': firebaseUid,
-      },
+      data: {'firebaseUid': firebaseUid},
     );
+
+    log('JWT Response: ${response.data}'); // ✅ ضيف السطر ده
 
     final token = response.data['token'];
     await secureStorageService.saveToken(token);
-    print(await secureStorageService.getToken());
 
-    final userResponse = await dioService.dio.get(
-      '/users/me',
-    );
+    log('Token saved, calling /users/me now'); // ✅ وده كمان
+
+    final userResponse = await dioService.dio.get('/users/me');
     return UserModel.fromJson(userResponse.data);
   }
 
@@ -151,7 +149,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
       '/users',
       data: {
         'name': name,
-        if (photoUrl != null) 'photo': photoUrl,
+        'photo': ?photoUrl,
       },
     );
     log(response.data.toString());

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hungry_app/core/utils/constant.dart';
 
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 
 class CustomTextFormFieldProfileView extends StatelessWidget {
@@ -32,17 +32,17 @@ class CustomTextFormFieldProfileView extends StatelessWidget {
       hintFontWeight: FontWeight.w500,
       hintFontSize: 18,
       obscureText: obscureText,
-      textStyle: TextStyle(
-        color: kPrimaryColor,
+      textStyle: const TextStyle(
+        color: AppColors.kPrimaryColor,
         fontSize: 18,
         fontWeight: FontWeight.w600,
       ),
       hintText: hintText,
       filled: false,
       borderRadius: 14,
-      enabledBorderColor: kPrimaryColor,
-      focusedBorderColor: kPrimaryColor,
-      cursorColor: kPrimaryColor,
+      enabledBorderColor: AppColors.kPrimaryColor,
+      focusedBorderColor: AppColors.kPrimaryColor,
+      cursorColor: AppColors.kPrimaryColor,
       suffixIcon: suffixIcon,
       hintColor: Colors.grey.shade600,
     );

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
+import '../../../../../core/widgets/bouncy_button.dart';
 import '../../../../../generated/assets.dart';
 import '../../../../aut_feature/presentation/manager/cubits/auth_cubit.dart';
-import 'bouncy_tap.dart';
 import 'custom_button_profile_view.dart';
 
 class ButtonsProfileViewSection extends StatefulWidget {
@@ -65,12 +65,12 @@ class _ButtonsProfileViewSectionState extends State<ButtonsProfileViewSection>
         child: Row(
           children: [
             Expanded(
-              child: BouncyTap(
+              child: BouncyButton(
                 child: CustomButtonProfileView(
                   onTap: widget.onTapButtonEditProfile,
                   outBorderColor: true,
                   text: 'Edit Name',
-                  textColor: kPrimaryColor,
+                  textColor: AppColors.kPrimaryColor,
                   backgroundColor: Colors.white,
                   image: Assets.assets.images.edit.path,
                 ),
@@ -78,14 +78,14 @@ class _ButtonsProfileViewSectionState extends State<ButtonsProfileViewSection>
             ),
             const Gap(10),
             Expanded(
-              child: BouncyTap(
+              child: BouncyButton(
                 child: CustomButtonProfileView(
                   onTap: () {
                     BlocProvider.of<AuthCubit>(context).logout();
                   },
                   text: 'Log out',
                   textColor: Colors.white,
-                  backgroundColor: kPrimaryColor,
+                  backgroundColor: AppColors.kPrimaryColor,
                   image: Assets.assets.images.signOut.path,
                   outBorderColor: false,
                 ),

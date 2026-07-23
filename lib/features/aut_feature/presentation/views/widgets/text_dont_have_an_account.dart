@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:hungry_app/core/utils/constant.dart';
 
-import '../../../../../core/utils/app_routes.dart';
+import '../../../../../core/app_setup/app_routes.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_text.dart';
-import '../sign_up_view.dart';
 
 class TextDontHaveAnAccount extends StatelessWidget {
   const TextDontHaveAnAccount({
@@ -18,7 +16,7 @@ class TextDontHaveAnAccount extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        CustomText(
+        const CustomText(
               text: "Don't have an account ?  ",
               color: 0xFFFF9100,
               fontSize: 15,
@@ -39,9 +37,9 @@ class TextDontHaveAnAccount extends StatelessWidget {
             );
           },
           child:
-              CustomText(
+              const CustomText(
                     text: ">>> Sign Up <<<",
-                    color: kIntPrimaryColor,
+                    color: AppColors.kIntPrimaryColor,
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
                   )

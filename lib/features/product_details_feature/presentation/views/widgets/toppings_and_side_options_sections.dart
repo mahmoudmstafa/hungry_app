@@ -12,7 +12,7 @@ class ToppingsAndSideOptionsSections extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         Gap(30),
         ToppingsSection(),

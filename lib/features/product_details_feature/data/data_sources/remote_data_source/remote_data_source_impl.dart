@@ -14,6 +14,7 @@ class ToppingRemoteDataSourceImpl
     required this.dioService,
   });
 
+  // get all toppings
   @override
   Future<List<ToppingModel>> getToppings() async {
     final response = await dioService.dio.get('/toppings');
@@ -25,6 +26,7 @@ class ToppingRemoteDataSourceImpl
         .toList();
   }
 
+  // get all side options
   @override
   Future<List<SideOptionsModel>> getSideOptions() async {
     final response = await dioService.dio.get('/sideOptions');

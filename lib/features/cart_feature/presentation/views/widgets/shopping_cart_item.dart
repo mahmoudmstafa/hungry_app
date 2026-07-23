@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gap/flutter_gap.dart';
 import 'package:hungry_app/features/cart_feature/presentation/views/widgets/shopping_cart_item_details.dart';
 import 'package:hungry_app/features/cart_feature/presentation/views/widgets/shopping_cart_item_quantity_counter.dart';
 
 import '../../../../../core/widgets/custom_shadow_widget.dart';
-import '../../../../../core/widgets/custom_text.dart';
-import '../../../../../generated/assets.dart';
 import '../../../domain/entities/cart_item_entity.dart';
 import '../../manager/cubits/cart_cubit/cart_cubit.dart';
 

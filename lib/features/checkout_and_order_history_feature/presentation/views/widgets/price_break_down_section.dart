@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
-import 'package:hungry_app/core/utils/constant.dart';
-import 'package:hungry_app/features/cart_feature/domain/entities/cart_item_entity.dart';
 
 import '../../../../../core/widgets/custom_text.dart';
-import '../../../../../generated/assets.dart';
-import '../../../domain/entities/order_entity.dart';
 
 class PriceBreakdownSection extends StatelessWidget {
   const PriceBreakdownSection({
@@ -41,7 +37,7 @@ class PriceBreakdownSection extends StatelessWidget {
             ),
           ],
         ),
-        Gap(10),
+        const Gap(10),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -60,7 +56,7 @@ class PriceBreakdownSection extends StatelessWidget {
             ),
           ],
         ),
-        Gap(10),
+        const Gap(10),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -79,7 +75,7 @@ class PriceBreakdownSection extends StatelessWidget {
             ),
           ],
         ),
-        Gap(10),
+        const Gap(10),
       ],
     );
   }

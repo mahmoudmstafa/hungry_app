@@ -6,7 +6,7 @@ import 'package:hungry_app/features/aut_feature/domain/entities/user_entity.dart
 import 'package:hungry_app/features/aut_feature/domain/use_cases/params/login_param.dart';
 import 'package:meta/meta.dart';
 
-import '../../../../../core/utils/image_picker_service.dart';
+import '../../../../../core/app_setup/app_image_picker.dart';
 import '../../../domain/use_cases/auto_login_use_case.dart';
 import '../../../domain/use_cases/login_use_case.dart';
 import '../../../domain/use_cases/logout_use_case.dart';
@@ -34,7 +34,7 @@ class AuthCubit extends Cubit<AuthState> {
   final LogoutUseCase logoutUseCase;
   final AutoLoginUseCase autoLoginUseCase;
   final UpdateNameUseCase updateNameUseCase;
-  final ImagePickerService imagePickerService;
+  final AppImagePicker imagePickerService;
 
   // signUp
   Future<void> signUp({
@@ -133,6 +133,7 @@ class AuthCubit extends Cubit<AuthState> {
     );
   }
 
+  // pick profile image from gallery
   Future<void> pickProfileImage() async {
     log('pickProfileImage');
 
@@ -145,6 +146,7 @@ class AuthCubit extends Cubit<AuthState> {
       photo: image,
     );
   }
+
   // update name
   Future<void> updateNameAndPhoto({
     String? name,

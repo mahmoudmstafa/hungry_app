@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_text.dart';
-import '../../../../../generated/assets.dart';
 
 class TextGetStartedLoginView extends StatelessWidget {
   const TextGetStartedLoginView({
@@ -18,17 +17,13 @@ class TextGetStartedLoginView extends StatelessWidget {
       children: [
         CustomText(
           text: isSignUp == true ? "Let's Join Us " : "Let's Get Started ",
-          color: isSignUp == true ? 0xFFFFFFFF : kIntPrimaryColor,
+          color: isSignUp == true ? 0xFFFFFFFF : AppColors.kIntPrimaryColor,
           fontSize: 20,
           fontWeight: FontWeight.w500,
         ),
-        // Image.asset(
-        //   Assets.assets.images.hamburger.path,
-        //   width: 50,
-        // ),
         CustomText(
           text: " :",
-          color: isSignUp == true ? 0xFFFFFFFF : kIntPrimaryColor,
+          color: isSignUp == true ? 0xFFFFFFFF : AppColors.kIntPrimaryColor,
           fontSize: 20,
           fontWeight: FontWeight.w500,
         ),

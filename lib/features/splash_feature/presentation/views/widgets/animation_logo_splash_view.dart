@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hungry_app/core/constants/app_photos.dart';
 
-import '../../../../../core/utils/constant.dart';
 
 class AnimationLogoSplashView extends StatelessWidget {
   const AnimationLogoSplashView({
@@ -12,7 +12,7 @@ class AnimationLogoSplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-          kLogo,
+          AppPhotos.kLogo,
         )
         .animate()
         .fadeIn(
@@ -46,6 +46,5 @@ class AnimationLogoSplashView extends StatelessWidget {
         .fadeOut(
           duration: 800.ms,
         );
-    ;
   }
 }

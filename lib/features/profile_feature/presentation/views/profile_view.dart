@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hungry_app/core/utils/constant.dart';
-import 'package:hungry_app/features/profile_feature/presentation/views/widgets/profile_view_body.dart';
+import 'package:hungry_app/features/profile_feature/presentation/views/widgets/profile_view_body_bloc_listener.dart';
 
 import '../../../../core/widgets/custom_scaffold.dart';
 
@@ -11,8 +10,8 @@ class ProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScaffold(
-      child: ProfileViewBody(),
+    return const CustomScaffold(
+      child: ProfileViewBodyBlocListener(),
     );
   }
 }

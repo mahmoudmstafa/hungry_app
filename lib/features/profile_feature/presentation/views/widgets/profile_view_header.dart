@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:hungry_app/core/widgets/profile_photo_widget.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/bottom_curve_clipper.dart';
 import '../../../../../core/widgets/custom_back_button.dart';
 import '../../../../aut_feature/presentation/manager/cubits/auth_cubit.dart';
@@ -20,17 +20,17 @@ class ProfileViewHeader extends StatelessWidget {
     return ClipPath(
       clipper: BottomCurveClipper(),
       child: Container(
-        color: kPrimaryColor,
+        color: AppColors.kPrimaryColor,
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
               child: CustomBackButton(
                 settings: false,
-                colorOfBackIcon: kPrimaryColor,
+                colorOfBackIcon: AppColors.kPrimaryColor,
               ),
             ),
-            Gap(15),
+            const Gap(15),
             ProfilePhotoWidget(
               photo: context.watch<AuthCubit>().user.photo,
               onTap: (){

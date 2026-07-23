@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:get/get.dart';
 
-import '../../../../../core/utils/app_routes.dart';
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_button.dart';
-import 'bouncy_button.dart';
+import '../../../../../core/widgets/bouncy_button.dart';
 
 class CustomButtonsAddOrderAndCancel extends StatelessWidget {
   const CustomButtonsAddOrderAndCancel({
@@ -24,19 +23,19 @@ class CustomButtonsAddOrderAndCancel extends StatelessWidget {
               child: CustomButton(
                 onTap: onTap,
                 text: 'Add Order',
-                backgroundColor: kPrimaryColor,
+                backgroundColor: AppColors.kPrimaryColor,
                 height: 50,
                 textFontSize: 16,
               ),
             ),
           ),
-          Gap(2),
+          const Gap(2),
           Expanded(
             child: BouncyButton(
               child: CustomButton(
                 onTap: () => Get.back(),
                 text: 'Cancel',
-                backgroundColor: kPrimaryColor,
+                backgroundColor: AppColors.kPrimaryColor,
                 height: 50,
                 textFontSize: 16,
               ),

@@ -10,7 +10,7 @@ class AnimationTextFastFreshDeliSplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomText(
+    return const CustomText(
       text: 'Fast ⚡ , Fresh 🌿 & Delicious 🍽️ !',
       color: 0xFFFFFFFF,
       fontSize: 14,

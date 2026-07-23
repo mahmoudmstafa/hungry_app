@@ -10,7 +10,7 @@ class ButtonSaveCardDetailsAndListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
+    return const ListTile(
       visualDensity: VisualDensity.compact,
       title: CustomText(
         text: 'Save card details for future payments',

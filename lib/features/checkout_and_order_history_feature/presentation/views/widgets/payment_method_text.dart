@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_text.dart';
 
 
@@ -11,11 +11,11 @@ class PaymentMethodText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 3.0),
+    return const Padding(
+      padding: EdgeInsets.only(left: 3.0),
       child: CustomText(
         text: 'Payment methods',
-        color: kIntSecondaryColor,
+        color: AppColors.kIntSecondaryColor,
         fontSize: 21,
         fontWeight: FontWeight.w600,
       ),

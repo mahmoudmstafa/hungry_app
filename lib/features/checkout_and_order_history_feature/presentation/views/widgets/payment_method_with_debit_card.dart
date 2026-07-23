@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_text.dart';
 import '../../../../../generated/assets.dart';
 
@@ -24,8 +24,8 @@ class PaymentMethodWithDebitCard extends StatelessWidget {
             side: BorderSide.none,
           ),
           color: isSelected
-              ? kSecondaryColor
-              : Color(
+              ? AppColors.kSecondaryColor
+              : const Color(
                   0xffF3F4F6,
                 ),
           elevation: 5,
@@ -34,7 +34,7 @@ class PaymentMethodWithDebitCard extends StatelessWidget {
             child: ListTile(
               title: CustomText(
                 text: 'Debit card',
-                color: isSelected ? 0xFFFFFFFF : kIntSecondaryColor,
+                color: isSelected ? 0xFFFFFFFF : AppColors.kIntSecondaryColor,
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
               ),

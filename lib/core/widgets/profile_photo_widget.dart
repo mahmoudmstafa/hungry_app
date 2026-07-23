@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hungry_app/core/constants/app_photos.dart';
 
-import '../../generated/assets.dart';
-import '../utils/constant.dart';
+import '../constants/app_colors.dart';
 
 class ProfilePhotoWidget extends StatelessWidget {
   const ProfilePhotoWidget({
@@ -36,7 +36,7 @@ class ProfilePhotoWidget extends StatelessWidget {
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: photo == null || photo!.isEmpty
-                    ? AssetImage(kProfilePhoto)
+                    ? AssetImage(AppPhotos.kProfilePhoto)
                     : NetworkImage(photo!) as ImageProvider,
               ),
             ),
@@ -57,7 +57,7 @@ class ProfilePhotoWidget extends StatelessWidget {
               child: Icon(
                 Icons.add,
                 size: width * 0.18,
-                color: kPrimaryColor,
+                color: AppColors.kPrimaryColor,
               ),
             ),
           ),
@@ -96,7 +96,7 @@ class ProfilePhotoWidgetWithoutAdd extends StatelessWidget {
           image: DecorationImage(
             fit: BoxFit.cover,
             image: photo == null || photo!.isEmpty
-                ? AssetImage(kProfilePhoto)
+                ? AssetImage(AppPhotos.kProfilePhoto)
                 : NetworkImage(photo!) as ImageProvider,
           ),
         ),

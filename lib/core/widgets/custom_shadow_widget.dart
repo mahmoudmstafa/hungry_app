@@ -12,7 +12,7 @@ class CustomShadowWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 3),
+      margin: const EdgeInsets.symmetric(horizontal: 3),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
@@ -20,7 +20,7 @@ class CustomShadowWidget extends StatelessWidget {
           BoxShadow(
             color: Colors.grey.withOpacity(.2),
             blurRadius: 9,
-            offset: Offset(0, 5),
+            offset: const Offset(0, 5),
           ),
         ],
       ),

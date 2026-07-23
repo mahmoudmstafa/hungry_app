@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:hungry_app/core/constants/app_colors.dart';
 
-import '../utils/constant.dart';
-import '../../generated/assets.dart';
 
 class CustomBottomBar extends StatefulWidget {
   const CustomBottomBar({
@@ -26,11 +24,11 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         bottom: 8,
       ),
-      decoration: BoxDecoration(
-        color: kPrimaryColor,
+      decoration: const BoxDecoration(
+        color: AppColors.kPrimaryColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),

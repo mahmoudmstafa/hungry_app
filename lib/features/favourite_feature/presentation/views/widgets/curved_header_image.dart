@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../../../generated/assets.dart';
 import 'curved_bottom_clipper.dart';
-import 'favourites_view_body.dart';
 
 class CurvedHeaderImage extends StatefulWidget {
   const CurvedHeaderImage({super.key});
@@ -18,44 +17,12 @@ class _CurvedHeaderImageState extends State<CurvedHeaderImage>
   late final Animation<double> _scaleAnimation;
   late final Animation<Offset> _slideAnimation;
   @override
+  @override
   void initState() {
     super.initState();
-
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 1500),
-    );
-
-    _fadeAnimation = CurvedAnimation(
-      parent: _controller,
-      curve: const Interval(0.0, 0.7, curve: Curves.easeOut),
-    );
-
-    _scaleAnimation = Tween<double>(
-      begin: 1.08,
-      end: 1.0,
-    ).animate(
-      CurvedAnimation(
-        parent: _controller,
-        curve: Curves.easeOutCubic,
-      ),
-    );
-
-    _slideAnimation = Tween<Offset>(
-      begin: const Offset(0, -0.05),
-      end: Offset.zero,
-    ).animate(
-      CurvedAnimation(
-        parent: _controller,
-        curve: Curves.easeOutCubic,
-      ),
-    );
-
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _controller.forward();
-    });
+    _setupAnimations();
+    _startAnimation();
   }
-
   @override
   void dispose() {
     _controller.dispose();
@@ -86,4 +53,43 @@ class _CurvedHeaderImageState extends State<CurvedHeaderImage>
       ),
     );
   }
+
+  void _setupAnimations() {
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1500),
+    );
+
+    _fadeAnimation = CurvedAnimation(
+      parent: _controller,
+      curve: const Interval(0.0, 0.7, curve: Curves.easeOut),
+    );
+
+    _scaleAnimation = Tween<double>(
+      begin: 1.08,
+      end: 1.0,
+    ).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: Curves.easeOutCubic,
+      ),
+    );
+
+    _slideAnimation = Tween<Offset>(
+      begin: const Offset(0, -0.05),
+      end: Offset.zero,
+    ).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: Curves.easeOutCubic,
+      ),
+    );
+  }
+
+  void _startAnimation() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _controller.forward();
+    });
+  }
+
 }

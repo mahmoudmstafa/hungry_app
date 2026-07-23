@@ -3,7 +3,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
+
 
 
 class FavouriteButton extends StatelessWidget {
@@ -20,7 +21,7 @@ class FavouriteButton extends StatelessWidget {
       onPressed: onPressedFavouriteButton,
       icon: Icon(
         isFavourite ? Icons.favorite : Icons.favorite_border,
-        color: isFavourite ? kPrimaryColor : kSecondaryColor,
+        color: isFavourite ? AppColors.kPrimaryColor : AppColors.kSecondaryColor,
       ),
     );
   }

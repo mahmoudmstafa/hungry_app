@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
-import 'package:hungry_app/core/utils/constant.dart';
 
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_text_field_password_icon.dart';
 import 'custom_auth_text_form_field.dart';
 
@@ -28,13 +28,13 @@ class _TextFieldSignUpViewSectionState
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Gap(
+        const Gap(
           10,
         ),
         CustomAuthTextFormField(
           focusedErrorBorder: Colors.orange[700],
           errorBorderColor: Colors.orange[700],
-          errorStyle: TextStyle(
+          errorStyle: const TextStyle(
             color: Colors.white,
           ),
           validator: (data) {
@@ -47,13 +47,13 @@ class _TextFieldSignUpViewSectionState
           onSaved: widget.onSavedName,
           hintText: 'Name',
         ),
-        Gap(
+        const Gap(
           10,
         ),
         CustomAuthTextFormField(
           errorBorderColor: Colors.orange[700],
           focusedErrorBorder: Colors.orange[700],
-          errorStyle: TextStyle(
+          errorStyle: const TextStyle(
             color: Colors.white,
           ),
           validator: (data) {
@@ -66,13 +66,13 @@ class _TextFieldSignUpViewSectionState
           onSaved: widget.onSavedEmail,
           hintText: 'Email Address',
         ),
-        Gap(
+        const Gap(
           10,
         ),
         CustomAuthTextFormField(
           errorBorderColor: Colors.orange[700],
           focusedErrorBorder: Colors.orange[700],
-          errorStyle: TextStyle(
+          errorStyle: const TextStyle(
             color: Colors.white,
           ),
           validator: (data) {
@@ -87,7 +87,7 @@ class _TextFieldSignUpViewSectionState
           hintText: 'Password',
           suffixIcon: CustomTextFieldPasswordIcon(
             obscureText: obscureText,
-            iconColor: kSecondaryColor,
+            iconColor: AppColors.kSecondaryColor,
             onPressed: () {
               setState(() {
                 obscureText = !obscureText;
@@ -95,7 +95,7 @@ class _TextFieldSignUpViewSectionState
             },
           ),
         ),
-        Gap(
+        const Gap(
           35,
         ),
       ],

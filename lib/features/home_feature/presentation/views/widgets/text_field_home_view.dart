@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hungry_app/core/constants/app_colors.dart';
 
-import '../../../../../core/utils/constant.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../../generated/assets.dart';
 import '../../manager/cubits/search_products_cubit/search_products_cubit.dart';
@@ -34,14 +34,14 @@ class _TextFieldHomeViewState extends State<TextFieldHomeView> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.1),
             blurRadius: 10,
-            offset: Offset(0, 4),
+            offset: const Offset(0, 4),
           ),
         ],
       ),
@@ -52,13 +52,13 @@ class _TextFieldHomeViewState extends State<TextFieldHomeView> {
             searchQuery,
           );
         },
-        cursorColor: kSecondaryColor,
-        textStyle: TextStyle(
-          color: kSecondaryColor,
+        cursorColor: AppColors.kSecondaryColor,
+        textStyle: const TextStyle(
+          color: AppColors.kSecondaryColor,
           fontSize: 20,
           fontWeight: FontWeight.w600,
         ),
-        focusedBorderColor: kPrimaryColor,
+        focusedBorderColor: AppColors.kPrimaryColor,
         prefixIcon: Padding(
           padding: const EdgeInsets.only(
             top: 14.0,
@@ -72,7 +72,7 @@ class _TextFieldHomeViewState extends State<TextFieldHomeView> {
           ),
         ),
         hintText: "Search",
-        hintColor: kSecondaryColor,
+        hintColor: AppColors.kSecondaryColor,
         enabledBorderColor: Colors.white,
       ),
     );

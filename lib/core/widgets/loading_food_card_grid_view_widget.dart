@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 
-import '../../features/home_feature/presentation/views/widgets/food_card.dart';
 import '../../features/home_feature/presentation/views/widgets/rating_widget.dart';
-import '../utils/constant.dart';
+import '../constants/app_colors.dart';
 import 'custom_animation_loading_widget.dart';
 import 'custom_cached_network_image.dart';
 import 'custom_text.dart';
@@ -17,9 +16,9 @@ class LoadingFoodCardGridViewWidget extends StatelessWidget {
       child: GridView.builder(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
-        padding: EdgeInsets.only(top: 5, bottom: 20),
+        padding: const EdgeInsets.only(top: 5, bottom: 20),
         itemCount: 10,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 10,
           mainAxisSpacing: 30,
@@ -44,7 +43,7 @@ class LoadingFoodCardGridViewWidget extends StatelessWidget {
                 CustomCachedNetworkImage(
                   height: 120,
                   width: double.infinity,
-                  colorCircleIndicator: kSecondaryColor,
+                  colorCircleIndicator: AppColors.kSecondaryColor,
                   imageUrl: '',
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(16),
@@ -52,19 +51,19 @@ class LoadingFoodCardGridViewWidget extends StatelessWidget {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: kSecondaryColor.withOpacity(0.3),
+                      color: AppColors.kSecondaryColor.withOpacity(0.3),
                       spreadRadius: 2,
                       blurRadius: 12,
                       offset: const Offset(0, 6),
                     ),
                   ],
                 ),
-                Gap(20),
+                const Gap(20),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 14.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [

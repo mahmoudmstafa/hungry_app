@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:hungry_app/features/aut_feature/domain/entities/user_entity.dart';
 
-import 'package:hungry_app/features/aut_feature/domain/entities/user_entity.dart';
 
 import '../../models/user_model.dart';
 

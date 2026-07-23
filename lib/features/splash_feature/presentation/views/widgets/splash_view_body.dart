@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:hungry_app/core/utils/app_routes.dart';
-import 'package:hungry_app/features/aut_feature/presentation/views/login_view.dart';
-import 'package:hungry_app/features/home_feature/presentation/views/home_view.dart';
 
-import '../../../../../core/utils/secure_storage_service.dart';
-import '../../../../../core/utils/service_locator.dart';
+import '../../../../../core/app_setup/app_routes.dart';
+import '../../../../../core/network/secure_storage_service.dart';
+import '../../../../../core/app_setup/app_service_locator.dart';
 import '../../../../aut_feature/presentation/manager/cubits/auth_cubit.dart';
 import 'animation_logo_splash_view.dart';
 import 'animation_purger_splash_view.dart';
@@ -44,15 +41,15 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           Get.offAllNamed(AppRoutes.login);
         }
       },
-      child: Center(
+      child: const Center(
         child: Column(
           children: [
-            const Spacer(),
+            Spacer(),
             AnimationLogoSplashView(),
-            const Gap(10),
-            const AnimationTextFastFreshDeliSplashView(),
-            const Spacer(),
-            const AnimationPurgerSplashView(),
+            Gap(10),
+            AnimationTextFastFreshDeliSplashView(),
+            Spacer(),
+            AnimationPurgerSplashView(),
           ],
         ),
       ),
@@ -72,6 +69,16 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     );
   }
 
+
+  Future<void> _startApp() async {
+    await Future.delayed(
+      const Duration(milliseconds: 4700),
+    );
+
+    if (!mounted) return;
+
+    await _checkAuth();
+  }
   Future<void> _checkAuth() async {
     final token = await getIt<SecureStorageService>().getToken();
 
@@ -85,13 +92,4 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     context.read<AuthCubit>().autoLogin();
   }
 
-  Future<void> _startApp() async {
-    await Future.delayed(
-      const Duration(milliseconds: 4700),
-    );
-
-    if (!mounted) return;
-
-    await _checkAuth();
-  }
 }

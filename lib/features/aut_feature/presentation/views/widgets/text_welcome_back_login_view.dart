@@ -10,7 +10,7 @@ class TextWelcomeBackLoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
+    return const Align(
       alignment: Alignment.center,
       child: CustomText(
         text: 'Welcome Back , Discover The Fast Food ',

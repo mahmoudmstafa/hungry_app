@@ -19,9 +19,40 @@ class _AnimatedLovedMealsTitleState extends State<AnimatedLovedMealsTitle>
   late final Animation<Offset> _slideAnimation;
 
   @override
+  @override
   void initState() {
     super.initState();
+    _setupAnimations();
+    _startAnimationAfterDelay();
+  }
 
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FadeTransition(
+      opacity: _fadeAnimation,
+      child: SlideTransition(
+        position: _slideAnimation,
+        child: ScaleTransition(
+          scale: _scaleAnimation,
+          child: const CustomText(
+            text: '💚🍽️  Your Loved Meals  🍽️💚',
+            color: 0xFFFFFFFF,
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+    );
+  }
+
+
+  void _setupAnimations() {
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1200),
@@ -51,34 +82,11 @@ class _AnimatedLovedMealsTitleState extends State<AnimatedLovedMealsTitle>
         curve: Curves.easeOutCubic,
       ),
     );
+  }
 
+  void _startAnimationAfterDelay() {
     Future.delayed(const Duration(milliseconds: 400), () {
       if (mounted) _controller.forward();
     });
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return FadeTransition(
-      opacity: _fadeAnimation,
-      child: SlideTransition(
-        position: _slideAnimation,
-        child: ScaleTransition(
-          scale: _scaleAnimation,
-          child: const CustomText(
-            text: '💚🍽️  Your Loved Meals  🍽️💚',
-            color: 0xFFFFFFFF,
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-      ),
-    );
   }
 }

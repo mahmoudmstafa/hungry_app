@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_cached_network_image.dart';
 import '../../../../../core/widgets/custom_text.dart';
-import '../../../../../generated/assets.dart';
 import 'buttons_add_and_add_done_and_animation.dart';
 
 
@@ -24,7 +23,7 @@ class EditingWidget extends StatelessWidget {
     return Container(
       width: 110,
       decoration: BoxDecoration(
-        color: kSecondaryColor,
+        color: AppColors.kSecondaryColor,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -42,9 +41,9 @@ class EditingWidget extends StatelessWidget {
             height: 90,
             child: CustomCachedNetworkImage(
               width: double.infinity,
-              colorCircleIndicator: kSecondaryColor,
+              colorCircleIndicator: AppColors.kSecondaryColor,
               imageUrl: productImage,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(16),
                 topRight: Radius.circular(16),
               ),
@@ -58,7 +57,7 @@ class EditingWidget extends StatelessWidget {
               ],
             ),
           ),
-          Gap(10),
+          const Gap(10),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: CustomText(
@@ -71,7 +70,7 @@ class EditingWidget extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
             ),
           ),
-          Gap(5),
+          const Gap(5),
           GestureDetector(
             onTap: onTap ,
             child: AnimationAddAndAddDoneButtons(

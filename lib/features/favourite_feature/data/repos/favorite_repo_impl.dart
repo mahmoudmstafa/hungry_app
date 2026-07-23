@@ -11,6 +11,7 @@ class FavouriteRepositoryImpl
     required this.localDataSource,
   });
 
+  // add favourite
   @override
   Future<void> addFavourite(
       ProductEntity product,
@@ -24,6 +25,7 @@ class FavouriteRepositoryImpl
     );
   }
 
+  // remove favourite
   @override
   Future<void> removeFavourite(
       String productId,
@@ -35,6 +37,7 @@ class FavouriteRepositoryImpl
     );
   }
 
+  // get favourites
   @override
   List<ProductEntity> getFavourites(
       String userId,
@@ -45,6 +48,7 @@ class FavouriteRepositoryImpl
         .toList();
   }
 
+  // check if favourite
   @override
   bool isFavourite(
       String productId,

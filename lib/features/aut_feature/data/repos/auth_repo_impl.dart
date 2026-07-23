@@ -5,19 +5,19 @@ import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fpdart/fpdart.dart';
 
-import '../../../../core/utils/cloudinary_service.dart';
-import '../../../../core/utils/failures.dart';
+import '../../../../core/app_setup/app_failures.dart';
 import '../../domain/entities/user_entity.dart';
 import '../../domain/repos/auth_repo.dart';
 import '../data_sources/remote_data_source/remote_data_source.dart';
 
 class AuthRepoImpl implements AuthRepo {
   final AuthRemoteDataSource remoteDataSource;
+
   AuthRepoImpl({required this.remoteDataSource});
 
   // signUp
   @override
-  Future<Either<Failure, UserEntity>> signUp({
+  Future<Either<AppFailures, UserEntity>> signUp({
     required String name,
     required String email,
     required String password,
@@ -45,7 +45,7 @@ class AuthRepoImpl implements AuthRepo {
 
   // login
   @override
-  Future<Either<Failure, UserEntity>> login({
+  Future<Either<AppFailures, UserEntity>> login({
     required String email,
     required String password,
   }) async {
@@ -71,13 +71,13 @@ class AuthRepoImpl implements AuthRepo {
 
   // logout
   @override
-  Future<Either<Failure, void>> logout() async {
+  Future<Either<AppFailures, void>> logout() async {
     try {
       await remoteDataSource.logout();
       return const Right(null);
     } catch (e) {
       return Left(
-        Failure(
+        AppFailures(
           errMessage: e.toString(),
         ),
       );
@@ -86,7 +86,7 @@ class AuthRepoImpl implements AuthRepo {
 
   // auto login
   @override
-  Future<Either<Failure, UserEntity>> autoLogin() async {
+  Future<Either<AppFailures, UserEntity>> autoLogin() async {
     try {
       UserEntity user = await remoteDataSource.autoLogin();
       return Right(
@@ -100,12 +100,12 @@ class AuthRepoImpl implements AuthRepo {
       return Left(
         FirebaseFailure.fromAutoLoginException(e),
       );
-    } on Failure catch (e) {
+    } on AppFailures catch (e) {
       return Left(e);
     } catch (e) {
       log('the error is --> $e');
       return Left(
-        Failure(
+        AppFailures(
           errMessage: e.toString(),
         ),
       );
@@ -114,7 +114,7 @@ class AuthRepoImpl implements AuthRepo {
 
   // update name and photo and photo
   @override
-  Future<Either<Failure, UserEntity>> updateName({
+  Future<Either<AppFailures, UserEntity>> updateName({
     required String name,
     required File? photo,
   }) async {
@@ -127,11 +127,11 @@ class AuthRepoImpl implements AuthRepo {
       return Right(user);
     } on DioException catch (e) {
       return Left(ServerFailure.fromDioError(e));
-    } on Failure catch (e) {
+    } on AppFailures catch (e) {
       return Left(e);
     } catch (e) {
       return Left(
-        Failure(
+        AppFailures(
           errMessage: e.toString(),
         ),
       );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 
 
 
@@ -28,8 +28,8 @@ class _SliderWidgetState extends State<SliderWidget> {
         value: value,
         min: 0,
         max: 100,
-        activeColor: kPrimaryColor,
-        inactiveColor: Color(
+        activeColor: AppColors.kPrimaryColor,
+        inactiveColor: const Color(
           0xffDCD8D3,
         ),
         onChanged: (newValue) {
@@ -83,7 +83,7 @@ class SquareThumb extends SliderComponentShape {
     context.canvas.drawRRect(rRect, shadowPaint);
     context.canvas.drawRRect(
       rRect,
-      Paint()..color = kPrimaryColor,
+      Paint()..color = AppColors.kPrimaryColor,
     );
   }
 }

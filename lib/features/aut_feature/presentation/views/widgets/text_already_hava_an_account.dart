@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
-import 'package:hungry_app/core/utils/app_routes.dart';
-import 'package:hungry_app/features/aut_feature/presentation/views/login_view.dart';
 
+import '../../../../../core/app_setup/app_routes.dart';
 import '../../../../../core/widgets/custom_text.dart';
-import '../sign_up_view.dart';
 
 class TextAlreadyHavaAnAccount extends StatelessWidget {
   const TextAlreadyHavaAnAccount({
@@ -18,7 +16,7 @@ class TextAlreadyHavaAnAccount extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        CustomText(
+        const CustomText(
               text: "Already have an account ?  ",
               color: 0xFFFFFFFF,
               fontSize: 15,
@@ -37,7 +35,7 @@ class TextAlreadyHavaAnAccount extends StatelessWidget {
                   AppRoutes.login,
                 );
               },
-              child: CustomText(
+              child: const CustomText(
                 text: ">>> Log In <<<",
                 color: 0xFFFFAB40,
                 fontSize: 16,

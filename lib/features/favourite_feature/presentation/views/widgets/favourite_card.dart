@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:hungry_app/core/constants/app_colors.dart';
 import 'package:hungry_app/features/home_feature/domain/entities/product_entity.dart';
 
-import '../../../../../core/utils/app_routes.dart';
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/app_setup/app_routes.dart';
 import '../../../../../core/widgets/custom_cached_network_image.dart';
 import '../../../../../core/widgets/custom_text.dart';
 import '../../../../home_feature/presentation/views/widgets/rating_widget.dart';
@@ -30,24 +30,10 @@ class _FavouriteCardState extends State<FavouriteCard>
   bool _isRemoving = false;
 
   @override
+  @override
   void initState() {
     super.initState();
-
-    _removeController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 320),
-    );
-
-    _scaleAnimation = Tween<double>(begin: 1.0, end: 0.65).animate(
-      CurvedAnimation(parent: _removeController, curve: Curves.easeInBack),
-    );
-
-    _fadeAnimation = Tween<double>(begin: 1.0, end: 0.0).animate(
-      CurvedAnimation(
-        parent: _removeController,
-        curve: const Interval(0.2, 1.0, curve: Curves.easeIn),
-      ),
-    );
+    _setupRemoveAnimation();
   }
 
   @override
@@ -57,7 +43,6 @@ class _FavouriteCardState extends State<FavouriteCard>
   }
 
   Future<void> _handleFavouriteToggle(bool isCurrentlyFavourite) async {
-    // لو الكارت في صفحة المفضلة وبيتشال منها → شغل أنيميشن الخروج الأول
     if (isCurrentlyFavourite) {
       if (_isRemoving) return;
       setState(() => _isRemoving = true);
@@ -68,7 +53,6 @@ class _FavouriteCardState extends State<FavouriteCard>
         context.read<FavoriteCubit>().toggleFavourite(widget.products);
       }
     } else {
-      // إضافة للمفضلة مباشرة، مفيش داعي لأنيميشن خروج
       context.read<FavoriteCubit>().toggleFavourite(widget.products);
     }
   }
@@ -94,7 +78,7 @@ class _FavouriteCardState extends State<FavouriteCard>
           );
         },
         child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 20 ),
+          margin: const EdgeInsets.symmetric(horizontal: 20),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(16),
@@ -113,7 +97,7 @@ class _FavouriteCardState extends State<FavouriteCard>
               CustomCachedNetworkImage(
                 height: 150,
                 width: double.infinity,
-                colorCircleIndicator: kSecondaryColor,
+                colorCircleIndicator: AppColors.kSecondaryColor,
                 imageUrl: widget.products.productImage,
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(16),
@@ -164,7 +148,7 @@ class _FavouriteCardState extends State<FavouriteCard>
                         vertical: 3,
                       ),
                       decoration: BoxDecoration(
-                        color: kSecondaryColor,
+                        color: AppColors.kSecondaryColor,
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: CustomText(
@@ -196,4 +180,22 @@ class _FavouriteCardState extends State<FavouriteCard>
       ),
     );
   }
+  void _setupRemoveAnimation() {
+    _removeController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 320),
+    );
+
+    _scaleAnimation = Tween<double>(begin: 1.0, end: 0.65).animate(
+      CurvedAnimation(parent: _removeController, curve: Curves.easeInBack),
+    );
+
+    _fadeAnimation = Tween<double>(begin: 1.0, end: 0.0).animate(
+      CurvedAnimation(
+        parent: _removeController,
+        curve: const Interval(0.2, 1.0, curve: Curves.easeIn),
+      ),
+    );
+  }
+
 }

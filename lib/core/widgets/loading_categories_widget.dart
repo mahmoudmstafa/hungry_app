@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/constant.dart';
+import '../constants/app_colors.dart';
 import 'custom_animation_loading_widget.dart';
 import 'custom_button.dart';
 
@@ -48,13 +48,13 @@ class _LoadingCategoriesWidgetState extends State<LoadingCategoriesWidget> {
             itemCount: 10,
             itemBuilder: (context, index) {
               return GestureDetector(
-                child: CustomButton(
+                child: const CustomButton(
                   text: 'Loading ...',
                   textColor: Colors.white,
                   padding: EdgeInsets.symmetric(
                     horizontal: 20,
                   ),
-                  backgroundColor: kSecondaryColor,
+                  backgroundColor: AppColors.kSecondaryColor,
                 ),
               );
             },

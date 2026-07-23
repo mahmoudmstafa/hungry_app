@@ -10,6 +10,7 @@ class CheckoutRepoImpl implements CheckoutRepo {
     required this.localDataSource,
   });
 
+  // place (add) order
   @override
   Future<void> placeOrder(OrderEntity order) async {
     await localDataSource.placeOrder(
@@ -17,11 +18,13 @@ class CheckoutRepoImpl implements CheckoutRepo {
     );
   }
 
+  // get order
   @override
   List<OrderEntity> getOrders(String userId) {
     return localDataSource.getOrders(userId);
   }
 
+  // clear cart
   @override
   Future<void> clearCart(String userId) {
     return localDataSource.clearCart(userId);

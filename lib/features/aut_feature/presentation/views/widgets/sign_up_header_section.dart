@@ -16,14 +16,14 @@ class SignUpHeaderSection extends StatelessWidget {
     return ClipPath(
       clipper: BottomCurveClipper(),
       child: Container(
-        padding: EdgeInsets.only(top: 60),
+        padding: const EdgeInsets.only(top: 60),
         color: Colors.white,
         child: Column(
           children: [
-            CustomAuthLogo(),
-            Gap(10),
-            TextJoinUsSignUpView(),
-            Gap(10),
+            const CustomAuthLogo(),
+            const Gap(10),
+            const TextJoinUsSignUpView(),
+            const Gap(10),
             Padding(
               padding: const EdgeInsets.only(bottom: 28.0),
               child: Image.asset(

@@ -6,8 +6,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hungry_app/core/constants/app_colors.dart';
 
-import '../../../../../core/utils/constant.dart';
 import '../../../../../core/widgets/custom_text.dart';
 import '../../../../../generated/assets.dart';
 import 'favourite_button.dart';
@@ -35,10 +35,10 @@ class _RatingWidgetState extends State<RatingWidget> {
             SvgPicture.asset(
               Assets.assets.images.star.path,
             ),
-            Gap(5),
+            const Gap(5),
             CustomText(
               text: rating.toStringAsFixed(1),
-              color: kIntSecondaryColor,
+              color: AppColors.kIntSecondaryColor,
               fontSize: 17,
               fontWeight: FontWeight.w600,
             ),

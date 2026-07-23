@@ -8,8 +8,7 @@ import 'package:hungry_app/features/home_feature/presentation/manager/cubits/get
 import 'package:hungry_app/features/product_details_feature/presentation/views/widgets/product_details_text.dart';
 import 'package:hungry_app/features/product_details_feature/presentation/views/widgets/spicy_section.dart';
 
-import '../../../../../core/utils/constant.dart';
-import '../../../../../generated/assets.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../home_feature/domain/entities/product_entity.dart';
 
 class ProductDetailsSection extends StatelessWidget {
@@ -17,7 +16,6 @@ class ProductDetailsSection extends StatelessWidget {
     super.key,
   });
 
-  // أسماء الكاتيجوريز اللي مش عايزين نظهر فيها خانة الـ Spicy
   static const List<String> categoriesWithoutSpicyOption = [
     'Desserts',
     'Drinks',
@@ -51,26 +49,26 @@ class ProductDetailsSection extends StatelessWidget {
           CustomCachedNetworkImage(
             borderRadiusLoadingImage: BorderRadius.circular(16),
             width: double.infinity,
-            colorCircleIndicator: kSecondaryColor,
+            colorCircleIndicator: AppColors.kSecondaryColor,
             imageUrl: products.productImage,
             borderRadius: BorderRadius.circular(16),
             boxShadow: [
               BoxShadow(
-                color: kSecondaryColor.withOpacity(0.3),
+                color: AppColors.kSecondaryColor.withOpacity(0.3),
                 spreadRadius: 2,
                 blurRadius: 12,
                 offset: const Offset(0, 6),
               ),
             ],
           ),
-          Gap(10),
+          const Gap(10),
           Column(
             children: [
               ProductDetailsText(
                 title: products.title,
                 desc: products.desc,
               ),
-              if (shouldShowSpicySection) SpicySection(),
+              if (shouldShowSpicySection) const SpicySection(),
             ],
           ),
         ],

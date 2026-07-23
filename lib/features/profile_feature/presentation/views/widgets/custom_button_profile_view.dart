@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
-import 'package:hungry_app/core/utils/constant.dart';
+
+import '../../../../../core/constants/app_colors.dart';
 
 class CustomButtonProfileView extends StatelessWidget {
   const CustomButtonProfileView({
@@ -33,7 +34,7 @@ class CustomButtonProfileView extends StatelessWidget {
           color: backgroundColor,
           borderRadius: BorderRadius.circular(16),
           border: BoxBorder.all(
-            color: outBorderColor ? kPrimaryColor : Colors.white,
+            color: outBorderColor ? AppColors.kPrimaryColor : Colors.white,
             width: 2,
           ),
         ),
@@ -48,7 +49,7 @@ class CustomButtonProfileView extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            Gap(10),
+            const Gap(10),
             Image.asset(
               image,
               height: 18,

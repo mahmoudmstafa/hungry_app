@@ -10,11 +10,13 @@ class FavouriteLocalDataSourceImpl implements FavouriteLocalDataSource {
     required this.favouriteBox,
   });
 
+  // add favourite
   @override
   Future<void> addFavourite(FavouriteModel item) async {
     await favouriteBox.add(item);
   }
 
+  // remove favourite
   @override
   Future<void> removeFavourite(
     String productId,
@@ -27,6 +29,7 @@ class FavouriteLocalDataSourceImpl implements FavouriteLocalDataSource {
     await item.delete();
   }
 
+  // get favourites
   @override
   List<FavouriteModel> getFavourites(String userId) {
     return favouriteBox.values
@@ -36,6 +39,7 @@ class FavouriteLocalDataSourceImpl implements FavouriteLocalDataSource {
         .toList();
   }
 
+  // check if favourite
   @override
   bool isFavourite(
     String productId,

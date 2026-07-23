@@ -29,6 +29,8 @@ class FavoriteCubit extends Cubit<FavoriteState> {
   String get userId => firebaseAuth.currentUser!.uid;
 
   List<ProductEntity> favourites = [];
+
+  // remove favourite
   Future<void> removeFavourite(ProductEntity product) async {
     await removeFavouriteUseCase(
       product.id,
@@ -37,16 +39,20 @@ class FavoriteCubit extends Cubit<FavoriteState> {
 
     getFavourites();
   }
+
+  // get favourites
   void getFavourites() {
     favourites = getFavouriteUseCase(userId);
 
     emit(FavouriteLoaded(favourites));
   }
 
+  // check if favourite
   bool isFavourite(String productId) {
     return isFavouriteUseCase(productId, userId);
   }
 
+  // toggle favourite
   Future<void> toggleFavourite(ProductEntity product) async {
     if (isFavourite(product.id)) {
       await removeFavouriteUseCase(

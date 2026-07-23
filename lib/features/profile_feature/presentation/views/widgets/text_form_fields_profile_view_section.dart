@@ -4,7 +4,6 @@ import 'package:flutter_gap/flutter_gap.dart';
 import 'package:hungry_app/features/aut_feature/domain/entities/user_entity.dart';
 
 import '../../../../aut_feature/presentation/manager/cubits/auth_cubit.dart';
-import 'custom_password_text_form_field_profile_view.dart';
 import 'custom_text_form_field_profile_view.dart';
 
 class TextFormFieldsProfileViewSection extends StatefulWidget {
@@ -53,20 +52,13 @@ class _TextFormFieldsProfileViewSectionState
           controller: _nameController,
           hintText: 'Name',
         ),
-        Gap(15),
+        const Gap(15),
         CustomTextFormFieldProfileView(
           enable: false,
           controller: _emailController,
           hintText: 'Email',
         ),
-        Gap(15),
-        // CustomTextFormFieldProfileView(
-        //   hintText: 'Delivery address',
-        // ),
-        // Gap(15),
-        // CustomPasswordTextFormFieldProfileView(
-        //   controller: _passwordController,
-        // ),
+        const Gap(15),
       ],
     );
   }

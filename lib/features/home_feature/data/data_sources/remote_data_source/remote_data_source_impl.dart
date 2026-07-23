@@ -1,6 +1,5 @@
 import 'dart:developer';
 
-import 'package:hive_ce/hive.dart';
 import 'package:hungry_app/features/home_feature/data/data_sources/remote_data_source/remote_data_source.dart';
 import 'package:hungry_app/features/home_feature/data/models/category_model.dart';
 
@@ -15,6 +14,8 @@ class ProductRemoteDataSourceImpl implements ProductRemoteDataSource {
 
   final DioService dioService;
 
+
+  // get products
   @override
   Future<PaginatedProductsModel> getProducts({
     required int page,
@@ -26,7 +27,7 @@ class ProductRemoteDataSourceImpl implements ProductRemoteDataSource {
       queryParameters: {
         'page': page,
         'limit': limit,
-        if (categoryId != null) 'categoryId': categoryId,
+        'categoryId': ?categoryId,
       },
     );
     log(response.data.toString());

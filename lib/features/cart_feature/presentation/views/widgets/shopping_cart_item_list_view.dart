@@ -17,9 +17,9 @@ class ShoppingCartItemListView extends StatelessWidget {
     final items = cartCubit.cartItems.reversed.toList();
 
     return ListView.separated(
-      padding: EdgeInsets.only(bottom: 25),
+      padding: const EdgeInsets.only(bottom: 25),
       itemCount: items.length,
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       itemBuilder: (context, index) {
         return ShoppingCartItem(
           key: ObjectKey(items[index]),
@@ -28,7 +28,7 @@ class ShoppingCartItemListView extends StatelessWidget {
         );
       },
       separatorBuilder: (BuildContext context, int index) {
-        return Gap(25);
+        return const Gap(25);
       },
     );
   }

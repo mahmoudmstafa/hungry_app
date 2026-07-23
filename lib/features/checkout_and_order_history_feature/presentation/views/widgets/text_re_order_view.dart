@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_text.dart';
 
 class TextReOrderView extends StatelessWidget {
@@ -16,18 +16,18 @@ class TextReOrderView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomText(
+        const CustomText(
           text: 'Re Order !',
-          color: kIntPrimaryColor,
+          color: AppColors.kIntPrimaryColor,
           fontWeight: FontWeight.w700,
           fontSize: 26,
           fontFamily: 'Poppins',
         ),
-        Gap(10),
+        const Gap(10),
         CustomText(
           textAlign: TextAlign.center,
           text: text,
-          color: kIntSecondaryColor,
+          color: AppColors.kIntSecondaryColor,
           fontWeight: FontWeight.w500,
           fontSize: 14,
         ),
@@ -35,6 +35,3 @@ class TextReOrderView extends StatelessWidget {
     );
   }
 }
-
-//           ' Your cart already contains items ! \nReplace current cart \n with this order ? ',
-// 'Ready to reorder! 🎉\nAdd these items\nto your cart?',

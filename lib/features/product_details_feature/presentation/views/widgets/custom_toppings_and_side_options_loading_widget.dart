@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_animation_loading_widget.dart';
 import '../../../../../core/widgets/custom_cached_network_image.dart';
 import '../../../../../core/widgets/custom_text.dart';
@@ -18,15 +18,15 @@ class CustomToppingsAndSideOptionsLoadingWidget extends StatelessWidget {
       child: SizedBox(
         height: 175,
         child: ListView.separated(
-          padding: EdgeInsets.only(top: 8, left: 20, right: 20, bottom: 15),
+          padding: const EdgeInsets.only(top: 8, left: 20, right: 20, bottom: 15),
           scrollDirection: Axis.horizontal,
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           itemCount: 5,
           itemBuilder: (BuildContext context, int index) {
             return Container(
               width: 100,
               decoration: BoxDecoration(
-                color: kSecondaryColor,
+                color: AppColors.kSecondaryColor,
                 borderRadius: BorderRadius.circular(16),
                 boxShadow: [
                   BoxShadow(
@@ -44,9 +44,9 @@ class CustomToppingsAndSideOptionsLoadingWidget extends StatelessWidget {
                     height: 90,
                     child: CustomCachedNetworkImage(
                       width: double.infinity,
-                      colorCircleIndicator: kSecondaryColor,
+                      colorCircleIndicator: AppColors.kSecondaryColor,
                       imageUrl: '',
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(16),
                         topRight: Radius.circular(16),
                       ),
@@ -60,16 +60,16 @@ class CustomToppingsAndSideOptionsLoadingWidget extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Gap(10),
-                  CustomText(
+                  const Gap(10),
+                  const CustomText(
                     text: 'Loading ...',
                     color: 0xFFFF1744,
                   ),
-                  Gap(5),
+                  const Gap(5),
                   Container(
-                    margin: EdgeInsets.only(left: 3, right: 3, bottom: 3),
+                    margin: const EdgeInsets.only(left: 3, right: 3, bottom: 3),
                     width: double.infinity,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.grey,
                     ),
@@ -84,7 +84,7 @@ class CustomToppingsAndSideOptionsLoadingWidget extends StatelessWidget {
             );
           },
           separatorBuilder: (BuildContext context, int index) {
-            return SizedBox(
+            return const SizedBox(
               width: 10,
             );
           },

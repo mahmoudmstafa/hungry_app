@@ -10,6 +10,8 @@ class CartRepoImpl implements CartRepo {
     required this.localDataSource,
   });
 
+
+  // add to cart
   @override
   Future<void> addToCart(CartItemEntity item, userId) {
     return localDataSource.addToCart(
@@ -18,21 +20,25 @@ class CartRepoImpl implements CartRepo {
     );
   }
 
+  // get cart items
   @override
   List<CartItemEntity> getCartItems(userId) {
     return localDataSource.getCartItems(userId);
   }
 
+  // remove item
   @override
   Future<void> removeCartItem(int index, userId) {
     return localDataSource.removeItem(index, userId);
   }
 
+  // clear cart
   @override
   Future<void> clearCart(userId) {
     return localDataSource.clearCart(userId);
   }
 
+  // update item
   @override
   Future<void> updateItem(
       CartItemEntity item,

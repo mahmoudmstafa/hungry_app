@@ -1,14 +1,13 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gap/flutter_gap.dart';
-import 'package:hungry_app/features/aut_feature/domain/entities/user_entity.dart';
 import 'package:hungry_app/features/aut_feature/presentation/manager/cubits/auth_cubit.dart';
 import 'package:hungry_app/features/profile_feature/presentation/views/widgets/payment_with_card_profile_view.dart';
 import 'package:hungry_app/features/profile_feature/presentation/views/widgets/text_form_fields_profile_view_section.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
+import '../../../../../core/constants/app_spaces.dart';
 import '../../../../../core/widgets/custom_text.dart';
 import 'buttons_profile_view_section.dart';
 import 'custom_divider_profile_view.dart';
@@ -29,30 +28,30 @@ class _ProfileViewFormState extends State<ProfileViewForm> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(
-        horizontal: kPadding,
+        horizontal: AppSpaces.kPadding,
       ),
       color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Gap(
+          const Gap(
             20,
           ),
-          CustomText(
+          const CustomText(
             text: ' Profile Form :',
             fontSize: 20,
             fontWeight: FontWeight.w500,
-            color: kIntPrimaryColor,
+            color: AppColors.kIntPrimaryColor,
           ),
-          Gap(15),
+          const Gap(15),
           TextFormFieldsProfileViewSection(
             onChangedName: (data) {
               name = data;
             },
           ),
-          CustomDividerProfileView(),
-          PaymentWithCardProfileView(),
-          Expanded(
+          const CustomDividerProfileView(),
+          const PaymentWithCardProfileView(),
+          const Expanded(
             child: SizedBox(
               height: 15,
             ),
@@ -64,7 +63,7 @@ class _ProfileViewFormState extends State<ProfileViewForm> {
               );
             },
           ),
-          Gap(25),
+          const Gap(25),
         ],
       ),
     );

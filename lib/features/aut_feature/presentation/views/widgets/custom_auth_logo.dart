@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hungry_app/core/constants/app_photos.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
+
 
 class CustomAuthLogo extends StatelessWidget {
   const CustomAuthLogo({
@@ -13,9 +15,9 @@ class CustomAuthLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      kLogo,
+      AppPhotos.kLogo,
       width: 250,
-      color: isSignView ? kPrimaryColor : Colors.white,
+      color: isSignView ? AppColors.kPrimaryColor : Colors.white,
     );
   }
 }

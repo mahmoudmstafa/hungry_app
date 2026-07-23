@@ -28,6 +28,8 @@ class CheckoutCubit extends Cubit<CheckoutState> {
 
   OrderEntity? currentOrder;
 
+
+  // place (add) order
   Future<void> placeOrder(OrderEntity order) async {
     emit(CheckoutLoading());
 
@@ -40,6 +42,7 @@ class CheckoutCubit extends Cubit<CheckoutState> {
     emit(CheckoutSuccess());
   }
 
+  // get orders
   void getOrders() {
     orders = getOrdersUseCase(userId);
 

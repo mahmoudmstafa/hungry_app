@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hungry_app/features/home_feature/presentation/views/widgets/menu_and_food_card_section.dart';
 
-import '../../../../../core/utils/constant.dart';
-import '../../../../../core/widgets/custom_scaffold.dart';
-import '../../../../../core/widgets/custom_bottom_bar.dart';
 import '../../manager/cubits/get_products_cubit/get_product_cubit.dart';
 import 'home_view_app_bar_and_search_section.dart';
 
@@ -27,12 +24,7 @@ class _HomeViewBodyState extends State<HomeViewBody> with AutomaticKeepAliveClie
     _scrollController = ScrollController()..addListener(_onScroll);
   }
 
-  void _onScroll() {
-    if (_scrollController.position.pixels >=
-        _scrollController.position.maxScrollExtent - 300) {
-      context.read<GetProductCubit>().loadNextPage();
-    }
-  }
+
 
   @override
   void dispose() {
@@ -47,10 +39,16 @@ class _HomeViewBodyState extends State<HomeViewBody> with AutomaticKeepAliveClie
     return CustomScrollView(
       controller: _scrollController,
       physics: const BouncingScrollPhysics(),
-      slivers: [
-        const HomeViewAppBarAndSearchSection(),
-        const MenuAndFoodCardSection(),
+      slivers: const [
+        HomeViewAppBarAndSearchSection(),
+        MenuAndFoodCardSection(),
       ],
     );
+  }
+  void _onScroll() {
+    if (_scrollController.position.pixels >=
+        _scrollController.position.maxScrollExtent - 300) {
+      context.read<GetProductCubit>().loadNextPage();
+    }
   }
 }

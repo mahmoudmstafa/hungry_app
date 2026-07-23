@@ -6,7 +6,6 @@ class CurvedBottomClipper extends CustomClipper<Path> {
 
     path.lineTo(0, size.height - 40);
 
-    // منحنى ناعم في الآخر
     path.quadraticBezierTo(
       size.width / 2,
       size.height - 20,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_button.dart';
-import 'bouncy_button.dart';
+import '../../../../../core/widgets/bouncy_button.dart';
 
 class CustomButtonReOrder extends StatelessWidget {
   const CustomButtonReOrder({super.key, this.onTap});
@@ -16,7 +16,7 @@ class CustomButtonReOrder extends StatelessWidget {
         child: CustomButton(
           onTap: onTap,
           text: 'Re Order',
-          backgroundColor: kPrimaryColor,
+          backgroundColor: AppColors.kPrimaryColor,
           height: 50,
           textFontSize: 17,
         ),

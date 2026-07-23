@@ -6,7 +6,7 @@ import 'package:dio/dio.dart';
 
 
 
-import '../utils/secure_storage_service.dart';
+import 'secure_storage_service.dart';
 
 class DioService {
   final SecureStorageService secureStorageService;

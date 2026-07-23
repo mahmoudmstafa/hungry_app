@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
-import 'package:hungry_app/core/utils/constant.dart';
 
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_text_field_password_icon.dart';
 import 'custom_auth_text_form_field.dart';
 
@@ -27,14 +27,14 @@ class _TextFieldsLoginViewSectionState
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Gap(
+        const Gap(
           10,
         ),
         CustomAuthTextFormField(
           focusedErrorBorder: Colors.green,
           errorBorderColor: Colors.green,
-          errorStyle: TextStyle(
-            color: kSecondaryColor,
+          errorStyle: const TextStyle(
+            color: AppColors.kSecondaryColor,
             fontWeight: FontWeight.w500,
           ),
           onSaved: widget.onEmailSaved,
@@ -46,14 +46,14 @@ class _TextFieldsLoginViewSectionState
           },
           hintText: 'Email Address',
         ),
-        Gap(
+        const Gap(
           10,
         ),
         CustomAuthTextFormField(
           focusedErrorBorder: Colors.green,
           errorBorderColor: Colors.green,
-          errorStyle: TextStyle(
-            color: kSecondaryColor,
+          errorStyle: const TextStyle(
+            color: AppColors.kSecondaryColor,
             fontWeight: FontWeight.w500,
           ),
           onSaved: widget.onPasswordSaved,
@@ -67,7 +67,7 @@ class _TextFieldsLoginViewSectionState
           hintText: 'Password',
           suffixIcon: CustomTextFieldPasswordIcon(
             obscureText: obscureText,
-            iconColor: kSecondaryColor,
+            iconColor: AppColors.kSecondaryColor,
             onPressed: () {
               setState(() {
                 obscureText = !obscureText;
@@ -75,7 +75,7 @@ class _TextFieldsLoginViewSectionState
             },
           ),
         ),
-        Gap(
+        const Gap(
           40,
         ),
       ],

@@ -5,7 +5,6 @@ import '../../manager/cubits/favorite_cubit/favorite_cubit.dart';
 import 'empty_favourites_widget.dart';
 import 'favourites_cards_slider.dart';
 
-
 class FavouritesCardsSliderBlocBuilder extends StatelessWidget {
   const FavouritesCardsSliderBlocBuilder({super.key});
 
@@ -18,7 +17,9 @@ class FavouritesCardsSliderBlocBuilder extends StatelessWidget {
         if (favourites.isEmpty) {
           return const EmptyFavouritesWidget();
         }
-        return FavouritesCardsSlider();
+        return FavouritesCardsSlider(
+          favourites: favourites,
+        );
       },
     );
   }

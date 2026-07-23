@@ -26,4 +26,11 @@ class RootController extends GetxController {
     pageController.dispose();
     super.onClose();
   }
+
+  void findArgumentsFromTab() {
+    final int? requestedIndex = Get.arguments;
+    if (requestedIndex != null && requestedIndex != currentIndex.value) {
+      changeTab(requestedIndex);
+    }
+  }
 }

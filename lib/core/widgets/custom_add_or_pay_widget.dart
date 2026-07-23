@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gap/flutter_gap.dart';
-import 'package:get/get.dart';
-import 'package:hungry_app/core/utils/constant.dart';
+import 'package:hungry_app/core/constants/app_colors.dart';
 import 'package:hungry_app/core/widgets/custom_button.dart';
 import 'package:hungry_app/core/widgets/custom_text.dart';
 
-import '../../generated/assets.dart';
-import '../utils/app_routes.dart';
 
 class CustomAddOrPayWidget extends StatelessWidget {
   const CustomAddOrPayWidget({
@@ -61,7 +57,7 @@ class CustomAddOrPayWidget extends StatelessWidget {
                   vertical: 3,
                 ),
                 decoration: BoxDecoration(
-                  color: kSecondaryColor,
+                  color: AppColors.kSecondaryColor,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Center(
@@ -99,7 +95,7 @@ class CustomAddOrPayWidget extends StatelessWidget {
                   borderRadius: 20,
                   onTap: onTap,
                   text: textButton,
-                  backgroundColor: kPrimaryColor,
+                  backgroundColor: AppColors.kPrimaryColor,
                 ),
               ),
             ),

@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:hungry_app/features/home_feature/domain/entities/category_entity.dart';
 
-import '../../../../core/utils/failures.dart';
+import '../../../../core/app_setup/app_failures.dart';
 import '../../domain/entities/paginated_products_entity.dart';
 import '../../domain/entities/product_entity.dart';
 import '../../domain/repos/home_repo.dart';
@@ -21,8 +21,10 @@ class HomeRepoImpl implements HomeRepo {
   final ProductRemoteDataSource remoteDataSource;
   final LocalDataSource localDataSource;
 
+
+  // get products
   @override
-  Future<Either<Failure, PaginatedProductsEntity>> getProducts({
+  Future<Either<AppFailures, PaginatedProductsEntity>> getProducts({
     required int page,
     String? categoryId,
   }) async {
@@ -41,40 +43,48 @@ class HomeRepoImpl implements HomeRepo {
       return Right(products);
     } on DioException catch (e) {
       return Left(ServerFailure.fromDioError(e));
-    } on Failure catch (e) {
+    } on AppFailures catch (e) {
       return Left(e);
     } catch (e, stackTrace) {
       log('Unexpected Error: $e', stackTrace: stackTrace);
       return Left(
-        Failure(errMessage: 'Something went wrong.\nPlease try again later.'),
+        AppFailures(
+          errMessage: 'Something went wrong.\nPlease try again later.',
+        ),
       );
     }
   }
 
+  // get cached products
   @override
   List<ProductEntity> getCachedProducts() {
     return localDataSource.getCachedProducts();
   }
 
+  // get categories
   @override
-  Future<Either<Failure, List<CategoryEntity>>> getCategories() async {
+  Future<Either<AppFailures, List<CategoryEntity>>> getCategories() async {
     try {
       final categories = await remoteDataSource.getCategories();
       return Right(categories);
     } on DioException catch (e) {
       return Left(ServerFailure.fromDioError(e));
-    } on Failure catch (e) {
+    } on AppFailures catch (e) {
       return Left(e);
     } catch (e, stackTrace) {
       log('Unexpected Error: $e', stackTrace: stackTrace);
       return Left(
-        Failure(errMessage: 'Something went wrong.\nPlease try again later.'),
+        AppFailures(
+          errMessage: 'Something went wrong.\nPlease try again later.',
+        ),
       );
     }
   }
 
+
+  // search products
   @override
-  Future<Either<Failure, List<ProductEntity>>> searchProducts({
+  Future<Either<AppFailures, List<ProductEntity>>> searchProducts({
     required String searchQuery,
   }) async {
     try {
@@ -87,12 +97,14 @@ class HomeRepoImpl implements HomeRepo {
         return const Right([]);
       }
       return Left(ServerFailure.fromDioError(e));
-    } on Failure catch (e) {
+    } on AppFailures catch (e) {
       return Left(e);
     } catch (e, stackTrace) {
       log('Unexpected Error: $e', stackTrace: stackTrace);
       return Left(
-        Failure(errMessage: 'Something went wrong.\nPlease try again later.'),
+        AppFailures(
+          errMessage: 'Something went wrong.\nPlease try again later.',
+        ),
       );
     }
   }

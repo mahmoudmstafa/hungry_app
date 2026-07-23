@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hungry_app/core/constants/app_colors.dart';
 
-import '../../../../../core/utils/constant.dart';
 
 
 class CustomAddOrRemoveWidget extends StatelessWidget {
@@ -19,9 +19,8 @@ class CustomAddOrRemoveWidget extends StatelessWidget {
       child: Container(
         height: 30,
         width: 30,
-        decoration: BoxDecoration(
-          color: kPrimaryColor,
-          // borderRadius: BorderRadius.circular(6),
+        decoration: const BoxDecoration(
+          color: AppColors.kPrimaryColor,
           shape: BoxShape.circle,
         ),
         child: Center(

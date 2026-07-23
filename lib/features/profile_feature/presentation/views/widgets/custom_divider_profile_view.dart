@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hungry_app/core/utils/constant.dart';
+
+import '../../../../../core/constants/app_colors.dart';
 
 class CustomDividerProfileView extends StatelessWidget {
   const CustomDividerProfileView({
@@ -8,14 +9,14 @@ class CustomDividerProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
+    return const Padding(
+      padding: EdgeInsets.only(
         top: 40,
         bottom: 10,
       ),
       child: Divider(
         color: Color(
-          kIntPrimaryColor,
+          AppColors.kIntPrimaryColor,
         ),
         endIndent: 20,
         indent: 20,

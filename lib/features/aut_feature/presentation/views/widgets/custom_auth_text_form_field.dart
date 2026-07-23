@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 
 class CustomAuthTextFormField extends StatelessWidget {
@@ -38,18 +38,18 @@ class CustomAuthTextFormField extends StatelessWidget {
       onSaved: onSaved,
       suffixIcon: suffixIcon,
       obscureText: obscureText,
-      cursorColor: kSecondaryColor,
-      textStyle: TextStyle(
+      cursorColor: AppColors.kSecondaryColor,
+      textStyle: const TextStyle(
         fontSize: 18,
         fontWeight: FontWeight.w500,
       ),
       borderRadius: 14,
       hintText: hintText,
-      hintColor: kPrimaryColor,
+      hintColor: AppColors.kPrimaryColor,
       hintFontSize: 18,
       hintFontWeight: FontWeight.w400,
-      focusedBorderColor: kPrimaryColor,
-      enabledBorderColor: kPrimaryColor,
+      focusedBorderColor: AppColors.kPrimaryColor,
+      enabledBorderColor: AppColors.kPrimaryColor,
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/widgets/custom_text.dart';
 
 class PaymentMethodsWithDelivery extends StatelessWidget {
@@ -21,7 +21,7 @@ class PaymentMethodsWithDelivery extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             side: BorderSide.none,
           ),
-          color: isSelected ? kSecondaryColor : Color(
+          color: isSelected ? AppColors.kSecondaryColor : const Color(
             0xffF3F4F6,
           ),
           elevation: 5,
@@ -30,19 +30,19 @@ class PaymentMethodsWithDelivery extends StatelessWidget {
             child: ListTile(
               title: CustomText(
                 text: 'Cash on Delivery',
-                color: isSelected? 0xFFFFFFFF : kIntSecondaryColor,
+                color: isSelected? 0xFFFFFFFF : AppColors.kIntSecondaryColor,
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
               ),
               leading: Container(
-                margin: EdgeInsets.only(left: 10),
+                margin: const EdgeInsets.only(left: 10),
                 height: 50,
                 width: 50,
                 decoration: BoxDecoration(
-                  color: isSelected ? kPrimaryColor : kSecondaryColor,
+                  color: isSelected ? AppColors.kPrimaryColor : AppColors.kSecondaryColor,
                   shape: BoxShape.circle,
                 ),
-                child: Center(
+                child: const Center(
                   child: Text(
                     '\$',
                     style: TextStyle(

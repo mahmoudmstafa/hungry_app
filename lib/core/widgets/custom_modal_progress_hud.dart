@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hungry_app/core/utils/constant.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
+
+import '../constants/app_colors.dart';
 
 
 // flutter pub add modal_progress_hud_nsn
@@ -28,7 +29,7 @@ class CustomModalProgressHud extends StatelessWidget {
         width: 40,
         height: 40,
         child: CircularProgressIndicator(
-          color: circleColor ?? kSecondaryColor,
+          color: circleColor ?? AppColors.kSecondaryColor,
           strokeWidth: 4,
         ),
       ),

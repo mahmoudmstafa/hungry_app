@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../utils/constant.dart';
 
 class CustomTextFormField extends StatefulWidget {
   const CustomTextFormField({
@@ -118,7 +117,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       decoration: InputDecoration(
         filled: widget.filled ?? true,
         fillColor: Colors.white,
-        contentPadding: EdgeInsets.symmetric(
+        contentPadding: const EdgeInsets.symmetric(
           horizontal: 22,
           vertical: 16,
         ),
@@ -127,7 +126,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         labelText: widget.labelText,
         prefixIcon: widget.prefixIcon,
         suffixIcon: widget.suffixIcon,
-        labelStyle: TextStyle(
+        labelStyle: const TextStyle(
           color: Colors.red,
           fontSize: 18,
         ),

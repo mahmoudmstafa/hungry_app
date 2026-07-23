@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hungry_app/core/constants/app_colors.dart';
 
-import '../../../../../core/utils/constant.dart';
 import '../../../../../core/widgets/custom_text.dart';
 class EstimatedDeliveryTime extends StatelessWidget {
   const EstimatedDeliveryTime({
@@ -9,19 +9,19 @@ class EstimatedDeliveryTime extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CustomText(
           text: 'Estimated delivery time:',
           fontSize: 15,
-          color: kIntSecondaryColor,
+          color: AppColors.kIntSecondaryColor,
           fontWeight: FontWeight.w600,
         ),
         CustomText(
           text: '15 - 30 mins',
           fontSize: 13,
-          color: kIntSecondaryColor,
+          color: AppColors.kIntSecondaryColor,
           fontWeight: FontWeight.w500,
         ),
       ],

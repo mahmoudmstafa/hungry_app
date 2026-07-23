@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/constant.dart';
 
 class SaveCardDetailsCheckButton extends StatefulWidget {
   const SaveCardDetailsCheckButton({
@@ -31,7 +30,7 @@ class _SaveCardDetailsCheckButtonState
           borderRadius: BorderRadius.circular(6),
           color: saveCardDetails ? Colors.red : Colors.grey,
         ),
-        child: Icon(
+        child: const Icon(
           size: 16,
           fontWeight: FontWeight.bold,
           Icons.check,

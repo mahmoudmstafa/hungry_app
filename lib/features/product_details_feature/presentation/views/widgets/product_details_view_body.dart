@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gap/flutter_gap.dart';
 import 'package:hungry_app/features/product_details_feature/presentation/views/widgets/product_details_section.dart';
 import 'package:hungry_app/features/product_details_feature/presentation/views/widgets/toppings_and_side_options_sections.dart';
 
-import '../../../../../core/utils/constant.dart';
+import '../../../../../core/constants/app_spaces.dart';
 import '../../../../../core/widgets/custom_back_button.dart';
 import 'add_to_cart_section.dart';
 
@@ -12,7 +11,7 @@ class ProductDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         Expanded(
           child: CustomScrollView(
@@ -23,7 +22,7 @@ class ProductDetailsViewBody extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: kPadding),
+                      padding: EdgeInsets.symmetric(horizontal: AppSpaces.kPadding),
                       child: CustomBackButton(),
                     ),
                     ProductDetailsSection(),

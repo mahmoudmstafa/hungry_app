@@ -1,8 +1,7 @@
-import 'dart:developer';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:hungry_app/core/utils/constant.dart';
+import 'package:hungry_app/core/constants/app_colors.dart';
 
 import 'custom_animation_loading_widget.dart';
 
@@ -48,7 +47,7 @@ class CustomCachedNetworkImage extends StatelessWidget {
                   color: Colors.grey,
                   borderRadius:
                       borderRadiusLoadingImage ??
-                      BorderRadius.only(
+                      const BorderRadius.only(
                         topLeft: Radius.circular(16),
                         topRight: Radius.circular(16),
                       ),
@@ -67,10 +66,10 @@ class CustomCachedNetworkImage extends StatelessWidget {
       imageUrl: imageUrl,
       errorWidget: (context, url, error) =>
           errorWidget ??
-          Icon(
+          const Icon(
             Icons.fastfood,
             size: 32,
-            color: kSecondaryColor,
+            color: AppColors.kSecondaryColor,
           ),
       imageBuilder: (context, imageProvider) {
         return Container(

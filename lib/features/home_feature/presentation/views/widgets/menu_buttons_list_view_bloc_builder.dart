@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hungry_app/core/utils/constant.dart';
 import 'package:hungry_app/features/home_feature/presentation/manager/cubits/get_category_cubit/get_category_cubit.dart';
 
-import '../../../../../core/widgets/custom_animation_loading_widget.dart';
-import '../../../../../core/widgets/custom_button.dart';
-import '../../../../../core/widgets/custom_circle_loading.dart';
 import '../../../../../core/widgets/custom_error_message.dart';
 import '../../../../../core/widgets/loading_categories_widget.dart';
 import '../../../../../core/widgets/menu_buttons_list_view.dart';
 import '../../../domain/entities/category_entity.dart';
 import '../../manager/cubits/get_products_cubit/get_product_cubit.dart';
-import 'acitve_and_inactive_menu.dart';
 
 class MenuButtonsListViewBlocBuilder extends StatefulWidget {
   const MenuButtonsListViewBlocBuilder({super.key});
@@ -33,7 +28,7 @@ class _MenuButtonsListViewBlocBuilderState
           return CustomErrorMessage(errMessage: state.message);
         } else if (state is GetCategoryLoaded) {
           final allCategories = [
-            CategoryEntity(id: 'all', name: 'All', image: ''),
+            const CategoryEntity(id: 'all', name: 'All', image: ''),
             ...state.categories,
           ];
           return MenuButtonsListView(
@@ -53,7 +48,7 @@ class _MenuButtonsListViewBlocBuilderState
             },
           );
         } else {
-          return LoadingCategoriesWidget();
+          return const LoadingCategoriesWidget();
         }
       },
     );
