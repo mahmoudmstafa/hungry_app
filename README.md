@@ -1,17 +1,133 @@
-# hungry_app
+# 🍔 Hungry App
 
-A new Flutter project.
+A modern Flutter Food Delivery application built with **Clean Architecture**, **BLoC**, and **Firebase Authentication**, featuring a complete ordering workflow from browsing meals to checkout and order history.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+- 🔐 Firebase Authentication
+- 🍽 Browse food categories
+- ❤️ Favorite meals
+- 🛒 Shopping Cart
+- 💳 Checkout System
+- 📜 Order History
+- 🔄 Re-order previous orders
+- ⭐ Modern & Responsive UI
+- 📱 Beautiful Animations
+- ☁️ Backend API Integration
+- 💾 Local Persistence using Hive
+- ⚡ State Management using flutter_bloc
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## 📸 Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+> Add screenshots here.
+
+```
+assets/screenshots/
+```
+
+Example:
+
+| Home | Cart | Order History |
+|------|------|---------------|
+| Screenshot | Screenshot | Screenshot |
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- Flutter
+- Dart
+- flutter_bloc
+- Hive CE
+- Firebase Authentication
+- GetX (Navigation)
+- Cached Network Image
+- Flutter SVG
+
+### Architecture
+- Clean Architecture
+- Repository Pattern
+- Dependency Injection
+- Use Cases
+
+---
+
+## 📂 Project Structure
+
+```
+lib/
+│
+├── core/
+├── features/
+│   ├── authentication
+│   ├── home
+│   ├── cart
+│   ├── checkout_and_order_history
+│   ├── favourites
+│   └── profile
+│
+├── generated/
+└── main.dart
+```
+
+---
+
+## 🚀 Getting Started
+
+### Clone Repository
+
+```bash
+git clone https://github.com/mahmoudmstafa/hungry-app.git
+```
+
+### Install Packages
+
+```bash
+flutter pub get
+```
+
+### Run
+
+```bash
+flutter run
+```
+
+---
+
+## 📦 Backend
+
+The backend repository is available here:
+
+👉 https://github.com/mahmoudmstafa/hungry-backend
+
+---
+
+## 📱 Main Features
+
+- Authentication
+- Browse Foods
+- Categories
+- Favorites
+- Shopping Cart
+- Checkout
+- Order History
+- Re-order
+- Profile
+
+---
+
+## 👨‍💻 Author
+
+Mahmoud Mostafa
+
+GitHub:
+https://github.com/mahmoudmstafa
+
+---
+
+## 📄 License
+
+This project is created for learning and portfolio purposes.
