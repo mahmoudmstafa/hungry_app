@@ -19,22 +19,6 @@ A modern Flutter Food Delivery application built with **Clean Architecture**, **
 
 ---
 
-## 📸 Screenshots
-
-> Add screenshots here.
-
-```
-assets/screenshots/
-```
-
-Example:
-
-| Home | Cart | Order History |
-|------|------|---------------|
-| Screenshot | Screenshot | Screenshot |
-
----
-
 ## 🛠 Tech Stack
 
 ### Frontend
